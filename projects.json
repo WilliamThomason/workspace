@@ -61,12 +61,6 @@
   },
   {
     "category": "ESL Sites",
-    "name": "speak-easy-english",
-    "title": "Speak Easy English \u2014 Online English Lessons for Everyone",
-    "path": "./esl-sites/speak-easy-english/index.html"
-  },
-  {
-    "category": "ESL Sites",
     "name": "eloquenta",
     "title": "Eloquenta \u2014 Online English for Adults",
     "path": "./esl-sites/eloquenta/index.html"
