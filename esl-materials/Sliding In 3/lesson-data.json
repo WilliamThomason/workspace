@@ -1,0 +1,1631 @@
+[
+  {
+    "category": "Society & Culture",
+    "topics": [
+      {
+        "title": "Privacy (10 questions)",
+        "slug": "privacy",
+        "questions": [
+          {
+            "original": "Do you consider yourself to be a private person?",
+            "paraphrased": "Do you feel that your government goes too far in collecting personal information?"
+          },
+          {
+            "original": "Do you share information about yourself with your friends or do you keep a lot of secrets?",
+            "paraphrased": "Do you believe login using fingerprints or facial recognition is a good thing?"
+          },
+          {
+            "original": "Are you good at keeping your friends' personal information secret?",
+            "paraphrased": "At any point in your life, have you fallen victim to identity theft?"
+          },
+          {
+            "original": "Are you usually guarded about writing personal information on social media or do you write openly?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you think that your government goes too far in collecting personal information?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you agree with the opinion that if you've got nothing to hide then you have nothing to worry about your personal information being collected by government or companies?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Has your cell phone or computer ever been hacked?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you worry about hacking? If so what measures do you take to avoid it?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you think login using fingerprints or facial recognition is a good thing?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever fallen victim to identity theft?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Police (12 questions)",
+        "slug": "police",
+        "questions": [
+          {
+            "original": "Have you ever been stopped or questioned by the police?",
+            "paraphrased": "At any point in your life, have you been stopped or questioned by the police?"
+          },
+          {
+            "original": "Have you ever had to visit a police station? If so describe the experience.",
+            "paraphrased": "At any point in your life, have you had to visit a police station? If so describe the experience."
+          },
+          {
+            "original": "Do you have respect for the police force in your country?",
+            "paraphrased": "Do you have respect for the police force in your home country?"
+          },
+          {
+            "original": "What sorts of issues do the police commonly have to deal with in your society?",
+            "paraphrased": "What sorts of issues do the police commonly have to deal with where you live?"
+          },
+          {
+            "original": "Is being a police officer dangerous in your own neighbourhood?",
+            "paraphrased": "What is the proportion of male to female police officers in your home country?"
+          },
+          {
+            "original": "Do you tend to find police officers approachable or intimidating?",
+            "paraphrased": "Are police officers in your home country usually considered trustworthy?"
+          },
+          {
+            "original": "Do you know any police officers personally?",
+            "paraphrased": "Do police carry guns in your home country?"
+          },
+          {
+            "original": "Would you ever consider becoming a police officer? Why or why not?",
+            "paraphrased": "Is excessive use of force by police officers ever an issue in your home country?"
+          },
+          {
+            "original": "What is the proportion of male to female police officers in your country?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are police officers in your country usually considered trustworthy?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do police carry guns in your country?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is excessive use of force by police officers ever an issue in your country?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Law and Justice (11 questions)",
+        "slug": "lawjustice",
+        "questions": [
+          {
+            "original": "Are you usually a law-abiding citizen?",
+            "paraphrased": "At any point in your life, have you broken the law? If so how?"
+          },
+          {
+            "original": "Have you ever broken the law? If so how?",
+            "paraphrased": "Do you believe it's possible to live a life in which you never break a single law?"
+          },
+          {
+            "original": "Do you think it's possible to live a life in which you never break a single law?",
+            "paraphrased": "At any point in your life, have you met anyone who has spent time in jail?"
+          },
+          {
+            "original": "Have you ever met anyone who has spent time in jail?",
+            "paraphrased": "From your perspective are your country's laws generally fair or are some laws unjust?"
+          },
+          {
+            "original": "In your opinion are your country's laws generally fair or are some laws unjust?",
+            "paraphrased": "From your perspective is it ok to exploit 'loopholes' in the law for personal benefit?"
+          },
+          {
+            "original": "What is the difference between law-abiding behaviour and ethical behaviour? Can you think of any examples where your country's laws don't manage to prevent unethical behaviour?",
+            "paraphrased": "Do you think the laws in your home country are too lenient on criminals?"
+          },
+          {
+            "original": "In your opinion is it ok to exploit 'loopholes' in the law for personal benefit?",
+            "paraphrased": "From your perspective do white collar criminals tend to be punished too leniently?"
+          },
+          {
+            "original": "Do you think the laws in your country are too lenient on criminals?",
+            "paraphrased": "Should certain illicit drugs be legalized? Can you think of any cases where a drug should be legalized for a special purpose, such as for medicinal use?"
+          },
+          {
+            "original": "In your opinion do white collar criminals tend to be punished too leniently?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe in capital punishment? Why or why not?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Should certain illicit drugs be legalized? Are there any cases where a drug should be legalized for a special purpose, such as for medicinal use?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Politics (18 questions)",
+        "slug": "politics",
+        "questions": [
+          {
+            "original": "Are you interested in politics? Do you follow political stories in the news?",
+            "paraphrased": "From your perspective is your country's government doing a good job?"
+          },
+          {
+            "original": "In your opinion is your country's government doing a good job?",
+            "paraphrased": "Do you believe most politicians want to change the world for the better or get ahead themselves?"
+          },
+          {
+            "original": "Are you positive or cynical about politics and politicians generally?",
+            "paraphrased": "Are there many political scandals in your home country?"
+          },
+          {
+            "original": "Do you think most politicians want to change the world for the better or get ahead themselves?",
+            "paraphrased": "Do you believe its ok to scrutinize politicians' private lives?"
+          },
+          {
+            "original": "Are there many political scandals in your country?",
+            "paraphrased": "Do you believe capitalism works?"
+          },
+          {
+            "original": "Do you think its ok to scrutinize politicians' private lives?",
+            "paraphrased": "Do you believe socialism has the potential to work?"
+          },
+          {
+            "original": "Do you lean towards 'the right' or 'the left'?",
+            "paraphrased": "Do you believe political extremism is becoming more prevalent?"
+          },
+          {
+            "original": "Describe your understanding of 'left wing'.",
+            "paraphrased": "From your perspective is it ever appropriate to mix politics and religion or is secularism always the best choice?"
+          },
+          {
+            "original": "Describe your understanding of 'right wing'.",
+            "paraphrased": "Do you believe a global world order is a good thing?"
+          },
+          {
+            "original": "Do you think capitalism works?",
+            "paraphrased": "At any point in your life, have you met a politician?"
+          },
+          {
+            "original": "Do you think socialism has the potential to work?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Can an authoritarian system ever be successful?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you think political extremism is becoming more prevalent?",
+            "paraphrased": ""
+          },
+          {
+            "original": "In your opinion is it ever appropriate to mix politics and religion or is secularism always the best choice?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you think a global world order is a good thing?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever met a politician?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Who's your favorite politician?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Who's your least favourite politician?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Poverty (12 questions)",
+        "slug": "poverty",
+        "questions": [
+          {
+            "original": "Is poverty a big issue in your country? Is the poverty rate rising or falling?",
+            "paraphrased": "Is poverty a big issue in your home country? Is the poverty rate rising or falling?"
+          },
+          {
+            "original": "Do you know anyone who you would describe as poor?",
+            "paraphrased": "Can you think of any poor areas or slums in your town? Are they dangerous?"
+          },
+          {
+            "original": "Are there any poor areas or slums in your town? Are they dangerous?",
+            "paraphrased": "In your society is there any particular minority group, age group or other demographic group that is more likely to live in poverty? Do you believe this is?"
+          },
+          {
+            "original": "In your society is there any particular minority group, age group or other demographic group that is more likely to live in poverty? Do you think this is?",
+            "paraphrased": "How does the government in your home country help poor people? Does it provide meals or shelter?"
+          },
+          {
+            "original": "Do you often see homeless people in your town? Where are they usually found?",
+            "paraphrased": "From your perspective how often the government of your country do enough to help poor people?"
+          },
+          {
+            "original": "How does the government in your country help poor people? Does it provide meals or shelter?",
+            "paraphrased": "At any point in your life, have you given money to charity?"
+          },
+          {
+            "original": "In your opinion how often the government of your country do enough to help poor people?",
+            "paraphrased": "At any point in your life, have you volunteered to help poor people? Would you like to?"
+          },
+          {
+            "original": "Have you ever given money to charity?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are there clothes bins in your neighbourhood? Do you ever leave your old clothes there?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever volunteered to help poor people? Would you like to?",
+            "paraphrased": ""
+          },
+          {
+            "original": "How often do you see beggars? Do you ever give money to them?",
+            "paraphrased": ""
+          },
+          {
+            "original": "In your view how often are poor people to blame for their own problems?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "War (13 questions)",
+        "slug": "war",
+        "questions": [
+          {
+            "original": "Has there ever been a war in your country?",
+            "paraphrased": "Has there ever been a war in your home country?"
+          },
+          {
+            "original": "Are you worried about a war starting in your country in the future? How do you think it could it start?",
+            "paraphrased": "Are you worried about a war starting in your home country in the future? How do you think it could it start?"
+          },
+          {
+            "original": "What would you do if a war broke out in your country? Would you try to leave?",
+            "paraphrased": "What would you do if a war broke out in your home country? Would you try to leave?"
+          },
+          {
+            "original": "Do you think another world war is a possibility in the future?",
+            "paraphrased": "Do you believe another world war is a possibility in the future?"
+          },
+          {
+            "original": "In your opinion what countries pose the biggest threat to world peace?",
+            "paraphrased": "From your perspective what countries pose the biggest threat to world peace?"
+          },
+          {
+            "original": "Do you think wars and fighting are an unavoidable part of human nature?",
+            "paraphrased": "Do you believe wars and fighting are an unavoidable part of human nature?"
+          },
+          {
+            "original": "What are the most common causes of war starting?",
+            "paraphrased": "From your perspective is the UN doing a good job of maintaining world peace?"
+          },
+          {
+            "original": "Does nationalism tend to increase the chance of a country going to war?",
+            "paraphrased": "Do you believe cyber wars are the wars of the future?"
+          },
+          {
+            "original": "In your opinion is the UN doing a good job of maintaining world peace?",
+            "paraphrased": "At any point in your life, have you visited a war zone?"
+          },
+          {
+            "original": "If your country were involved in a war would you volunteer to fight?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you think cyber wars are the wars of the future?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are robots and AI likely to take over the fighting role from humans?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever visited a war zone?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Religion and Faith (14 questions)",
+        "slug": "religionfaith",
+        "questions": [
+          {
+            "original": "Are you religious? If so which faith do you follow?",
+            "paraphrased": "At any point in your life, have you described yourself as an atheist or agnostic?"
+          },
+          {
+            "original": "Have you ever described yourself as an atheist or agnostic?",
+            "paraphrased": "Which religion is most popular in your home country? Why is it so popular?"
+          },
+          {
+            "original": "If you are religious how do you observe your religion?",
+            "paraphrased": "Is religious belief growing or declining in your home country?"
+          },
+          {
+            "original": "Which religion is most popular in your country? Why is it so popular?",
+            "paraphrased": "Do you feel that religion on the whole has a positive or a negative influence on the world?"
+          },
+          {
+            "original": "Is religious belief growing or declining in your country?",
+            "paraphrased": "Do you believe religions should be made to pay taxes to the government on the money they earn?"
+          },
+          {
+            "original": "Do you agree with those who say that religion is outdated?",
+            "paraphrased": "Are there any cults in your home country?"
+          },
+          {
+            "original": "Do you think that religion on the whole has a positive or a negative influence on the world?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe that government and religion should be completely separate?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you think religions should be made to pay taxes to the government on the money they earn?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Should religious people be able to follow their beliefs even if they conflict with a country's laws?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is it ok for religion to be taught in schools?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What's the difference between a cult and a religion?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are there any cults in your country?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What would you do if one of your family members joined a cult?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Proverbs and Sayings (13 questions)",
+        "slug": "proverbssayings",
+        "questions": [
+          {
+            "original": "Do you usually follow the advice that 'When in Rome, do as the Romans do'?",
+            "paraphrased": "Generally, do you follow the advice that 'When in Rome, do as the Romans do'?"
+          },
+          {
+            "original": "What do you think is meant by 'Keep your friends close and your enemies closer'? Do you think it's good advice?",
+            "paraphrased": "What do you think is meant by 'Keep your friends close and your enemies closer'? Do you believe it's good advice?"
+          },
+          {
+            "original": "Do you believe that 'When the going gets tough, the tough get going' is true? Do you consider yourself to be tough?",
+            "paraphrased": "Do you believe it is generally true that 'God helps those that help themselves'?"
+          },
+          {
+            "original": "Some say that 'Fortune favours the bold'. Can you think of any examples of that being true? Do you consider yourself to be bold?",
+            "paraphrased": "Generally, do you follow the advice that 'If it ain't broke, don't fix it'?"
+          },
+          {
+            "original": "Do you agree with the saying 'Hope for the best, but prepare for the worst'?",
+            "paraphrased": ""
+          },
+          {
+            "original": "'There is no such thing as a free lunch'. Do you agree or disagree?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you think it is generally true that 'God helps those that help themselves'?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you usually follow the advice that 'If it ain't broke, don't fix it'?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you agree that 'Too many cooks spoil the soup'? Can you think of any examples?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Has 'Easy come, easy go' (money comes and goes easily) been true in your life?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is it a good idea to follow the saying 'If you can't beat them join them'?",
+            "paraphrased": ""
+          },
+          {
+            "original": "In your experience is it correct that 'Blood is thicker than water' (family relationships are the most important)?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Regarding other people do you agree that 'You can't judge a book by its cover' (you can't know what someone is like just from their appearance)?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Names and Ancestry (12 questions)",
+        "slug": "namesancestry",
+        "questions": [
+          {
+            "original": "Do you like your name?",
+            "paraphrased": "Are you fond of your name?"
+          },
+          {
+            "original": "Does your name have a special meaning? Do you know why your parents chose it?",
+            "paraphrased": "How common is your family name common in your home country?"
+          },
+          {
+            "original": "Where does your family name come from?",
+            "paraphrased": "Can you think of any famous people in your family lineage?"
+          },
+          {
+            "original": "How common is your family name common in your country?",
+            "paraphrased": "Can you think of any criminals or shady characters in your family history?"
+          },
+          {
+            "original": "Do you know the history of your family well? How far back can you trace your roots?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are there any famous people in your family lineage?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are there any criminals or shady characters in your family history?",
+            "paraphrased": ""
+          },
+          {
+            "original": "In your society do wives usually assume their husband's family name or not?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Should children be able to take their mother's family name?",
+            "paraphrased": ""
+          },
+          {
+            "original": "If you could change your name what would you change it to?",
+            "paraphrased": ""
+          },
+          {
+            "original": "If you were having a child what name would you choose?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What are some strange names you've come across?",
+            "paraphrased": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Science, Technology & Future",
+    "topics": [
+      {
+        "title": "Science and Technology (15 questions)",
+        "slug": "sciencetechnology",
+        "questions": [
+          {
+            "original": "Do you follow news about science and technology closely?",
+            "paraphrased": "Do you believe technology is making our lives easier or more difficult?"
+          },
+          {
+            "original": "Describe an interesting story you've seen recently about a scientific finding or a new technological development?",
+            "paraphrased": "Generally, do you believe what you read about scientific breakthroughs or are you often sceptical?"
+          },
+          {
+            "original": "What do you think is the most important technological breakthrough in history? For example the invention of the wheel, the discovery of electricity, the invention of the motorcar, the invention of the internet etc.",
+            "paraphrased": "Do you believe scientific progress will eventually lead to humans living forever? If this were possible would it be a good thing?"
+          },
+          {
+            "original": "Do you think technology is making our lives easier or more difficult?",
+            "paraphrased": "Do you believe AI (artificial intelligence) is a threat or an opportunity for humanity?"
+          },
+          {
+            "original": "Do you usually believe what you read about scientific breakthroughs or are you often sceptical?",
+            "paraphrased": "From your perspective are GM (genetically modified) plant crops a good or bad thing? Why?"
+          },
+          {
+            "original": "Do you think scientific progress will eventually lead to humans living forever? If this were possible would it be a good thing?",
+            "paraphrased": "Do you believe the cloning of animals is ethical? Why?"
+          },
+          {
+            "original": "Do you think AI (artificial intelligence) is a threat or an opportunity for humanity?",
+            "paraphrased": "Do you believe you can survive in modern society without your cell phone?"
+          },
+          {
+            "original": "Do you believe AI and robots will eventually take over all jobs?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe that AI could eventually take over the world?",
+            "paraphrased": ""
+          },
+          {
+            "original": "In your opinion are GM (genetically modified) plant crops a good or bad thing? Why?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you think the cloning of animals is ethical? Why?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Should parents be able to choose the gender of their child before conception?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Should parents be able to choose the genetic characteristics of their children before conception?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe it will be possible to 3D print human organs in the future?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you think you can survive in modern society without your cell phone?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Robots and Artificial Intelligence (11 questions)",
+        "slug": "robotsartificialintelligence",
+        "questions": [
+          {
+            "original": "Are you concerned or excited by the development of artificial intelligence (AI) and robots?",
+            "paraphrased": "Do you believe most jobs in the future will be automated? Can you think of any that can't be automated?"
+          },
+          {
+            "original": "Do you believe most jobs in the future will be automated? Are there any that can't be automated?",
+            "paraphrased": "Do you believe a future world in which AI and robots take over all jobs is utopian or dystopian?"
+          },
+          {
+            "original": "Do you think a future world in which AI and robots take over all jobs is utopian or dystopian?",
+            "paraphrased": "Do you feel that in the future people will be able to use technology to 'upgrade' their bodies and brainpower?"
+          },
+          {
+            "original": "Can you imagine a doomsday scenario like in the movie Terminator being possible?",
+            "paraphrased": "From your perspective how long will it be before self-driving cars are common on the roads?"
+          },
+          {
+            "original": "If automation takes over large numbers of jobs will a universal basic wage be necessary in your view?",
+            "paraphrased": "Do you believe you would feel comfortable in a self-driving car?"
+          },
+          {
+            "original": "Do you believe robots have the potential to become lifelike and indistinguishable from humans?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Will it ever be possible to have a relationship with a robot?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you think that in the future people will be able to use technology to 'upgrade' their bodies and brainpower?",
+            "paraphrased": ""
+          },
+          {
+            "original": "In your opinion how long will it be before self-driving cars are common on the roads?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you think you would feel comfortable in a self-driving car?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you used any app or software which utilizes AI?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Genetics and Cloning (12 questions)",
+        "slug": "geneticscloning",
+        "questions": [
+          {
+            "original": "Do you more closely resemble your mother or your father?",
+            "paraphrased": "Have you got any 'throwback' traits from former generations?"
+          },
+          {
+            "original": "What are some of your family characteristics?",
+            "paraphrased": "Do you believe scientists will be able to clone body parts in the future? Is this a good thing?"
+          },
+          {
+            "original": "Do you have any 'throwback' traits from former generations?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe that genetic engineering is ethical?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is it ethical for pregnancies to be terminated on the basis of screening for congenital disorders?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is it OK to choose the gender of your child before conception? What about other characteristics?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is it OK to clone animals? How about humans?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you think scientists will be able to clone body parts in the future? Is this a good thing?",
+            "paraphrased": ""
+          },
+          {
+            "original": "How would you react to a clone of yourself?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are you happy to eat genetically modified food?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you agree that genetically modified crops are a good solution to food supply security?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe the humanity is getting weaker as the result of improved medicines and technology reducing natural selection? Could we survive without electricity and modern medicine?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "The Environment (13 questions)",
+        "slug": "theenvironment",
+        "questions": [
+          {
+            "original": "Do you believe climate change is occurring? If so are humans the primary cause of it?",
+            "paraphrased": "What do you think is the most important environmental issue in your home country?"
+          },
+          {
+            "original": "Why do you think climate change is such a big controversy?",
+            "paraphrased": "How is the air quality in your home country?"
+          },
+          {
+            "original": "What do you think is the most important environmental issue in your country?",
+            "paraphrased": "Generally, do you opt for energy efficient appliances for your home?"
+          },
+          {
+            "original": "How is the air quality in your country?",
+            "paraphrased": "Is trash a problem in your home country?"
+          },
+          {
+            "original": "Would you consider buying an electric car even if it cost more than a petrol car?",
+            "paraphrased": "At any point in your life, have you joined a volunteer scheme to pick up trash?"
+          },
+          {
+            "original": "Do you usually opt for energy efficient appliances for your home?",
+            "paraphrased": "Is there much natural environment remaining in your home country?"
+          },
+          {
+            "original": "Is trash a problem in your country?",
+            "paraphrased": "Is vegetation clearance an issue in your home country? Are many species of plant and animal going extinct?"
+          },
+          {
+            "original": "Have you ever joined a volunteer scheme to pick up trash?",
+            "paraphrased": "Do you believe it is important for natural areas to be preserved?"
+          },
+          {
+            "original": "Is there a recycling system in your neighbourhood? Describe how your local recycling system works.",
+            "paraphrased": "Do you think more trees should be planted in your home country?"
+          },
+          {
+            "original": "Is there much natural environment remaining in your country?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is vegetation clearance an issue in your country? Are many species of plant and animal going extinct?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you think it is important for natural areas to be preserved?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you think more trees should be planted in your country?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Weather, Climate and Seasons (13 questions)",
+        "slug": "weatherclimateseasons",
+        "questions": [
+          {
+            "original": "Do you prefer rainy days or sunny days? Why?",
+            "paraphrased": "Would you rather rainy days or sunny days? Why?"
+          },
+          {
+            "original": "How often does it rain where you live? Does it rain heavily often?",
+            "paraphrased": "Does it ever snow where you live? Are you fond of snowy weather?"
+          },
+          {
+            "original": "Does it ever snow where you live? Do you like snowy weather?",
+            "paraphrased": "Do you believe your country is too hot in summer or too cold in winter?"
+          },
+          {
+            "original": "Is your climate prone to sudden changes in temperature and weather or is it fairly stable?",
+            "paraphrased": "From your perspective what is the best temperature for human comfort?"
+          },
+          {
+            "original": "Do you think your country is too hot in summer or too cold in winter?",
+            "paraphrased": "Are there many extreme weather events in your home country? What are they?"
+          },
+          {
+            "original": "What is your favourite season? Why?",
+            "paraphrased": "Do you believe the climate of your country is changing?"
+          },
+          {
+            "original": "In your opinion what is the best temperature for human comfort?",
+            "paraphrased": "Do you believe global warming is real?"
+          },
+          {
+            "original": "Would you prefer to live in a tropical climate or a temperate climate? Why?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is the climate where you live usually dry or humid?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you feel more excited or scared during thunderstorms?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are there many extreme weather events in your country? What are they?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you think the climate of your country is changing?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you think global warming is real?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Space and Aliens (11 questions)",
+        "slug": "spacealiens",
+        "questions": [
+          {
+            "original": "Do you find astronomy interesting?",
+            "paraphrased": "At any point in your life, have you looked through a telescope? What did you look at?"
+          },
+          {
+            "original": "Have you ever looked through a telescope? What did you look at?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What planet do you find the most interesting? Why?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Would you ever consider becoming an astronaut?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Would you like to take a tour into space if it became possible? Where would you like to go?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe people will live on Mars in the future? Would you consider living there?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe we are alone in the universe or do you think extra-terrestrial life exists?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe in UFOs?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you agree with the view that alien life may be a threat to Earth?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Should we try to make contact with aliens or is it too dangerous?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What do you think aliens are likely to look like?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Ghosts and The Supernatural (15 questions)",
+        "slug": "ghostssupernatural",
+        "questions": [
+          {
+            "original": "Do you believe in ghosts?",
+            "paraphrased": "At any point in your life, have you seen a ghost?"
+          },
+          {
+            "original": "Have you ever seen a ghost?",
+            "paraphrased": "Are there any haunted houses or sites in your home country?"
+          },
+          {
+            "original": "What ghost stories have you heard?",
+            "paraphrased": "At any point in your life, have you experienced an amazing coincidence?"
+          },
+          {
+            "original": "Are there any haunted houses or sites in your country?",
+            "paraphrased": "What are some common superstitions in your home country?"
+          },
+          {
+            "original": "Do you easily get spooked in the dark?",
+            "paraphrased": "Have you got an unlucky number? What about a lucky number?"
+          },
+          {
+            "original": "Has anything unexplainable ever happened to you?",
+            "paraphrased": "At any point in your life, have you visited a fortune teller? Did what they told you come true?"
+          },
+          {
+            "original": "Have you ever experienced an amazing coincidence?",
+            "paraphrased": "At any point in your life, have you participated in a s&eacute;ance?"
+          },
+          {
+            "original": "Are you superstitious?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What are some common superstitions in your country?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you have an unlucky number? What about a lucky number?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever visited a fortune teller? Did what they told you come true?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe in astrology?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe Nostradamus correctly prophesied the future?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever participated in a s&eacute;ance?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What do you think happens after you die? Do you believe in reincarnation?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Do You Believe...? (13 questions)",
+        "slug": "doyoubelieve",
+        "questions": [
+          {
+            "original": "Do you believe in ghosts?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe in UFOs and aliens?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe in Bigfoot?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe in reincarnation?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe in magic?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe there is a god?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe humans have a soul?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe in miracles?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe in love at first sight?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe humans will one day live forever?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe in karma?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe in astrology?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe in fortune telling?",
+            "paraphrased": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Entertainment & Leisure",
+    "topics": [
+      {
+        "title": "Entertainment (14 questions)",
+        "slug": "entertainment",
+        "questions": [
+          {
+            "original": "What do you usually do for entertainment?",
+            "paraphrased": "At any point in your life, have you been to a play or musical?"
+          },
+          {
+            "original": "How often do you go to the movie theatre?",
+            "paraphrased": "At any point in your life, have you been to the opera?"
+          },
+          {
+            "original": "Do you generally enjoy live performances?",
+            "paraphrased": "At any point in your life, have you been to a circus?"
+          },
+          {
+            "original": "Do you enjoy going to concerts? What type of concerts do you enjoy?",
+            "paraphrased": "Are you fond of visiting amusement parks? Which ones have you visited?"
+          },
+          {
+            "original": "Have you ever been to a play or musical?",
+            "paraphrased": "At any point in your life, have you been to the Olympics or World Cup in person?"
+          },
+          {
+            "original": "Have you ever been to the opera?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever been to a circus?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you enjoy live comedy shows?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Does the idea of going to a stand-up comedy show thrill you or scare you?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you enjoy nightlife? If so do you prefer pubs, bars or nightclubs?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you like visiting amusement parks? Which ones have you visited?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is going to a sports stadium to watch a sporting event something you enjoy?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever been to the Olympics or World Cup in person?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you exprienced any interesting forms of entertainment while travelling abroad?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Music (17 questions)",
+        "slug": "music",
+        "questions": [
+          {
+            "original": "How often do you listen to music?",
+            "paraphrased": "In what ways has your taste in music changed over time?"
+          },
+          {
+            "original": "What's style of music do you most enjoy?",
+            "paraphrased": "Are you fond of sad songs?"
+          },
+          {
+            "original": "Do you generally prefer music which is high tempo and energetic or slow and melodic?",
+            "paraphrased": ""
+          },
+          {
+            "original": "How do you usually listen to music?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you been to any music concerts or festival before? Describe your experience.",
+            "paraphrased": ""
+          },
+          {
+            "original": "Who is your favourite artist? Why do you like them?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What's your favourite song or tune? Why do you like it?",
+            "paraphrased": ""
+          },
+          {
+            "original": "How has your taste in music changed over time?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you enjoy classical music? Why or why not?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Does dance music appeal to you?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you like sad songs?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you enjoy any ethnic music?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you consider yourself to be a musical person?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you play any musical instruments? If so what? Are you good at it?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Would you like to learn an instrument? If so which one?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you enjoy singing? Are you a good singer?",
+            "paraphrased": ""
+          },
+          {
+            "original": "How often do you go singing and where do you go?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "TV and Movies (16 questions)",
+        "slug": "tvmovies",
+        "questions": [
+          {
+            "original": "What sorts of TV programs do you enjoy watching?",
+            "paraphrased": "Generally, do you watch TV in the evenings or at another time of day?"
+          },
+          {
+            "original": "What is your favourite show at the moment?",
+            "paraphrased": "Have you got a favourite actor?"
+          },
+          {
+            "original": "What programs do you usually give a miss to?",
+            "paraphrased": "Have you got a favourite director?"
+          },
+          {
+            "original": "How many hours a day do you usually watch TV?",
+            "paraphrased": "Would you rather to see movies at the cinema or in your home? Why?"
+          },
+          {
+            "original": "How much TV is too much?",
+            "paraphrased": "Do you tend to prefer to watch Hollywood blockbusters or independent films?"
+          },
+          {
+            "original": "Do you usually watch TV in the evenings or at another time of day?",
+            "paraphrased": ""
+          },
+          {
+            "original": "In your home do you have pay TV? If so do you find all the extra channels useful?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you often watch movies?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What genre of movie to you enjoy?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Describe a recent movie you've seen.",
+            "paraphrased": ""
+          },
+          {
+            "original": "What is your favourite movie of all time? Why do you like it?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What is the worst movie you've ever seen? Why was it so bad?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you have a favourite actor?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you have a favourite director?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you prefer to see movies at the cinema or in your home? Why?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you usually prefer to watch Hollywood blockbusters or independent films?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Jokes and Humour (13 questions)",
+        "slug": "jokeshumour",
+        "questions": [
+          {
+            "original": "Do you think you have a good sense of humour?",
+            "paraphrased": "Do you believe you have a good sense of humour?"
+          },
+          {
+            "original": "Do you laugh a lot?",
+            "paraphrased": "Are you fond of telling jokes?"
+          },
+          {
+            "original": "Do you like telling jokes?",
+            "paraphrased": "Are you fond of to make fun of your friends?"
+          },
+          {
+            "original": "Do you joke around a lot with your friends?",
+            "paraphrased": "At any point in your life, have you been to a comedy show?"
+          },
+          {
+            "original": "Do you like to make fun of your friends?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Who is the funniest person you know? Why are they funny?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever been to a comedy show?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Who's your favourite comedian?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What's your favourite comedy movie?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you appreciate black humour?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you enjoy satirical novels or plays?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you ever engage in self-deprecating humour?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Tell a good joke you've heard.",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Art and Design (17 questions)",
+        "slug": "artdesign",
+        "questions": [
+          {
+            "original": "Do you consider yourself to be an artistic person?",
+            "paraphrased": "Are you fond of visiting art galleries?"
+          },
+          {
+            "original": "Do you like visiting art galleries?",
+            "paraphrased": "Do you tend to prefer the classical works of the master painters or contemporary art?"
+          },
+          {
+            "original": "What is your favourite painting?",
+            "paraphrased": "Are you fond of abstract art? Why or why not?"
+          },
+          {
+            "original": "Do you usually prefer the classical works of the master painters or contemporary art?",
+            "paraphrased": "Are you fond of crafts? If so what types of craft do you like?"
+          },
+          {
+            "original": "Do you like abstract art? Why or why not?",
+            "paraphrased": "At any point in your life, have you taken an arts or craft course? Did you enjoy it?"
+          },
+          {
+            "original": "Do you ever find art to be pretentious or overrated?",
+            "paraphrased": "Have you got a lot of art around your home? Describe what you have."
+          },
+          {
+            "original": "Do you enjoy looking at sculptures? Describe a sculpture that is memorable to you.",
+            "paraphrased": "Would you rather an interior environment that is homely and traditional or modern and minimalist?"
+          },
+          {
+            "original": "Do you like crafts? If so what types of craft do you like?",
+            "paraphrased": "Would you rather traditional architecture or modern architecture?"
+          },
+          {
+            "original": "Have you ever taken an arts or craft course? Did you enjoy it?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What is fine art? Give some examples of some fine art that you appreciate.",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you consider food presentation to be a type of art?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you have a lot of art around your home? Describe what you have.",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you spend a lot of effort trying to achieve a coordinated design style in your home? For example do you try to choose furniture and housewares with matching design styles and colours?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you prefer an interior environment that is homely and traditional or modern and minimalist?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you prefer traditional architecture or modern architecture?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Can you think of a building that you really like the design of? Why do you like it?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Can architecture be exciting? Give an example.",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Fame and Celebrities (11 questions)",
+        "slug": "famecelebrities",
+        "questions": [
+          {
+            "original": "Would you like to be famous? Why?",
+            "paraphrased": "Do you believe fame leads to happiness?"
+          },
+          {
+            "original": "Do you think fame leads to happiness?",
+            "paraphrased": "What are the pros and cons of being famous?"
+          },
+          {
+            "original": "What are the advantages and disadvantages of being famous?",
+            "paraphrased": "Do you believe celebrities should be role models or is that being unrealistic?"
+          },
+          {
+            "original": "Do you think celebrities should be role models or is that being unrealistic?",
+            "paraphrased": "At any point in your life, have you met a celebrity?"
+          },
+          {
+            "original": "Would you prefer to be rich and famous or just rich?",
+            "paraphrased": "Can you think of any celebrities you despise? Why do you despise them?"
+          },
+          {
+            "original": "Have you ever met a celebrity?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Which celebrity would you like to meet?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Who is your favourite celebrity? Why do you like them?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are there any celebrities you despise? Why do you despise them?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do celebrities get paid too much?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Why do you think celebrities tend to marry and divorce more than other people?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Animals and Pets (12 questions)",
+        "slug": "animalspets",
+        "questions": [
+          {
+            "original": "Do you like being around animals?",
+            "paraphrased": "Are you fond of being around animals?"
+          },
+          {
+            "original": "What animals don't you like? Why?",
+            "paraphrased": "Have you got any pets? If so what pet do you have?"
+          },
+          {
+            "original": "Do you have any pets? If so what pet do you have?",
+            "paraphrased": "Would you rather dogs or cats? Why?"
+          },
+          {
+            "original": "Would you like to have a pet? What would you like to have?",
+            "paraphrased": "From your perspective are zoos ethical?"
+          },
+          {
+            "original": "Do you prefer dogs or cats? Why?",
+            "paraphrased": "What animals are rare in your home country?"
+          },
+          {
+            "original": "In your opinion are zoos ethical?",
+            "paraphrased": "Are animals usually treated well in your home country?"
+          },
+          {
+            "original": "What would you do if came face to face with a bear while hiking?",
+            "paraphrased": "Do you believe it is wrong to keep a dog in a small apartment?"
+          },
+          {
+            "original": "What animals are rare in your country?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are animals usually treated well in your country?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you enjoy visiting farms?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you think it is wrong to keep a dog in a small apartment?",
+            "paraphrased": ""
+          },
+          {
+            "original": "If you owned a farm what would you keep on it?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Holidays (11 questions)",
+        "slug": "holidays",
+        "questions": [
+          {
+            "original": "Are there many public holidays in your country each year?",
+            "paraphrased": "Are there many public holidays in your home country each year?"
+          },
+          {
+            "original": "What are the most important public holidays in your country? Why are they important and what do people usually do on them?",
+            "paraphrased": "What are the most important public holidays in your home country? Why are they important and what do people usually do on them?"
+          },
+          {
+            "original": "What is your favorite public holiday? Why is it your favorite and what do you usually do on it?",
+            "paraphrased": "Are you fond of attending large public events on public holidays? What events do you usually attend?"
+          },
+          {
+            "original": "Do you like attending large public events on public holidays? What events do you usually attend?",
+            "paraphrased": "Apart from public holidays what other holidays do you usually have each year? Generally, do you get time off school or work?"
+          },
+          {
+            "original": "Apart from public holidays what other holidays do you usually have each year? Do you usually get time off school or work?",
+            "paraphrased": "Generally, do you sign up for special courses or activities in holiday periods?"
+          },
+          {
+            "original": "During extended holiday periods do you prefer to travel or stay at home?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you spend a lot of time with friends or family during holidays or are you usually alone?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you usually sign up for special courses or activities in holiday periods?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are there certain hobbies you do or sports you play during holiday periods?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you enjoy extended break periods or do you tend to get bored?",
+            "paraphrased": ""
+          },
+          {
+            "original": "When you go back to your normal routine after a holiday do you usually feel excited or depressed?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Travel (21 questions)",
+        "slug": "travel",
+        "questions": [
+          {
+            "original": "Do you like to travel? Do you consider yourself well-travelled?",
+            "paraphrased": "Are you fond of to travel? Do you consider yourself well-travelled?"
+          },
+          {
+            "original": "Describe the best trip you've ever taken.",
+            "paraphrased": "Would you rather to travel in your home country or abroad? Why?"
+          },
+          {
+            "original": "Describe the worst trip you've taken. Why was it so bad?",
+            "paraphrased": "Would you rather to take short trips away from home or longer ones?"
+          },
+          {
+            "original": "Do you prefer to travel in your home country or abroad? Why?",
+            "paraphrased": "Would you rather to travel individually or with family or with friends?"
+          },
+          {
+            "original": "Do you prefer to take short trips away from home or longer ones?",
+            "paraphrased": "What are the pros and cons of travelling solo?"
+          },
+          {
+            "original": "Do you prefer to travel individually or with family or with friends?",
+            "paraphrased": "Do you tend to getting home sick on longer trips?"
+          },
+          {
+            "original": "What are the advantages and disadvantages of travelling solo?",
+            "paraphrased": "Would you rather to travel by plane, boat, car, bicycle or on foot?"
+          },
+          {
+            "original": "Are you prone to getting home sick on longer trips?",
+            "paraphrased": "Would you rather beach holidays or city sightseeing?"
+          },
+          {
+            "original": "Do you prefer to travel by plane, boat, car, bicycle or on foot?",
+            "paraphrased": "At any point in your life, have you been on an ocean cruise? If so how was it?"
+          },
+          {
+            "original": "Do you prefer beach holidays or city sightseeing?",
+            "paraphrased": "At any point in your life, have you been on a camping car tour? Did you enjoy it?"
+          },
+          {
+            "original": "Have you ever been on an ocean cruise? If so how was it?",
+            "paraphrased": "At any point in your life, have you been on a bicycle tour? Was it a good experience?"
+          },
+          {
+            "original": "Have you ever been on a camping car tour? Did you enjoy it?",
+            "paraphrased": "At any point in your life, have you been on a hiking trek? Was it difficult?"
+          },
+          {
+            "original": "Have you ever been on a bicycle tour? Was it a good experience?",
+            "paraphrased": "Are you fond of to do adventure activities? What adventure activities have you done before and which ones would you like to try?"
+          },
+          {
+            "original": "Have you ever been on a hiking trek? Was it difficult?",
+            "paraphrased": "At any point in your life, have you missed a flight?"
+          },
+          {
+            "original": "Do you like to do adventure activities? What adventure activities have you done before and which ones would you like to try?",
+            "paraphrased": "At any point in your life, have you lost your bags while travelling?"
+          },
+          {
+            "original": "Are you adventurous with food when you travel?",
+            "paraphrased": "At any point in your life, have you been robbed while travelling?"
+          },
+          {
+            "original": "Have you ever missed a flight?",
+            "paraphrased": "At any point in your life, have you had any problems getting through customs or passport control?"
+          },
+          {
+            "original": "Have you ever lost your bags while travelling?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever been robbed while travelling?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever had any problems getting through customs or passport control?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you enjoy being at airports or not? What do you like or dislike about them?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Your Neighbourhood (13 questions)",
+        "slug": "yourneighbourhood",
+        "questions": [
+          {
+            "original": "Where do you live?",
+            "paraphrased": "Is there much crime in your neighbourhood? Generally, do you feel safe there?"
+          },
+          {
+            "original": "Describe your neighbourhood. Does it have much character?",
+            "paraphrased": ""
+          },
+          {
+            "original": "How long have you lived in that area?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Why did you move there?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Would you like to stay in your neighbourhood for the long term or would you prefer to leave?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is there much crime in your neighbourhood? Do you usually feel safe there?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you feel safe walking through your neighbourhood after dark?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are there nice parks near to your house?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are there a variety of shops in your neighbourhood?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is there good public transport to other areas in your neighbourhood?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is there a sense of community in your neighbourhood? Do many people know each other?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is your neighbourhood considered to be a wealthy area or not?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are there many foreign born people in your neighbourhood?",
+            "paraphrased": ""
+          }
+        ]
+      }
+    ]
+  }
+]

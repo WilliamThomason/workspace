@@ -1,0 +1,1701 @@
+[
+  {
+    "category": "Education & Learning",
+    "topics": [
+      {
+        "title": "Books and Reading (18 questions)",
+        "slug": "booksreading",
+        "questions": [
+          {
+            "original": "Do you read books often? When do you usually read them?",
+            "paraphrased": "Are you fond of books about crime?"
+          },
+          {
+            "original": "What is your favourite book? Why do you like it?",
+            "paraphrased": "Are you fond of horror stories?"
+          },
+          {
+            "original": "Who is your favourite author? Why do you like about his or her style?",
+            "paraphrased": "Are you fond of mystery stories?"
+          },
+          {
+            "original": "What genre of stories do you usually read?",
+            "paraphrased": "Are you fond of fantasy or science fiction stories?"
+          },
+          {
+            "original": "Do you like books about crime?",
+            "paraphrased": "Are you fond of romance stories?"
+          },
+          {
+            "original": "Do you like horror stories?",
+            "paraphrased": "Would you rather short stories or long ones?"
+          },
+          {
+            "original": "Do you like mystery stories?",
+            "paraphrased": "At any point in your life, have you read a book in a different language?"
+          },
+          {
+            "original": "Do you like fantasy or science fiction stories?",
+            "paraphrased": "Do you tend to prefer to read books or watch TV?"
+          },
+          {
+            "original": "Do you like romance stories?",
+            "paraphrased": "Would you rather to read the news in a newspaper or on the internet?"
+          },
+          {
+            "original": "Do you prefer short stories or long ones?",
+            "paraphrased": ""
+          },
+          {
+            "original": "How many pages was the longest book you've ever read? How long did it take you to read?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are you a fast reader?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever read a book in a different language?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you ever read stories using an e-reader?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you usually prefer to read books or watch TV?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you read newspapers? What type of articles do you like to read?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you prefer to read the news in a newspaper or on the internet?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you read magazines? What sort of magazines do you like?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Can You Describe...? (12 questions)",
+        "slug": "canyoudescribe",
+        "questions": [
+          {
+            "original": "Can you describe where your home is located?",
+            "paraphrased": "Can you describe the weather in your home country?"
+          },
+          {
+            "original": "Can you describe how to drive a car?",
+            "paraphrased": "Can you describe how the government works in your home country?"
+          },
+          {
+            "original": "Can you describe the weather in your country?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Can you describe an average day in your life?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Can you describe the last vacation you went on?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Can you describe how the government works in your country?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Can you describe your favourite food?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Can you describe the happiest moment in your life?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Can you describe the scariest moment in your life?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Can you describe your family members?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Can you describe your best friend?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Can you describe your intentions for the next five years of your life?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Do You Know How To...? (12 questions)",
+        "slug": "doyouknowhowto",
+        "questions": [
+          {
+            "original": "Do you know how to swim?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you know how to play tennis?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you know how to play golf?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you know how to ski?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you know how to ride a horse?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you know how to ride a pushbike?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you know how to ride a motorbike?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you know how to drive a car?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you know how to cook?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you know how to juggle?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you know how to do computer coding?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you know how to touch your nose with your tongue?",
+            "paraphrased": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Work, Money & Business",
+    "topics": [
+      {
+        "title": "Work and Jobs (19 questions)",
+        "slug": "workjobs",
+        "questions": [
+          {
+            "original": "Do you currently have or have you previously had a job? If so describe it.",
+            "paraphrased": "Have you got any career plans? Are you an ambitious person?"
+          },
+          {
+            "original": "Do you have any career plans? Are you an ambitious person?",
+            "paraphrased": "Would you rather flexible workplace hours or would you rather work set hours?"
+          },
+          {
+            "original": "Describe your dream job. Why does it appeal to you?",
+            "paraphrased": "Do people have too much job stress these days from your perspective?"
+          },
+          {
+            "original": "What job would you hate to do? Why?",
+            "paraphrased": "From your perspective are employees paid fair wages in your country?"
+          },
+          {
+            "original": "Is money, job satisfaction or lifestyle most important to you when considering a job?",
+            "paraphrased": "Have you got any plans to run a business in the future? If so what sort of business?"
+          },
+          {
+            "original": "What is an ideal number of hours to work in a week?",
+            "paraphrased": "At any point in your life, have you done any voluntary work?"
+          },
+          {
+            "original": "Do you prefer flexible workplace hours or would you rather work set hours?",
+            "paraphrased": "Do you believe automation is going to take over all jobs in the future? If so are you concerned about it?"
+          },
+          {
+            "original": "Does a nine to five job suit your current lifestyle?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do people have too much job stress these days in your opinion?",
+            "paraphrased": ""
+          },
+          {
+            "original": "In your opinion are employees paid fair wages in your country?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Should overtime work be paid at a higher rate than normal?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Would you prefer to be paid an hourly rate as a contract worker or have a permanent job with an annual salary?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Would you ever be prepared to do a 'DDD' job (dirty, dangerous and difficult)?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Would you prefer to work for others or would you rather be your own boss?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you consider yourself to be a 'team player'? Do you enjoy working in a team environment or do you prefer to complete tasks on your own?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you have any plans to run a business in the future? If so what sort of business?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever done any voluntary work?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you think automation is going to take over all jobs in the future? If so are you concerned about it?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Given a choice would you prefer to have a job or not?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Business (12 questions)",
+        "slug": "business",
+        "questions": [
+          {
+            "original": "Have you ever owned a business? If not have you ever considered starting a business?",
+            "paraphrased": "At any point in your life, have you owned a business? If not have you ever considered starting a business?"
+          },
+          {
+            "original": "Do you think you have a 'business mind'? Are you entrepreneurial and hard working?",
+            "paraphrased": "Do you believe you have a 'business mind'? Are you entrepreneurial and hard working?"
+          },
+          {
+            "original": "Do you prefer to work for yourself or to work for other people?",
+            "paraphrased": "Would you rather to work for yourself or to work for other people?"
+          },
+          {
+            "original": "Do any of your friends or family run successful businesses? What characteristics do you think they bring which lead to their success?",
+            "paraphrased": "Do you believe you are you good at spotting good business opportunities? Have you got any good ideas for business opportunities at the moment?"
+          },
+          {
+            "original": "What businesses are successful in your neighbourhood? Why are they doing well?",
+            "paraphrased": "Are business startups more likely to succeed or fail in your home country? Are there more success stories or bankruptcies?"
+          },
+          {
+            "original": "Do you think you are you good at spotting good business opportunities? Have you got any good ideas for business opportunities at the moment?",
+            "paraphrased": "Do you believe starting up a new business is usually cost-prohibitive? Does it usually require large bank loans?"
+          },
+          {
+            "original": "Are business startups more likely to succeed or fail in your country? Are there more success stories or bankruptcies?",
+            "paraphrased": "From your perspective is luck, strategy or hard work the most important factor in running becoming successful in business?"
+          },
+          {
+            "original": "Do you think starting up a new business is usually cost-prohibitive? Does it usually require large bank loans?",
+            "paraphrased": ""
+          },
+          {
+            "original": "In your opinion is luck, strategy or hard work the most important factor in running becoming successful in business?",
+            "paraphrased": ""
+          },
+          {
+            "original": "How important do you think connections are in running a business?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What do you think is the usually the biggest factor in a business failing?",
+            "paraphrased": ""
+          },
+          {
+            "original": "How important do you think it is to complete business course before starting a business?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Money (16 questions)",
+        "slug": "money",
+        "questions": [
+          {
+            "original": "How important is money in your life? Do you think about it a lot?",
+            "paraphrased": "How important is money in your life? Do you believe about it a lot?"
+          },
+          {
+            "original": "Are you more of a 'saver' or a 'spender'?",
+            "paraphrased": "At any point in your life, have you lost any money?"
+          },
+          {
+            "original": "What do you typically spend the most money on each month?",
+            "paraphrased": "Do you feel that you're usually generous with money?"
+          },
+          {
+            "original": "Is there any way you can save more money?",
+            "paraphrased": "Do you believe lending money to friends and family is a good idea?"
+          },
+          {
+            "original": "Have you ever lost any money?",
+            "paraphrased": "At any point in your life, have you been in debt? Who did you owe money to?"
+          },
+          {
+            "original": "Do you think that you're usually generous with money?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you think lending money to friends and family is a good idea?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Has anyone ever owed money to you?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever been in debt? Who did you owe money to?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Would you prefer to be comfortably well off or extremely rich?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Would you prefer to be rich or beautiful?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Does more money lead to more happiness?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is money the most important issue in a marriage?",
+            "paraphrased": ""
+          },
+          {
+            "original": "How much money do you think you need to be financially independent?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What is the most expensive thing you've ever bought?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What's do you think is the best legal way of getting wealthy in a short time?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Investing (14 questions)",
+        "slug": "investing",
+        "questions": [
+          {
+            "original": "Do you have any investments at the moment? What are they?",
+            "paraphrased": "Have you got any investments at the moment? What are they?"
+          },
+          {
+            "original": "Have you ever made money on an investment? Have you ever lost any?",
+            "paraphrased": "At any point in your life, have you made money on an investment? Have you ever lost any?"
+          },
+          {
+            "original": "Do you know anyone who has made or lost a lot of money investing?",
+            "paraphrased": "Do you believe real estate is a good investment at the moment? What are the advantages and disadvantages of investing in real estate?"
+          },
+          {
+            "original": "If you had one million dollars to invest today how would you choose to invest it? For example in your own business, real estate, the stock market or bitcoin.",
+            "paraphrased": "From your perspective is the stock market in your country currently undervalued or overvalued? Do you think investing in stocks is risky?"
+          },
+          {
+            "original": "Do you think real estate is a good investment at the moment? What are the advantages and disadvantages of investing in real estate?",
+            "paraphrased": "How do you feel about borrowing money to invest? Would you rather to borrow money from a bank or from family or friends?"
+          },
+          {
+            "original": "In your opinion is the stock market in your country currently undervalued or overvalued? Do you think investing in stocks is risky?",
+            "paraphrased": ""
+          },
+          {
+            "original": "How do you feel about borrowing money to invest? Do you prefer to borrow money from a bank or from family or friends?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What is diversification in investing and why is it important?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What is compound interest and how does it affect savings and investments?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What are some common biases that can impact investment decisions and how can they be overcome?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is your country experiencing inflation at the moment? How does inflation impact investing?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Can you explain ethical investing and how it relates to personal values and sustainability? Share your opinion on this approach to investing.",
+            "paraphrased": ""
+          },
+          {
+            "original": "How do geopolitical events, such as trade wars or political instability, affect global financial markets and investments?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you agree with Warren Buffet that investors should be fearful when others are greedy and greedy when others are fearful?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "The Economy (12 questions)",
+        "slug": "theeconomy",
+        "questions": [
+          {
+            "original": "How is the economy of your country at the moment? Do you feel it has a positive or negative outlook?",
+            "paraphrased": "From your perspective what is the best way to stimulate economic growth?"
+          },
+          {
+            "original": "In your opinion what is the best way to stimulate economic growth?",
+            "paraphrased": "From your perspective what is the most effective way to reduce income inequality?"
+          },
+          {
+            "original": "What are some advantages and disadvantages of a free market economy?",
+            "paraphrased": "Do you believe AI is going to have a big impact on the job market in coming years?"
+          },
+          {
+            "original": "What role should governments play in regulating the economy?",
+            "paraphrased": ""
+          },
+          {
+            "original": "How do taxes affect the economy and what role should they play in government policy?",
+            "paraphrased": ""
+          },
+          {
+            "original": "In your opinion what is the most effective way to reduce income inequality?",
+            "paraphrased": ""
+          },
+          {
+            "original": "How does the stock market work and why is it important for the economy?",
+            "paraphrased": ""
+          },
+          {
+            "original": "How has globalisation affected the economies of different countries? What impact does international trade have on the economy of your country?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is inflation affecting your country's economy at the moment?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you think AI is going to have a big impact on the job market in coming years?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What is your opinion on the gig economy and its effects on workers?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What are some of the benefits and drawbacks of a cashless economy?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Future Plans and Goals (16 questions)",
+        "slug": "futureplansgoals",
+        "questions": [
+          {
+            "original": "Do you have goals relating to education?",
+            "paraphrased": "Have you got goals relating to education?"
+          },
+          {
+            "original": "Do you have goals relating to career?",
+            "paraphrased": "Have you got goals relating to career?"
+          },
+          {
+            "original": "Do you have goals relating to money?",
+            "paraphrased": "Have you got goals relating to money?"
+          },
+          {
+            "original": "Do you have goals relating to family and relationships?",
+            "paraphrased": "Have you got goals relating to family and relationships?"
+          },
+          {
+            "original": "Do you have goals relating to health and fitness?",
+            "paraphrased": "Have you got goals relating to health and fitness?"
+          },
+          {
+            "original": "What are your most important goals at the moment?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Which goals are short term and which are longer term?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are your goals 'SMART' (specific, measurable, attainable, relevant and time-bound)?",
+            "paraphrased": ""
+          },
+          {
+            "original": "How can you achieve your goals?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Where do you plan to be and what do you plan to be doing one year from now?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Where do you plan to be and what do you plan to be doing five years from now?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Where do you plan to be and what do you plan to be doing ten years from now?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you make New Year's resolutions each year?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What were your New Year's resolutions this year? Have you kept them?",
+            "paraphrased": ""
+          },
+          {
+            "original": "When you make a plan do you usually stick to it?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What is on your bucket list?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Do You Agree or Disagree? (13 questions)",
+        "slug": "doyouagreeordisagree",
+        "questions": [
+          {
+            "original": "Marijuana should be legalized.",
+            "paraphrased": ""
+          },
+          {
+            "original": "Same sex marriages should be made legal.",
+            "paraphrased": ""
+          },
+          {
+            "original": "Businesses should be free to refuse service to whoever they wish.",
+            "paraphrased": ""
+          },
+          {
+            "original": "Shouting is a type of violence.",
+            "paraphrased": ""
+          },
+          {
+            "original": "Capitalism is the only system of government that ensures prosperity.",
+            "paraphrased": ""
+          },
+          {
+            "original": "Governments should always be as small as possible.",
+            "paraphrased": ""
+          },
+          {
+            "original": "Abortion is unethical.",
+            "paraphrased": ""
+          },
+          {
+            "original": "Artificial Intelligence is a threat to humankind.",
+            "paraphrased": ""
+          },
+          {
+            "original": "Climate change is real.",
+            "paraphrased": ""
+          },
+          {
+            "original": "Governments need to collect data about us to protect against terrorism.",
+            "paraphrased": ""
+          },
+          {
+            "original": "The death penalty is sometimes necessary.",
+            "paraphrased": ""
+          },
+          {
+            "original": "Free trade deals are mostly beneficial to all parties.",
+            "paraphrased": ""
+          },
+          {
+            "original": "Sweet foods should be banned, restricted or highly taxed to counter obesity.",
+            "paraphrased": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Food, Health & Lifestyle",
+    "topics": [
+      {
+        "title": "Food and Diet (17 questions)",
+        "slug": "fooddiet",
+        "questions": [
+          {
+            "original": "Do you usually eat three meals a day?",
+            "paraphrased": "Generally, do you eat three meals a day?"
+          },
+          {
+            "original": "What do you usually eat for breakfast?",
+            "paraphrased": "Do you ever skip meals? Do you believe skipping some meals is healthy?"
+          },
+          {
+            "original": "What do you usually east for lunch?",
+            "paraphrased": "At any point in your life, have you been on a diet? Did it work?"
+          },
+          {
+            "original": "What do you usually eat for dinner?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you agree with the saying 'Eat breakfast like a king, lunch like a prince and dinner like a pauper'?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What is your favorite food? How often do you eat it?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are you an adventurous eater? Do you often try new foods?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you ever skip meals? Do you think skipping some meals is healthy?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever been on a diet? Did it work?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you snack often? What snack foods do you like?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you enjoy junk food? What junk foods do you enjoy?",
+            "paraphrased": ""
+          },
+          {
+            "original": "How often do you eat junk food?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are you a sweet tooth?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you enjoy drinking coffee?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you enjoy drinking alcohol? What type of alcohol do you enjoy and how often?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What food do you consider to be the unhealthiest?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is there any food you think you should cut down for the sake of your health?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Dieting (12 questions)",
+        "slug": "dieting",
+        "questions": [
+          {
+            "original": "Have you ever been on a diet? Describe your experience. Did you lose weight?",
+            "paraphrased": "At any point in your life, have you been on a diet? Describe your experience. Did you lose weight?"
+          },
+          {
+            "original": "How do you feel when you diet? Do you get tired or grumpy?",
+            "paraphrased": "At any point in your life, have you gone on a 'fad diet'? What claims were made and was the diet successful?"
+          },
+          {
+            "original": "Are you usually good at controlling what you consume?",
+            "paraphrased": "Do you believe dieting is the best way to lose weight, or is exercise more important?"
+          },
+          {
+            "original": "What kind of food or beverage do you have a weakness for?",
+            "paraphrased": "Have you got any plans to go on a diet soon?"
+          },
+          {
+            "original": "What do you think you most need to cut down on in your diet?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are you a 'sweet tooth'?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you often enjoy alcohol?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is there anything you should consume more of?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever gone on a 'fad diet'? What claims were made and was the diet successful?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you ever skip meals for health purposes?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you think dieting is the best way to lose weight, or is exercise more important?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you have any plans to go on a diet soon?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Cooking (12 questions)",
+        "slug": "cooking",
+        "questions": [
+          {
+            "original": "Can you cook well?",
+            "paraphrased": "Generally, do you cook for fun or because you have to?"
+          },
+          {
+            "original": "What dishes can you cook?",
+            "paraphrased": "At any point in your life, have you had a cooking disaster? What happened?"
+          },
+          {
+            "original": "How often do you cook?",
+            "paraphrased": "From your perspective what is the easiest dish to cook?"
+          },
+          {
+            "original": "Do you find cooking enjoyable?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you usually cook for fun or because you have to?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Describe the best meal you've ever cooked?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever had a cooking disaster? What happened?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are you adventurous in the kitchen? Do you cook new foods often?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you ever cook foreign dishes?",
+            "paraphrased": ""
+          },
+          {
+            "original": "In your opinion what is the easiest dish to cook?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What's a dish that's very difficult to cook? Why is it difficult?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Who's the best cook out of your family and friends? Why are they good?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Restaurants and Eating Out (20 questions)",
+        "slug": "restaurantseatingout",
+        "questions": [
+          {
+            "original": "Do you eat out often?",
+            "paraphrased": "Would you rather to eat out or eat at home?"
+          },
+          {
+            "original": "Do you prefer to eat out or eat at home?",
+            "paraphrased": "From your perspective is eating out cheap or expensive in your country?"
+          },
+          {
+            "original": "Describe your favourite restaurant.",
+            "paraphrased": "At any point in your life, have you had a bad experience eating out? Describe your experience."
+          },
+          {
+            "original": "In your opinion is eating out cheap or expensive in your country?",
+            "paraphrased": "At any point in your life, have you complained about the service at a restaurant?"
+          },
+          {
+            "original": "Do you tend to eat out at expensive or inexpensive restaurants?",
+            "paraphrased": "At any point in your life, have you gotten sick after eating out?"
+          },
+          {
+            "original": "What's the most expensive meal you've ever had?",
+            "paraphrased": "Do people usually leave tip in restaurants in your home country?"
+          },
+          {
+            "original": "What is the best meal you've ever eaten out? Why was it so great?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever had a bad experience eating out? Describe your experience.",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever complained about the service at a restaurant?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever gotten sick after eating out?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you go to fast food restaurants often? Which fast food restaurants do you enjoy eating at?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you ever go to fine dining restaurants? Are they usually worth the money?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you often eat in food courts?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you ever eat street food?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you generally prefer to eat at franchised restaurants or independent ones?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is the ambience in a restaurant important to you?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is there a large variety of restaurants where you live?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are there many ethnic restaurants where you live?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do people usually leave tip in restaurants in your country?",
+            "paraphrased": ""
+          },
+          {
+            "original": "If you were going to open a restaurant what sort of restaurant would you choose? Why?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Sickness (12 questions)",
+        "slug": "sickness",
+        "questions": [
+          {
+            "original": "On average how often do you get sick?",
+            "paraphrased": "At any point in your life, have you had to stay overnight in a hospital?"
+          },
+          {
+            "original": "Do you often get colds?",
+            "paraphrased": "At any point in your life, have you had to take an ambulance?"
+          },
+          {
+            "original": "What is the most serious sickness you've had?",
+            "paraphrased": "At any point in your life, have you broken a bone?"
+          },
+          {
+            "original": "Have you ever had to stay overnight in a hospital?",
+            "paraphrased": "Have you got any allergies?"
+          },
+          {
+            "original": "Have you ever had to take an ambulance?",
+            "paraphrased": "Do you believe modern life causes people to get sick more often?"
+          },
+          {
+            "original": "Have you ever broken a bone?",
+            "paraphrased": "Generally, do you trust doctors or are you inclined to get a second opinion?"
+          },
+          {
+            "original": "Do you have any allergies?",
+            "paraphrased": "At any point in your life, have you taken Chinese medicine?"
+          },
+          {
+            "original": "Do you think modern life causes people to get sick more often?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What do you think about people who refuse vaccinations for their children?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you usually trust doctors or are you inclined to get a second opinion?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you believe alternative heath remedies are effective in curing illness?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever taken Chinese medicine?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Sports and Exercise (18 questions)",
+        "slug": "sportsexercise",
+        "questions": [
+          {
+            "original": "Do you exercise regularly? If so what exercise do you usually do?",
+            "paraphrased": "At any point in your life, have you done weights?"
+          },
+          {
+            "original": "Do you enjoy exercising or is it something you'd prefer not to do?",
+            "paraphrased": "At any point in your life, have you had a personal trainer?"
+          },
+          {
+            "original": "Do you often go for a walk?",
+            "paraphrased": "At any point in your life, have you been a member of a sports club?"
+          },
+          {
+            "original": "Do you ever go jogging?",
+            "paraphrased": "Are you fond of watching sports on TV?"
+          },
+          {
+            "original": "Do you ever work out?",
+            "paraphrased": "At any point in your life, have you competed in an athletics sporting event?"
+          },
+          {
+            "original": "Have you ever done weights?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you ever go swimming?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you tried yoga or Pilates? Was it beneficial?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever had a personal trainer?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you consider yourself to be a 'sporty' person?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you ever play sports? Which sports?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever been a member of a sports club?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are you a competitive person? Do you get a kick out of winning?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you enjoy ball sports? Are you good at them?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are you good at running?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you like watching sports on TV?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever competed in an athletics sporting event?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you enjoy watching the Olympics? How about the World Cup?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Free Time and Hobbies (13 questions)",
+        "slug": "freetimehobbies",
+        "questions": [
+          {
+            "original": "When do you usually get free time?",
+            "paraphrased": "Do you tend to prefer to spend your free time engaged in energetic, lively activities or calm, relaxing ones?"
+          },
+          {
+            "original": "What do you usually do in your free time?",
+            "paraphrased": "Would you rather to spend your free time with other people or alone?"
+          },
+          {
+            "original": "Do you usually prefer to spend your free time engaged in energetic, lively activities or calm, relaxing ones?",
+            "paraphrased": "Have you got any hobbies?"
+          },
+          {
+            "original": "Would you like to have more free time or do you think you would you feel bored?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you watch a lot of TV?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you prefer to spend your free time with other people or alone?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you have any hobbies?",
+            "paraphrased": ""
+          },
+          {
+            "original": "For how long have you had your hobby?",
+            "paraphrased": ""
+          },
+          {
+            "original": "How often do you get time to spend time on the hobby?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is your hobby expensive?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Can your hobby make money?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do many of your friends have the same hobby?",
+            "paraphrased": ""
+          },
+          {
+            "original": "How have your hobbies changed over your lifetime?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Shopping (14 questions)",
+        "slug": "shopping",
+        "questions": [
+          {
+            "original": "Do you enjoy shopping?",
+            "paraphrased": "Do you tend to prefer to buy brand names? Why?"
+          },
+          {
+            "original": "What's your favourite place to go shopping?",
+            "paraphrased": "Would you rather smaller shops or large stores? Why?"
+          },
+          {
+            "original": "How often do you shop for clothes and accessories?",
+            "paraphrased": "Do you tend to prefer independent stores or large franchises? Why?"
+          },
+          {
+            "original": "Do you usually prefer to buy brand names? Why?",
+            "paraphrased": "Are you fond of visiting outlets stores? What do you tend to buy there?"
+          },
+          {
+            "original": "How often do you go shopping for groceries?",
+            "paraphrased": "Generally, do you buy goods on-the-spot or compare prices at other shops before you buy?"
+          },
+          {
+            "original": "Do you prefer smaller shops or large stores? Why?",
+            "paraphrased": "Are you fond of to haggle when you shop?"
+          },
+          {
+            "original": "Do you usually prefer independent stores or large franchises? Why?",
+            "paraphrased": "At any point in your life, have you had a problem while trying to return or exchange an item from a shop?"
+          },
+          {
+            "original": "How often do you visit shopping malls?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you like visiting outlets stores? What do you tend to buy there?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you ever shop online? What do you shop for online?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What's the most expensive thing you've ever bought shopping?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you usually buy goods on-the-spot or compare prices at other shops before you buy?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you like to haggle when you shop?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever had a problem while trying to return or exchange an item from a shop?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Fashion (11 questions)",
+        "slug": "fashion",
+        "questions": [
+          {
+            "original": "Do you consider yourself to have good fashion sense?",
+            "paraphrased": "From your perspective is high fashion primarily a marketing ploy to get more money from consumers?"
+          },
+          {
+            "original": "Do you follow the seasonal trends in clothes and accesssories?",
+            "paraphrased": "Do you believe paying high prices for brand clothes and accessories is usually justified?"
+          },
+          {
+            "original": "In your opinion is high fashion primarily a marketing ploy to get more money from consumers?",
+            "paraphrased": "At any point in your life, have you bought brand name clothes or accessories? What was it and do you use it often?"
+          },
+          {
+            "original": "Do you think paying high prices for brand clothes and accessories is usually justified?",
+            "paraphrased": "Do you tend to prefer to wear fashionable clothes or comfortable clothes?"
+          },
+          {
+            "original": "Have you ever bought brand name clothes or accessories? What was it and do you use it often?",
+            "paraphrased": "Generally, do you try to wear complementary colours and patterns?"
+          },
+          {
+            "original": "Do you usually prefer to wear fashionable clothes or comfortable clothes?",
+            "paraphrased": "At any point in your life, have you been to a fashion show? If so did you enjoy it?"
+          },
+          {
+            "original": "Do you usually try to wear complementary colours and patterns?",
+            "paraphrased": "Do you feel that the appearance of fashion models sets unrealistic expectations for young people?"
+          },
+          {
+            "original": "Who is the most fashionable person among those you know? Describe how they usually dress.",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever been to a fashion show? If so did you enjoy it?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you think that the appearance of fashion models sets unrealistic expectations for young people?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you agree that you should never mix hot pink with bright orange?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Manners (12 questions)",
+        "slug": "manners",
+        "questions": [
+          {
+            "original": "Do you consider yourself to be a well-mannered person? Why?",
+            "paraphrased": "What are considered good manners in your home country while eating?"
+          },
+          {
+            "original": "What are considered good manners in your country while eating?",
+            "paraphrased": "What are considered bad manners in your home country while eating?"
+          },
+          {
+            "original": "What are considered bad manners in your country while eating?",
+            "paraphrased": "How should you greet people politely in your home country?"
+          },
+          {
+            "original": "How should you greet people politely in your country?",
+            "paraphrased": "What are considered good manners in your home country while travelling on public transportation?"
+          },
+          {
+            "original": "What are considered good manners in your country while travelling on public transportation?",
+            "paraphrased": "From your perspective are the locals where you live usually polite drivers?"
+          },
+          {
+            "original": "In your opinion are the locals where you live usually polite drivers?",
+            "paraphrased": "Do people usually form orderly queues in your home country?"
+          },
+          {
+            "original": "Do people usually form orderly queues in your country?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you often hold the door open for strangers in public?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Describe an experience you had when you encountered a person you considered to be rude.",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are you ever deliberately rude to anyone?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you agree that we should always respect our elders?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Should certain manners be made into law?",
+            "paraphrased": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Personal Life & Identity",
+    "topics": [
+      {
+        "title": "Health and Well-Being (17 questions)",
+        "slug": "healthwellbeing",
+        "questions": [
+          {
+            "original": "In your own opinion how healthy are you?",
+            "paraphrased": "Generally, do you eat healthy food?"
+          },
+          {
+            "original": "Do you usually eat healthy food?",
+            "paraphrased": "Do you believe you should exercise more often?"
+          },
+          {
+            "original": "How much fruit and vegetables do you consume in a typical day? Should you eat more?",
+            "paraphrased": "From your perspective is doing heavy weights healthy or harmful?"
+          },
+          {
+            "original": "How much meat is it healthy to eat?",
+            "paraphrased": "At any point in your life, have you had a serious illness?"
+          },
+          {
+            "original": "Is it beneficial to health to consume alcohol in moderation or is none at all better?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you take vitamins or supplements regularly?",
+            "paraphrased": ""
+          },
+          {
+            "original": "How often do you exercise? What exercise do you do?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you think you should exercise more often?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What is an ideal amount of exercise?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What do you think is the best exercise for cardiovascular fitness?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What is the best exercise for building up your strength?",
+            "paraphrased": ""
+          },
+          {
+            "original": "In your opinion is doing heavy weights healthy or harmful?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is jogging a good form of exercise or is it too hard on the joints?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you ever do yoga or pilates? If so how is it beneficial?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever had a serious illness?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you suffer from any ongoing health conditions?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Do you suffer from any allergies?",
+            "paraphrased": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "category": "Society & Culture",
+    "topics": [
+      {
+        "title": "Culture and Tradition (12 questions)",
+        "slug": "culturetradition",
+        "questions": [
+          {
+            "original": "What things define culture?",
+            "paraphrased": "Can you think of any cultures that are particularly attractive to you? What do you like about them?"
+          },
+          {
+            "original": "What aspects do you like about your culture?",
+            "paraphrased": "Is any part of the culture in your home country disintegrating? Why is this happening?"
+          },
+          {
+            "original": "What aspects do you dislike about your culture? Is there anything you'd like to change?",
+            "paraphrased": "Do you believe it is healthy for a culture to evolve and adapt over time?"
+          },
+          {
+            "original": "Are there any cultures that are particularly attractive to you? What do you like about them?",
+            "paraphrased": "Are there any traditional customs you follow in your society?"
+          },
+          {
+            "original": "Do any aspects of other cultures offend you? Do you find any aspects difficult to understand?",
+            "paraphrased": "At any point in your life, have you experienced culture shock while travelling?"
+          },
+          {
+            "original": "Is any part of the culture in your country disintegrating? Why is this happening?",
+            "paraphrased": "At any point in your life, have you had a cultural misunderstanding?"
+          },
+          {
+            "original": "Do you think it is healthy for a culture to evolve and adapt over time?",
+            "paraphrased": ""
+          },
+          {
+            "original": "In your view how important is it to maintain the customs of your ancestors?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Are there any traditional customs you follow in your culture?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever experienced culture shock while travelling?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Would you consider dating or marrying someone from another culture?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Have you ever had a cultural misunderstanding?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Social Issues (14 questions)",
+        "slug": "socialissues",
+        "questions": [
+          {
+            "original": "In your opinion what's the most important social issue in your country?",
+            "paraphrased": "From your perspective what's the most important social issue in your country?"
+          },
+          {
+            "original": "Is there much poverty where you live? What can be done to address it?",
+            "paraphrased": "Is there a big gap between the rich and the poor in your home country? Why is this?"
+          },
+          {
+            "original": "Is there a big gap between the rich and the poor in your country? Why is this?",
+            "paraphrased": "Are there many illicit drugs in your country? From your perspective is there adequate punishment for drug users and dealers?"
+          },
+          {
+            "original": "Are there many illicit drugs in your country? In your opinion is there adequate punishment for drug users and dealers?",
+            "paraphrased": "Is youth unemployment high where you live? What about employment of the elderly?"
+          },
+          {
+            "original": "Is youth unemployment high in your society? What about employment of the elderly?",
+            "paraphrased": "Is racism common where you live? How is it usually manifest?"
+          },
+          {
+            "original": "Does your community have a high or low level of crime? Which crimes are most common?",
+            "paraphrased": "Is abortion legal or illegal in your home country? What is your opinion on it?"
+          },
+          {
+            "original": "Is racism common in your society? How is it usually manifest?",
+            "paraphrased": "Is there much corruption in your home country compared to other countries? How often do politicians go to jail for corruption?"
+          },
+          {
+            "original": "Is abortion legal or illegal in your country? What is your opinion on it?",
+            "paraphrased": "Is the birth rate high or low where you live? Are there likely to be issues with an ageing population in the future?"
+          },
+          {
+            "original": "Is there much corruption in your country compared to other countries? How often do politicians go to jail for corruption?",
+            "paraphrased": "Do you think the education system in your home country is good?"
+          },
+          {
+            "original": "Is the birth rate high or low in your society? Are there likely to be issues with an ageing population in the future?",
+            "paraphrased": "Is alcohol consumption a problem where you live? Why?"
+          },
+          {
+            "original": "Do you think the education system in your country is good?",
+            "paraphrased": "How is the health system in your home country? Is it affordable and accessible to all?"
+          },
+          {
+            "original": "Is alcohol consumption a problem in your society? Why?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is obesity a problem in your community? Are obesity rates rising?",
+            "paraphrased": ""
+          },
+          {
+            "original": "How is the health system in your country? Is it affordable and accessible to all?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Social and Demographic Trends (12 questions)",
+        "slug": "socialdemographictrends",
+        "questions": [
+          {
+            "original": "What are some significant social or demographic trends in your county?",
+            "paraphrased": "Is the population in your home country ageing? If so what implications does that have?"
+          },
+          {
+            "original": "Is the population in your country ageing? If so what implications does that have?",
+            "paraphrased": "Is household wealth growing or declining in your home country? What about household debt?"
+          },
+          {
+            "original": "Is household wealth growing or declining in your country? What about household debt?",
+            "paraphrased": "Do you believe people are becoming more disconnected from society as they become more connected online?"
+          },
+          {
+            "original": "Do you think people are becoming more disconnected from society as they become more connected online?",
+            "paraphrased": "Are families getting larger or smaller where you live? Why?"
+          },
+          {
+            "original": "Are families getting larger or smaller in your society? Why?",
+            "paraphrased": "From your perspective are women becoming more empowered in your society?"
+          },
+          {
+            "original": "In your opinion are women becoming more empowered in your society?",
+            "paraphrased": "Are any religions where you live growing or declining? Which religions are growing and which are declining?"
+          },
+          {
+            "original": "Is immigration to your country changing it? If so how is it changing?",
+            "paraphrased": "Is the middle class in your home country expanding or declining?"
+          },
+          {
+            "original": "Are any religions in your society growing or declining? Which religions are growing and which are declining?",
+            "paraphrased": "How is employment changing in your home country? Can you see evidence of automation in any industries?"
+          },
+          {
+            "original": "Is the middle class in your country expanding or declining?",
+            "paraphrased": "Is health improving and life expectancy increasing where you live?"
+          },
+          {
+            "original": "How is employment changing in your country? Can you see evidence of automation in any industries?",
+            "paraphrased": "Is obesity a big issue in your home country?"
+          },
+          {
+            "original": "Is health improving and life expectancy increasing in your society?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Is obesity a big issue in your country?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Modern Life (14 questions)",
+        "slug": "modernlife",
+        "questions": [
+          {
+            "original": "How has technology transformed our daily lives in the past decade? Are there any advancements you find particularly impressive or concerning?",
+            "paraphrased": "How has technology transformed our daily lives in the past decade? Can you think of any advancements you find particularly impressive or concerning?"
+          },
+          {
+            "original": "In your opinion, what are the pros and cons of living in a digitally connected world?",
+            "paraphrased": "Discuss the growing role of artificial intelligence (AI) in our daily lives. Have you got any concerns about it?"
+          },
+          {
+            "original": "How has social media influenced the way we communicate and interact with others?",
+            "paraphrased": "What are the pros and cons of remote work or online education?"
+          },
+          {
+            "original": "Discuss the impact of globalization on culture, economy, and society.",
+            "paraphrased": "What are some of the current trends in fashion, music, or entertainment? Do you believe these trends reflect societal values and attitudes?"
+          },
+          {
+            "original": "How has the concept of work-life balance evolved in recent years? Is it easier or more difficult to achieve in today's society?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What are some current environmental issues that concern you? How can individuals contribute to addressing them?",
+            "paraphrased": ""
+          },
+          {
+            "original": "How has the pandemic (COVID-19) affected our lives and society as a whole? What changes do you think will remain even after the pandemic ends?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Discuss the growing role of artificial intelligence (AI) in our daily lives. Do you have any concerns about it?",
+            "paraphrased": ""
+          },
+          {
+            "original": "What are the advantages and disadvantages of remote work or online education?",
+            "paraphrased": ""
+          },
+          {
+            "original": "How has the gig economy changed the way people work and earn a living?",
+            "paraphrased": ""
+          },
+          {
+            "original": "How has consumer behaviour changed in the era of e-commerce? What are the effects on traditional brick-and-mortar businesses?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Explore the role of renewable energy sources in transitioning to a more sustainable future.",
+            "paraphrased": ""
+          },
+          {
+            "original": "Discuss the challenges and benefits of living in urban areas versus rural areas in the modern world.",
+            "paraphrased": ""
+          },
+          {
+            "original": "What are some of the current trends in fashion, music, or entertainment? Do you think these trends reflect societal values and attitudes?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Prejudice, Biases and Stereotypes (12 questions)",
+        "slug": "prejudicebiasesstereotypes",
+        "questions": [
+          {
+            "original": "Do you have any strong biases or prejudices? If so how do you think it came about?",
+            "paraphrased": "Have you got any strong biases or prejudices? If so how do you think it came about?"
+          },
+          {
+            "original": "Do you feel negatively towards any particular racial group?",
+            "paraphrased": "Do you think there is much racism where you live?"
+          },
+          {
+            "original": "Do you think there is much racism in your society?",
+            "paraphrased": "Have you got a negative impression of any particular country? How do you think you got this impression?"
+          },
+          {
+            "original": "Do you have a negative impression of any particular country? How do you think you got this impression?",
+            "paraphrased": "Can you think of any cultures you feel negative towards?"
+          },
+          {
+            "original": "Are there any cultures you feel negative towards?",
+            "paraphrased": "What are some cultural stereotypes? Do you believe there is any truth to them?"
+          },
+          {
+            "original": "What are some cultural stereotypes? Do you think there is any truth to them?",
+            "paraphrased": "Can you think of any religions you feel negatively about? Why?"
+          },
+          {
+            "original": "Are there any religions you feel negatively about? Why?",
+            "paraphrased": "From your perspective is sexism a big issue in your society?"
+          },
+          {
+            "original": "In your opinion is sexism a big issue in your society?",
+            "paraphrased": "At any point in your life, have you been subjected to sexist behaviour?"
+          },
+          {
+            "original": "Have you ever been subjected to sexist behaviour?",
+            "paraphrased": "What are some gender stereotypes? Do you believe there is any truth to these stereotypes?"
+          },
+          {
+            "original": "What are some gender stereotypes? Do you think there is any truth to these stereotypes?",
+            "paraphrased": "Is ageism an issue where you live? How is it manifest?"
+          },
+          {
+            "original": "Is ageism an issue in your society? How is it manifest?",
+            "paraphrased": "Do you believe old people tend to be more conservative than young people?"
+          },
+          {
+            "original": "Do you think old people tend to be more conservative than young people?",
+            "paraphrased": ""
+          }
+        ]
+      },
+      {
+        "title": "Race and Racism (12 questions)",
+        "slug": "raceracism",
+        "questions": [
+          {
+            "original": "In your opinion is race biologically determined or at least partly a social construct?",
+            "paraphrased": "From your perspective is race biologically determined or at least partly a social construct?"
+          },
+          {
+            "original": "What race do you personally identify with?",
+            "paraphrased": "What racial groups are most common in your home country?"
+          },
+          {
+            "original": "What racial groups are most common in your country?",
+            "paraphrased": "What minority groups exist where you live? How are they treated?"
+          },
+          {
+            "original": "What minority groups exist in your society? How are they treated?",
+            "paraphrased": "Is racism a big issue where you live? How is it manifest?"
+          },
+          {
+            "original": "What do you think causes racism?",
+            "paraphrased": "In your home country are there many stories about racism in the news?"
+          },
+          {
+            "original": "Is racism a big issue in your society? How is it manifest?",
+            "paraphrased": "At any point in your life, have you experienced racism yourself? Describe what happened. How did you know it was racism?"
+          },
+          {
+            "original": "In your country are there many stories about racism in the news?",
+            "paraphrased": "Have you got any friends from a different racial group?"
+          },
+          {
+            "original": "Have you ever experienced racism yourself? Describe what happened. How did you know it was racism?",
+            "paraphrased": "Are interracial marriages common where you live?"
+          },
+          {
+            "original": "Do you have any friends from a different racial group?",
+            "paraphrased": "From your perspective do the laws in your country tend to encourage or discourage racism?"
+          },
+          {
+            "original": "Are interracial marriages common in your society?",
+            "paraphrased": ""
+          },
+          {
+            "original": "In your opinion do the laws in your country tend to encourage or discourage racism?",
+            "paraphrased": ""
+          },
+          {
+            "original": "Should the government of your country do more to stop racism?",
+            "paraphrased": ""
+          }
+        ]
+      }
+    ]
+  }
+]

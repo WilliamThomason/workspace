@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Food & Drink Culture — Speaking Lesson | Eloquenta</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Food &amp; Drink Culture — Speaking Lesson | Eloquenta</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -21,127 +22,166 @@
   --accent-glow:rgba(34,211,238,.35);
   --amber:#fbbf24;
   --green:#34d399;
+  --lime:#a3e635;
   --rose:#fb7185;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;min-height:100vh;height:auto}
-.slide{display:none;width:100vw;min-height:100vh;height:auto;position:relative;flex-direction:column;justify-content:center;align-items:center}
-.slide.active{display:flex}
-.slide-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.28) saturate(1.2)}
-.slide-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.88) 0%,rgba(0,0,0,.2) 40%,rgba(0,0,0,.55) 100%)}
-.slide-content{position:relative;z-index:2;max-width:820px;padding:40px;text-align-items:center;max-height:calc(100vh - 120px);overflow-y:auto}
-.slide-number{position:absolute;top:24px;left:28px;font-size:11px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.3);text-transform:uppercase}
-.slide-category{display:inline-block;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px;border:1px solid}
-.slide h1{font-size:3rem;font-weight:900;letter-spacing:-1px;line-height:1.1;margin-bottom:8px}
-.slide h2{font-size:1.4rem;font-weight:600;line-height:1.4;margin-bottom:16px;color:rgba(255,255,255,.9)}
+body{font-family:'Inter',sans-serif;background:#1c1c1c;color:#f1f5f9;overflow:hidden;height:100vh;width:100vw}
+
+/* Top Bar */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:10px 20px;background:rgba(28,28,28,.85);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
+.topbar-brand{font-size:18px;font-weight:700;color:#f1f5f9;font-family:'Inter',sans-serif;letter-spacing:.5px}
+.topbar-brand .o{color:#22d3ee}
+.topbar-back{padding:8px 20px;border-radius:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:#e2e8f0;font-size:13px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s;letter-spacing:.3px}
+.topbar-back:hover{background:rgba(34,211,238,.15);border-color:rgba(34,211,238,.3);color:#22d3ee}
+
+/* Progress Bar */
+.progress{position:fixed;bottom:0;left:0;right:0;z-index:60;background:rgba(255,255,255,.04);height:6px}
+.progress-bar{height:100%;background:linear-gradient(90deg,#22d3ee,#a3e635);transition:width .5s ease-out;border-radius:0 5px 5px 0}
+
+/* Horizontal scroll container */
+.slider{height:100vh;width:100vw;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;display:flex;scrollbar-width:none;-ms-overflow-style:none}
+.slider::-webkit-scrollbar{display:none}
+
+/* Each slide */
+.slide{min-width:100vw;flex-shrink:0;scroll-snap-align:start;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 40px 40px;min-height:100vh;height:auto;overflow-y:auto}
+
+/* Background per slide */
+.slide-bg{position:absolute;inset:0;z-index:0;background:var(--bg-hover);background-size:cover;background-position:center;filter:brightness(.2) saturate(.8)}
+.slide-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,28,28,.6) 0%,rgba(28,28,28,.15) 40%,rgba(28,28,28,.7) 100%)}
+
+/* Content */
+.slide-content{position:relative;z-index:2;max-width:720px;width:90%;text-align:center;padding-bottom:40px}
+
+.slide-number{position:absolute;top:24px;left:28px;font-size:10px;font-weight:600;letter-spacing:2px;color:rgba(255,255,255,.2);text-transform:uppercase;z-index:3}
+.slide-counter{position:fixed;top:68px;right:20px;z-index:50;font-size:.65rem;color:rgba(255,255,255,.2);letter-spacing:1px;font-family:'Inter',sans-serif}
+
+.slide-category{display:inline-block;padding:5px 16px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:24px;border:1px solid}
+.slide h1{font-size:2.8rem;font-weight:900;letter-spacing:-1px;line-height:1.1;margin-bottom:8px}
+.slide h2{font-size:1.3rem;font-weight:600;line-height:1.4;margin-bottom:12px;color:rgba(255,255,255,.9)}
 .slide p{font-size:1.05rem;color:rgba(255,255,255,.6);line-height:1.7;max-width:600px;margin:0 auto}
+
+/* Vocab tooltip */
 .vocab-word{border-bottom:2px dotted rgba(251,191,36,.5);cursor:help;color:#fbbf24;font-weight:600;position:relative}
 .vocab-word:hover{border-bottom-color:#22d3ee}
-.tt button {
-    display:block;margin-top:8px;padding:4px 8px;font-size:10px;
-    background:#22d3ee;color:#000;border:none;border-radius:4px;cursor:pointer;width:100%;
-}
-
-.vocab-word .tt{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);background:#0f172a;border:1px solid #334155;border-radius:10px;padding:10px 14px;min-width:200px;max-width:300px;font-size:13px;font-weight:400;color:#e2e8f0;line-height:1.5;text-align:left;box-shadow:0 8px 30px rgba(0,0,0,.5);z-index:100;transition:opacity .25s,visibility .25s;pointer-events:none}
+.vocab-word .tt{visibility:hidden;opacity:0;position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);background:#0f172a;border:1px solid #334155;border-radius:10px;padding:10px 14px;min-width:200px;max-width:300px;font-size:13px;font-weight:400;color:#e2e8f0;line-height:1.5;text-align:left;box-shadow:0 8px 30px rgba(0,0,0,.5);z-index:100;transition:opacity .25s;pointer-events:none}
 .vocab-word .tt::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:6px solid transparent;border-top-color:#334155}
-.vocab-word .tt strong{display:block;color:#22d3ee;font-weight:700;font-size:14px;margin-bottom:3px}
+.vocab-word .tt strong{display:block;color:#a3e635;font-weight:700;font-size:14px;margin-bottom:3px}
 .vocab-word:hover .tt{visibility:visible;opacity:1}
-.nav{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);z-index:50;display:flex;gap:8px;align-items:center}
-.nav-btn{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:var(--text);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s}
-.nav-btn:hover{background:rgba(255,255,255,.25)}
-.nav-dots{display:flex;gap:6px;align-items:center;padding:0 8px}
-.nav-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:all .2s}
-.nav-dot.active{background:#22d3ee;box-shadow:0 0 8px rgba(34,211,238,.4)}
-.nav-dot:hover{background:rgba(255,255,255,.5)}
-.progress{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(255,255,255,.06);height:10px}
-.progress-bar{height:100%;background:linear-gradient(90deg,#fbbf24,#22d3ee);transition:width .5s ease-out;border-radius:0 5px 5px 0;box-shadow:0 0 14px rgba(251,191,36,.4),0 0 6px rgba(34,211,238,.3)}
-.q-list{text-align:left;max-width:620px;margin:16px auto 0;display:flex;flex-direction:column;gap:10px}
-.q-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px 20px;font-size:15px;line-height:1.7;text-align:left}
-.q-item .num{display:inline-block;width:24px;height:24px;border-radius:50%;background:rgba(34,211,238,.12);color:#22d3ee;font-size:11px;font-weight:700;text-align-items:center;line-height:24px;margin-right:10px;vertical-align:top;flex-shrink:0}
-.warmup-badge{display:inline-block;padding:3px 12px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:rgba(52,211,153,.12);color:#34d399;margin-bottom:16px;border:1px solid rgba(52,211,153,.25)}
-.slide-footer{position:absolute;bottom:80px;left:50%;transform:translateX(-50%);font-size:11px;color:rgba(255,255,255,.2);letter-spacing:1px}
-.logo{color:var(--text);font-weight:700;letter-spacing:.5px}
-.logo .o{color:#22d3ee}
-@media(max-width:640px){.slide h1{font-size:2rem}.slide h2{font-size:1.1rem}.slide p{font-size:.9rem}.slide-content{padding:20px}.q-item{font-size:13px;padding:12px 14px}}
+.tt button{display:block;margin-top:8px;padding:4px 8px;font-size:10px;background:#22d3ee;color:#000;border:none;border-radius:4px;cursor:pointer;width:100%}
 
-/* Question number circle */
-.q-circle{
-  width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;
-  font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin:0 auto 16px;
-  border:2px solid rgba(255,255,255,.2);background:rgba(255,255,255,.05);color:var(--text);
-  backdrop-filter:blur(4px);
+/* Questions */
+.q-list{text-align:left;max-width:650px;margin:30px auto 0;display:flex;flex-direction:column;gap:30px}
+.q-item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:22px 26px;font-size:16px;line-height:1.8;text-align:left;transition:background .15s}
+.q-item .num{display:inline-block;width:30px;height:30px;border-radius:50%;background:rgba(34,211,238,.15);color:#22d3ee;font-size:13px;font-weight:700;text-align:center;line-height:30px;margin-right:14px;vertical-align:top;flex-shrink:0}
+
+/* Warmup badge */
+.warmup-badge{display:inline-block;padding:3px 12px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:rgba(163,230,53,.12);color:#a3e635;margin-bottom:16px;border:1px solid rgba(163,230,53,.25)}
+
+/* Footer text above questions */
+.slide-footer{font-size:10px;color:rgba(255,255,255,.2);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px}
+
+/* Nav — inline, above questions */
+.nav{display:flex;gap:8px;align-items:center;justify-content:center;margin:20px 0 0;padding:8px 0}
+.nav-btn{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:var(--text);cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;padding:0;line-height:1}
+.nav-btn:hover{background:rgba(34,211,238,.2);border-color:rgba(34,211,238,.4);box-shadow:0 0 12px rgba(34,211,238,.15)}
+.nav-btn svg{width:16px;height:16px;fill:#fff}
+.nav-dots{display:flex;gap:6px;align-items:center}
+.nav-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:all .2s}
+.nav-dot.active{background:#22d3ee;box-shadow:0 0 10px rgba(34,211,238,.5)}
+.nav-dot:hover{background:rgba(255,255,255,.5)}
+
+@media(max-width:640px){
+  .slide{padding:60px 20px 30px}
+  .slide h1{font-size:2rem}
+  .slide h2{font-size:1.1rem}
+  .q-item{font-size:14px;padding:16px 18px}
+  .nav{margin-top:12px}
 }
-.q-circle.accent{background:rgba(34,211,238,.15);border-color:rgba(34,211,238,.3);color:#22d3ee}
-.q-circle.warm{background:rgba(251,191,36,.15);border-color:rgba(251,191,36,.3);color:#fbbf24}
-/* Eloquenta Logo */
-  .elo-logo-wrap{display:inline-flex;align-items:center;gap:10px;text-decoration:none;transition:opacity .2s}
-  .elo-logo-wrap:hover{text-decoration:none;opacity:.85}
-  .elo-logo-wrap .elo-wordmark{font-size:22px;font-weight:700;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;letter-spacing:-.5px;line-height:1;color:#f1f5f9}
-  .elo-logo-wrap .elo-wordmark .o{color:#22d3ee}
+
+/* Start Overlay */
+#startOverlay{position:fixed;inset:0;z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#1c1c1c;transition:opacity .6s ease-out}
+#startOverlay.hidden{opacity:0;pointer-events:none}
+#startOverlay h1{font-size:3rem;font-weight:900;letter-spacing:-1px;margin-bottom:8px;text-align:center}
+#startOverlay h1 .o{color:#22d3ee}
+#startOverlay p{font-size:1.1rem;color:rgba(255,255,255,.55);margin-bottom:8px;text-align:center;max-width:480px;line-height:1.6}
+#startBtn{padding:18px 56px;border-radius:14px;background:linear-gradient(135deg,#22d3ee,#a3e635);border:none;color:#000;font-size:20px;font-weight:800;cursor:pointer;transition:all .2s;font-family:'Inter',sans-serif;letter-spacing:2px;text-transform:uppercase;box-shadow:0 4px 24px rgba(34,211,238,.3)}
+#startBtn:hover{transform:scale(1.05);box-shadow:0 6px 32px rgba(34,211,238,.4),0 0 20px rgba(163,230,53,.2)}
+#startBtn:active{transform:scale(.97)}
 </style>
-<link rel="stylesheet" href="../Curriculum/eloquent-branding.css">
 </head>
-<body style="padding-top:48px">
-<!-- Eloquenta Branded Top Bar -->
-<div class="elo-bar">
-  <a href="../Extras/landing.html" class="elo-logo-wrap" title="Eloquenta Home"><span class="elo-wordmark">El<span class="o">o</span>quenta</span></a>
-  <span class="elo-tagline">Speaking Lesson</span>
-  <div class="elo-menu">
-    <a href="../Extras/landing.html" class="elo-menu-link">🏠 Home</a>
-    <a href="../Extras/dashboard.html" class="elo-menu-link">📊 Dashboard</a>
-    <a href="../Curriculum/speaking-practice-slideshows.html" class="elo-menu-link">📚 All Lessons</a>
-  </div>
+<body>
+
+<div id="startOverlay">
+  <h1>El<span class="o">o</span>quenta</h1>
+  <p>Food &amp; Drink Culture — Speaking Lesson</p>
+  <p style="font-size:.85rem;color:rgba(255,255,255,.3);margin-bottom:30px">8 slides &middot; Conversation questions &middot; Vocabulary tips</p>
+  <button id="startBtn" onclick="startLesson()">Start</button>
 </div>
-<div class="elo-spacer"></div>
+
+<div class="topbar">
+  <span class="topbar-brand">El<span class="o">o</span>quenta</span>
+  <button class="topbar-back" onclick="history.back()">Back</button>
+</div>
 
 <div class="progress"><div class="progress-bar" id="progressBar" style="width:0%"></div></div>
-<div id="slides-container"></div>
-<div class="nav"><button class="nav-btn" onclick="prevSlide()">◀</button><div class="nav-dots" id="navDots"></div><button class="nav-btn" onclick="nextSlide()">▶</button></div>
+<div class="slide-counter" id="slideCounter">1 / 8</div>
+
+<div class="slider" id="slider"></div>
+
 <script>
 var SLIDES=[
-  {bg:"https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920&q=80",cat:"Speaking Lesson",catB:"rgba(251,191,36,.15);color:#fbbf24;border-color:rgba(251,191,36,.3)",title:"Food & Drink Culture",subtitle:"",text:"Explore food preferences, cooking habits, coffee culture, and social eating customs."},
-  {bg:"https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920&q=80",cat:"Warm-up",catB:"rgba(52,211,153,.12);color:#34d399;border-color:rgba(52,211,153,.25)",title:"Let's talk about food!",subtitle:"",isWarmup:true,warmupQ:["What did you eat today? Describe your meals.","Do you prefer eating at home or at restaurants? Why?","What is your favorite drink — coffee, tea, juice, or something else?"]},
-  {bg:"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1920&q=80",cat:"Food Preferences",catB:"rgba(251,191,36,.15);color:#fbbf24;border-color:rgba(251,191,36,.3)",title:"What kind of food do you enjoy?",subtitle:"",questions:["What is your favorite type of <span class='vocab-word'>cuisine<span class='tt'><strong>cuisine</strong><br>A style of cooking associated with a particular country or region.<br><button onclick='translateWord(this)'>Translate to L1</button></span></span>? Can you describe a typical dish?","Do you prefer sweet or salty snacks? Give examples.","Are there any foods you disliked as a child but enjoy now?","How often do you try <span class='vocab-word'>exotic<span class='tt'><strong>exotic</strong><br>Unusual and exciting, often from a foreign country.<br><button onclick='translateWord(this)'>Translate to L1</button></span></span> or unfamiliar foods?"]},
-  {bg:"https://images.unsplash.com/photo-1559466273-d95e72debaf6?w=1920&q=80",cat:"Cooking",catB:"rgba(245,158,11,.15);color:#fbbf24;border-color:rgba(245,158,11,.3)",title:"Do you cook at home?",subtitle:"",questions:["How often do you cook? Would you describe yourself as a confident cook?","What is the <span class='vocab-word'>signature dish<span class='tt'><strong>signature dish</strong><br>A dish that a person is especially known for making well.<br><button onclick='translateWord(this)'>Translate to L1</button></span></span> in your household?","Do you follow recipes exactly, or do you prefer to <span class='vocab-word'>improvise<span class='tt'><strong>improvise</strong><br>To create something spontaneously without following a plan or recipe.<br><button onclick='translateWord(this)'>Translate to L1</button></span></span>?","How has <span class='vocab-word'>convenience food<span class='tt'><strong>convenience food</strong><br>Food that is pre-prepared and quick to serve, like frozen meals or instant noodles.<br><button onclick='translateWord(this)'>Translate to L1</button></span></span> changed the way your family eats?"]},
-  {bg:"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1920&q=80",cat:"Coffee Culture",catB:"rgba(168,85,247,.15);color:#a78bfa;border-color:rgba(168,85,247,.3)",title:"Coffee, tea & daily rituals",subtitle:"",questions:["Do you start your day with coffee, tea, or something else? Describe your morning <span class='vocab-word'>ritual<span class='tt'><strong>ritual</strong><br>A regular habit or routine, often done at the same time each day.<br><button onclick='translateWord(this)'>Translate to L1</button></span></span>.","Do you have a favorite coffee shop or café? What makes it special?","How do you take your coffee — black, with milk, with sugar, or something unusual?","Do you think coffee culture in your country is different from other places you have visited?"]},
-  {bg:"https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80",cat:"Dining Culture",catB:"rgba(52,211,153,.12);color:#34d399;border-color:rgba(52,211,153,.25)",title:"Eating out & social dining",subtitle:"",questions:["How often do you eat at restaurants? What kind of restaurants do you prefer?","In your culture, who usually <span class='vocab-word'>pays the bill<span class='tt'><strong>pays the bill</strong><br>Covers the cost of the meal when dining out with others.<br><button onclick='translateWord(this)'>Translate to L1</button></span></span> when a group eats together?","Do you prefer a quiet dinner for two or a loud meal with a big group?","What is the most memorable meal you have ever had at a restaurant? Describe it."]},
-  {bg:"https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1920&q=80",cat:"Drink Culture",catB:"rgba(167,139,250,.15);color:#a78bfa;border-color:rgba(167,139,250,.3)",title:"Drinks & social habits",subtitle:"",questions:["Do you drink alcohol? If so, what is your favorite, and when do you usually have it?","How do <span class='vocab-word'>drinking customs<span class='tt'><strong>drinking customs</strong><br>The social rules and traditions around alcohol consumption in a particular culture.<br><button onclick='translateWord(this)'>Translate to L1</button></span></span> in your country compare to other places you know?","Do you think the legal <span class='vocab-word'>drinking age<span class='tt'><strong>drinking age</strong><br>The minimum legal age at which a person can buy or consume alcohol.<br><button onclick='translateWord(this)'>Translate to L1</button></span></span> in your country is appropriate? Why or why not?","What is a non-alcoholic drink from your country that you would recommend to a visitor?"]},
-  {bg:"https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920&q=80",cat:"Wrap-up",catB:"rgba(34,211,238,.15);color:#22d3ee;border-color:rgba(34,211,238,.3)",title:"Well done!",subtitle:"Food & Drink Culture — Speaking Lesson",text:"Practice these questions with a partner. Try to speak for at least 2 minutes on each topic."},
+  {bg:"https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920&q=80",cat:"Speaking Lesson",catB:"rgba(34,211,238,.15);color:#22d3ee;border-color:rgba(34,211,238,.3)",title:"Food & Drink Culture",text:"Explore food preferences, cooking habits, coffee culture, and social eating customs.",isTitle:true},
+  {bg:"https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920&q=80",cat:"Warm-up",catB:"rgba(52,211,153,.12);color:#34d399;border-color:rgba(52,211,153,.25)",title:"Let's talk about food!",questions:["What did you eat today? Describe your meals.","Do you prefer eating at home or at restaurants? Why?","What is your favorite drink — coffee, tea, juice, or something else?"],isWarmup:true},
+  {bg:"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1920&q=80",cat:"Food Preferences",catB:"rgba(251,191,36,.15);color:#fbbf24;border-color:rgba(251,191,36,.3)",title:"What kind of food do you enjoy?",questions:["What is your favorite type of <span class='vocab-word'>cuisine<span class='tt'><strong>cuisine</strong><br>A style of cooking associated with a particular country or region.<br><button onclick='translateWord(this)'>Translate to L1</button></span></span>? Can you describe a typical dish?","Do you prefer sweet or salty snacks? Give examples.","Are there any foods you disliked as a child but enjoy now?","How often do you try <span class='vocab-word'>exotic<span class='tt'><strong>exotic</strong><br>Unusual and exciting, often from a foreign country.<br><button onclick='translateWord(this)'>Translate to L1</button></span></span> or unfamiliar foods?"]},
+  {bg:"https://images.unsplash.com/photo-1559466273-d95e72debaf6?w=1920&q=80",cat:"Cooking",catB:"rgba(245,158,11,.15);color:#fbbf24;border-color:rgba(245,158,11,.3)",title:"Do you cook at home?",questions:["How often do you cook? Would you describe yourself as a confident cook?","What is the <span class='vocab-word'>signature dish<span class='tt'><strong>signature dish</strong><br>A dish that a person is especially known for making well.<br><button onclick='translateWord(this)'>Translate to L1</button></span></span> in your household?","Do you follow recipes exactly, or do you prefer to <span class='vocab-word'>improvise<span class='tt'><strong>improvise</strong><br>To create something spontaneously without following a plan or recipe.<br><button onclick='translateWord(this)'>Translate to L1</button></span></span>?","How has <span class='vocab-word'>convenience food<span class='tt'><strong>convenience food</strong><br>Food that is pre-prepared and quick to serve, like frozen meals or instant noodles.<br><button onclick='translateWord(this)'>Translate to L1</button></span></span> changed the way your family eats?"]},
+  {bg:"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1920&q=80",cat:"Coffee Culture",catB:"rgba(168,85,247,.15);color:#a78bfa;border-color:rgba(168,85,247,.3)",title:"Coffee, tea & daily rituals",questions:["Do you start your day with coffee, tea, or something else? Describe your morning <span class='vocab-word'>ritual<span class='tt'><strong>ritual</strong><br>A regular habit or routine, often done at the same time each day.<br><button onclick='translateWord(this)'>Translate to L1</button></span></span>.","Do you have a favorite coffee shop or café? What makes it special?","How do you take your coffee — black, with milk, with sugar, or something unusual?","Do you think coffee culture in your country is different from other places you have visited?"]},
+  {bg:"https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80",cat:"Dining Culture",catB:"rgba(52,211,153,.12);color:#34d399;border-color:rgba(52,211,153,.25)",title:"Eating out & social dining",questions:["How often do you eat at restaurants? What kind of restaurants do you prefer?","In your culture, who usually <span class='vocab-word'>pays the bill<span class='tt'><strong>pays the bill</strong><br>Covers the cost of the meal when dining out with others.<br><button onclick='translateWord(this)'>Translate to L1</button></span></span> when a group eats together?","Do you prefer a quiet dinner for two or a loud meal with a big group?","What is the most memorable meal you have ever had at a restaurant? Describe it."]},
+  {bg:"https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1920&q=80",cat:"Drink Culture",catB:"rgba(167,139,250,.15);color:#a78bfa;border-color:rgba(167,139,250,.3)",title:"Drinks & social habits",questions:["Do you drink alcohol? If so, what is your favorite, and when do you usually have it?","How do <span class='vocab-word'>drinking customs<span class='tt'><strong>drinking customs</strong><br>The social rules and traditions around alcohol consumption in a particular culture.<br><button onclick='translateWord(this)'>Translate to L1</button></span></span> in your country compare to other places you know?","Do you think the legal <span class='vocab-word'>drinking age<span class='tt'><strong>drinking age</strong><br>The minimum legal age at which a person can buy or consume alcohol.<br><button onclick='translateWord(this)'>Translate to L1</button></span></span> in your country is appropriate? Why or why not?","What is a non-alcoholic drink from your country that you would recommend to a visitor?"]},
+  {bg:"https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920&q=80",cat:"Wrap-up",catB:"rgba(34,211,238,.15);color:#22d3ee;border-color:rgba(34,211,238,.3)",title:"Well done!",text:"Practice these questions with a partner. Try to speak for at least 2 minutes on each topic.",isEnd:true}
 ];
+
 var current=0;
+var slider,dots;
+
 function renderSlides(){
-  var container=document.getElementById('slides-container');
-  var dots=document.getElementById('navDots');
-  var html='',dotsHtml='';
+  slider=document.getElementById('slider');
+  var html='';
   SLIDES.forEach(function(s,i){
-    html+='<div class="slide'+(i===0?' active':'')+'" id="slide-'+i+'">';
+    html+='<div class="slide" id="slide-'+i+'">';
     html+='<div class="slide-bg" style="background-image:url('+s.bg+')"></div>';
     html+='<span class="slide-number">'+(i+1)+' / '+SLIDES.length+'</span>';
     html+='<div class="slide-content">';
+
     if(s.isTitle){
       html+='<span class="slide-category" style="background:'+s.catB+'">'+s.cat+'</span>';
       html+='<h1>'+s.title+'</h1>';
       html+='<p>'+s.text+'</p>';
-      html+='<p style="font-size:11px;color:rgba(255,255,255,.25);margin-top:12px">💡 Hover over highlighted words to see definitions</p>';
-    } else if(s.isWarmup){
-      html+='<span class="warmup-badge">🔥 Warm-up</span>';
-      html+='<h2>'+s.title+'</h2>';
-      if(s.warmupQ){
-        html+='<div class="q-list">';
-        s.warmupQ.forEach(function(q,j){
-          html+='<div class="q-item"><span class="num">'+(j+1)+'</span>'+q+'</div>';
-        });
-        html+='</div>';
-      }
-    } else if(s.isEnd){
+      html+='<button class="nav-btn nav-btn-next" style="margin-top:32px;font-size:18px;padding:14px 44px;background:linear-gradient(135deg,rgba(34,211,238,.15),rgba(163,230,53,.1));border:1px solid rgba(34,211,238,.3);color:#22d3ee;border-radius:50px;cursor:pointer;font-family:Inter,sans-serif;font-weight:700;letter-spacing:1.5px;transition:all .2s;text-transform:uppercase" onclick="nextSlide()">Next &#9654;</button>';
+      html+='<p style="font-size:.75rem;color:rgba(255,255,255,.25);margin-top:16px">Use arrow keys or buttons to navigate</p>';
+    }else if(s.isEnd){
       html+='<span class="slide-category" style="background:'+s.catB+'">'+s.cat+'</span>';
       html+='<h1>'+s.title+'</h1>';
-      html+='<h2>'+s.subtitle+'</h2>';
       html+='<p>'+s.text+'</p>';
-    } else {
-      html+='<span class="slide-category" style="background:'+s.catB+'">'+s.cat+'</span>';
-      html+='<h2>'+s.title+'</h2>';
+    }else{
+      if(s.isWarmup){
+        html+='<span class="warmup-badge">Warm-up</span>';
+        html+='<h2>'+s.title+'</h2>';
+      }else{
+        html+='<span class="slide-category" style="background:'+s.catB+'">'+s.cat+'</span>';
+        html+='<h2>'+s.title+'</h2>';
+      }
+      html+='<div class="slide-footer">Food &amp; Drink Culture — Speaking Lesson</div>';
       if(s.questions){
+        var dotsHtml='';
+        var dotIndex=0;
+        SLIDES.forEach(function(d,di){
+          if(!d.isTitle&&!d.isEnd){
+            dotsHtml+='<div class="nav-dot'+(di===i?' active':'')+'" onclick="goTo('+di+')"></div>';
+            dotIndex++;
+          }
+        });
+        html+='<div class="nav"><button class="nav-btn" onclick="prevSlide()"><svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg></button><div class="nav-dots">'+dotsHtml+'</div><button class="nav-btn" onclick="nextSlide()"><svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg></button></div>';
         html+='<div class="q-list">';
         s.questions.forEach(function(q,j){
           html+='<div class="q-item"><span class="num">'+(j+1)+'</span>'+q+'</div>';
@@ -149,35 +189,77 @@ function renderSlides(){
         html+='</div>';
       }
     }
-    html+='</div>';
-    html+='<div class="slide-footer"> <span class="elo-wordmark">El<span class="o">o</span>quenta</span> — Food & Drink Culture</div>';
-    html+='</div>';
-    dotsHtml+='<div class="nav-dot'+(i===0?' active':'')+'" onclick="goTo('+i+')"></div>';
+    html+='</div></div>';
   });
-  container.innerHTML=html;dots.innerHTML=dotsHtml;
+  slider.innerHTML=html;
+  updateUI();
 }
-function showSlide(n){if(n<0||n>=SLIDES.length)return;document.querySelectorAll('.slide').forEach(function(s){s.classList.remove('active')});document.querySelectorAll('.nav-dot').forEach(function(d){d.classList.remove('active')});document.getElementById('slide-'+n).classList.add('active');document.querySelectorAll('.nav-dot')[n].classList.add('active');current=n;document.getElementById('progressBar').style.width=(((current+1)/SLIDES.length)*100)+'%';}
-function nextSlide(){showSlide(current+1)}function prevSlide(){showSlide(current-1)}function goTo(n){showSlide(n)}
-document.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();nextSlide()}if(e.key==='ArrowLeft'){e.preventDefault();prevSlide()}});
-var tx=0;document.addEventListener('touchstart',function(e){tx=e.touches[0].clientX});document.addEventListener('touchend',function(e){var d=tx-e.changedTouches[0].clientX;if(Math.abs(d)>50){d>0?nextSlide():prevSlide()}});
+
+function goTo(n){
+  if(n<0||n>=SLIDES.length)return;
+  current=n;
+  var slide=document.getElementById('slide-'+n);
+  if(slide) slide.scrollIntoView({behavior:'smooth',inline:'start',block:'nearest'});
+  var dotIdx=0;
+  for(var k=0;k<n;k++){if(!SLIDES[k].isTitle&&!SLIDES[k].isEnd) dotIdx++;}
+  document.querySelectorAll('.nav').forEach(function(nav){
+    nav.querySelectorAll('.nav-dot').forEach(function(el,i){el.classList.toggle('active',i===dotIdx)});
+  });
+  updateUI();
+}
+
+function nextSlide(){goTo(current+1)}
+function prevSlide(){goTo(current-1)}
+
+function updateUI(){
+  document.getElementById('progressBar').style.width=((current+1)/SLIDES.length*100)+'%';
+  document.getElementById('slideCounter').textContent=(current+1)+' / '+SLIDES.length;
+}
+
+// Scroll spy
+var scrollTimer=null;
+document.getElementById('slider').addEventListener('scroll',function(){
+  if(scrollTimer)return;
+  scrollTimer=setTimeout(function(){
+    scrollTimer=null;
+    var slides=document.querySelectorAll('.slide');
+    var sliderLeft=document.getElementById('slider').scrollLeft;
+    var viewportW=window.innerWidth;
+    slides.forEach(function(slide,i){
+      var rect=slide.getBoundingClientRect();
+      var slideCenter=rect.left+rect.width/2;
+      var viewportCenter=viewportW/2;
+      if(Math.abs(slideCenter-viewportCenter)<viewportW/2){
+        if(current!==i){
+          current=i;
+          var dotIdx=0;
+          for(var k=0;k<i;k++){if(!SLIDES[k].isTitle&&!SLIDES[k].isEnd) dotIdx++;}
+          document.querySelectorAll('.nav').forEach(function(nav){
+            nav.querySelectorAll('.nav-dot').forEach(function(el,j){el.classList.toggle('active',j===dotIdx)});
+          });
+          updateUI();
+        }
+      }
+    });
+  },150);
+},{passive:true});
+
+document.addEventListener('keydown',function(e){
+  if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();nextSlide()}
+  if(e.key==='ArrowLeft'){e.preventDefault();prevSlide()}
+});
+
+function startLesson(){
+  document.getElementById('startOverlay').classList.add('hidden');
+  setTimeout(function(){document.getElementById('startOverlay').style.display='none'},600);
+}
+
 renderSlides();
 
-    function translateWord(btn) {
-        btn.innerText = "Translating...";
-        // For now, simple mock simulation
-        setTimeout(() => {
-            btn.innerText = "L1 Translation: [Example]";
-        }, 800);
-    }
-
-
-// Shift+wheel for horizontal scroll (side scrolling)
-document.addEventListener('wheel',function(e){
-  if(e.shiftKey){
-    e.preventDefault();
-    window.scrollBy(e.deltaY, 0);
-  }
-},{passive:false});
+function translateWord(btn){
+  btn.innerText='Translating...';
+  setTimeout(function(){btn.innerText='L1 Translation: [Example]'},800);
+}
 </script>
 </body>
 </html>
