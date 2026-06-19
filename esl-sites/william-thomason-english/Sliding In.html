@@ -6,30 +6,167 @@
 <title>Sliding In — Interactive English Lessons</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Blogger+Sans:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;510;590;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#1c1c1c;--bg2:#161616;--bg3:#222222;--bg-card:#232323;--bg-card2:#1a1a1a;--border:#333333;--border-light:#444444;--text:#e8e8e8;--text-muted:#999999;--text-dim:#555555;--accent:#a3e635;--accent-dim:rgba(163,230,53,.08);--accent-glow:rgba(163,230,53,.3);--cta:#fcbe6a;--cta-hover:#fdb553;--cta-text:#1c1c1c;--violet:#a78bfa;--rose:#fb7185;--amber:#fbbf24;--green:#34d399}
-[data-theme="light"]{--bg:#f5f5f5;--bg2:#eeeeee;--bg3:#e0e0e0;--bg-card:#ffffff;--bg-card2:#f0f0f0;--border:#d0d0d0;--border-light:#b0b0b0;--text:#2f2f2f;--text-muted:#666666;--text-dim:#888888;--accent:#3097cf;--accent-dim:rgba(48,151,207,.08);--accent-glow:rgba(48,151,207,.25);--cta:#f59e0b;--cta-hover:#e08e00;--cta-text:#ffffff;--violet:#8b5cf6;--rose:#f43f5e;--amber:#f59e0b;--green:#10b981}
-[data-theme="wte"]{--bg:#1c1c1c;--bg2:#161616;--bg3:#222222;--bg-card:#232323;--bg-card2:#1a1a1a;--border:#333333;--border-light:#444444;--text:#e8e8e8;--text-muted:#999999;--text-dim:#555555;--accent:#a3e635;--accent-dim:rgba(163,230,53,.08);--accent-glow:rgba(163,230,53,.3);--cta:#fcbe6a;--cta-hover:#fdb553;--cta-text:#1c1c1c;--violet:#a78bfa;--rose:#fb7185;--amber:#fbbf24;--green:#34d399}
+:root{
+  --bg:#08090a;--bg2:#0f1011;--bg3:#191a1b;--bg-card:rgba(255,255,255,0.02);--bg-card2:#141516;
+  --border:rgba(255,255,255,0.08);--border-subtle:rgba(255,255,255,0.05);--border-hover:rgba(255,255,255,0.12);
+  --text:#f7f8f8;--text-secondary:#d0d6e0;--text-muted:#8a8f98;--text-dim:#62666d;
+  --accent:#5e6ad2;--accent-hover:#7170ff;--accent-glow:rgba(94,106,210,0.25);--accent-bg:rgba(94,106,210,0.08);
+  --green:#10b981;--green-bg:rgba(16,185,129,0.08);
+  --font:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+}
+[data-theme="light"]{
+  --bg:#f7f8f8;--bg2:#f3f4f5;--bg3:#e6e6e6;--bg-card:#ffffff;--bg-card2:#f5f6f7;
+  --border:rgba(0,0,0,0.08);--border-subtle:rgba(0,0,0,0.05);--border-hover:rgba(0,0,0,0.15);
+  --text:#171717;--text-secondary:#4a4a4a;--text-muted:#6b6b6b;--text-dim:#999999;
+  --accent:#5e6ad2;--accent-hover:#4f5bc0;--accent-glow:rgba(94,106,210,0.15);--accent-bg:rgba(94,106,210,0.05);
+}
+[data-theme="wte"]{--bg:#08090a;--bg2:#0f1011;--bg3:#191a1b;--accent:#a3e635;--accent-hover:#b8f54a;--accent-glow:rgba(163,230,53,0.25);--accent-bg:rgba(163,230,53,0.08);--border:rgba(255,255,255,0.08);--border-subtle:rgba(255,255,255,0.05);--text:#f7f8f8;--text-secondary:#d0d6e0;--text-muted:#8a8f98;--text-dim:#62666d;--bg-card:rgba(255,255,255,0.02)}
 *{margin:0;padding:0;box-sizing:border-box}
 html{font-size:16px;scroll-behavior:smooth}
-body{font-family:'Blogger Sans','Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;transition:background .3s ease,color .3s ease}
-::selection{background:var(--accent);color:var(--bg)}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;transition:background .3s ease,color .3s ease;font-feature-settings:'cv01','ss03'}
+::selection{background:var(--accent);color:#fff}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes scaleIn{from{opacity:0;transform:scale(0.95)}to{opacity:1;transform:scale(1)}}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-@keyframes limeGlow{0%,100%{box-shadow:0 0 8px rgba(163,230,53,.2)}50%{box-shadow:0 0 20px rgba(163,230,53,.4)}}
-[data-theme="light"] @keyframes limeGlow{0%,100%{box-shadow:0 0 8px rgba(48,151,207,.15)}50%{box-shadow:0 0 20px rgba(48,151,207,.3)}}
+@keyframes kenBurns{0%{transform:scale(1) translate(0,0)}50%{transform:scale(1.08) translate(-1%,-1%)}100%{transform:scale(1.04) translate(1%,1%)}}
+@keyframes glow{0%,100%{box-shadow:0 0 8px var(--accent-glow)}50%{box-shadow:0 0 24px var(--accent-glow)}}
 
-.nav{position:sticky;top:0;z-index:50;background:rgba(28,28,28,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px;height:56px;display:flex;align-items:center;justify-content:space-between;transition:background .3s ease}
-[data-theme="light"] .nav{background:rgba(245,245,245,.92)}
-.nav-logo{font-family:'Fira Code',monospace;font-size:1rem;font-weight:700;color:var(--text);letter-spacing:2px;text-decoration:none}
+/* ═══ NAV ═══ */
+.nav{position:sticky;top:0;z-index:50;background:rgba(8,9,10,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border-subtle);padding:0 32px;height:52px;display:flex;align-items:center;justify-content:space-between;transition:background .3s ease}
+.nav-logo{font-family:var(--mono);font-size:.85rem;font-weight:500;color:var(--text);letter-spacing:0.5px;text-decoration:none}
 .nav-logo span{color:var(--accent)}
-.nav-links{display:flex;gap:20px;align-items:center}
-.nav-links a{color:var(--text-muted);text-decoration:none;font-size:.83rem;font-weight:500;transition:color .15s}
-.nav-links a:hover{color:var(--text)}
-.theme-cycle-btn{display:inline-flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:4px 12px;border-radius:6px;cursor:pointer;font-family:'Fira Code',monospace;font-size:.7rem;font-weight:600;transition:all .2s}
-.theme-cycle-btn:hover{border-color:var(--accent);background:var(--bg-card)}
-.theme-cycle-btn .dot{width:8px;height:8px;border-radius:50%}
-.nav-cta{padding:7px 18px;border-radius:8px;background:var(--cta);color:var(--cta-text);text-decoration:none;font-size:.78rem;font-weight:700;transition:all .15s;white-space:nowrap;animation:limeGlow 3s ease-in-out infinite}
+.nav-links{display:flex;gap:4px;align-items:center}
+.nav-links a{color:var(--text-muted);text-decoration:none;font-size:.8rem;font-weight:510;padding:6px 12px;border-radius:6px;transition:all .15s}
+.nav-links a:hover{color:var(--text);background:rgba(255,255,255,0.03)}
+.nav-cta{padding:6px 16px;border-radius:6px;background:var(--accent);color:#fff;text-decoration:none;font-size:.78rem;font-weight:590;transition:all .2s;border:1px solid transparent}
+.nav-cta:hover{background:var(--accent-hover);transform:translateY(-1px);box-shadow:0 4px 12px var(--accent-glow)}
+.theme-cycle-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.03);border:1px solid var(--border-subtle);color:var(--text-muted);padding:5px 10px;border-radius:6px;cursor:pointer;font-family:var(--mono);font-size:.65rem;font-weight:510;transition:all .2s}
+.theme-cycle-btn:hover{border-color:var(--border);color:var(--text);background:rgba(255,255,255,0.05)}
+.theme-cycle-btn .dot{width:6px;height:6px;border-radius:50%}
+
+/* ═══ HERO ═══ */
+.hero{padding:80px 32px 60px;text-align:center;max-width:720px;margin:0 auto}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:9999px;background:var(--accent-bg);border:1px solid var(--border-subtle);font-size:.65rem;font-weight:590;color:var(--accent);margin-bottom:20px;letter-spacing:1px;text-transform:uppercase;animation:fadeIn .6s ease}
+.hero h1{font-size:2.8rem;font-weight:510;line-height:1.05;letter-spacing:-1.5px;margin-bottom:12px;animation:slideUp .6s ease}
+.hero h1 .accent{color:var(--accent)}
+.hero p{font-size:1.05rem;color:var(--text-muted);line-height:1.7;max-width:520px;margin:0 auto;animation:slideUp .6s ease .1s both}
+
+/* ═══ SECTION ═══ */
+.section{padding:60px 32px;max-width:1200px;margin:0 auto}
+.section-header{margin-bottom:40px}
+.section-header h2{font-size:1.5rem;font-weight:510;letter-spacing:-0.5px;margin-bottom:6px}
+.section-header p{color:var(--text-muted);font-size:.9rem}
+.section-num{font-family:var(--mono);font-size:.6rem;font-weight:510;color:var(--accent);letter-spacing:3px;text-transform:uppercase;margin-bottom:8px}
+
+/* ═══ LESSON GRID ═══ */
+.lesson-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px}
+.lesson-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;transition:all .2s cubic-bezier(.4,0,.2,1);text-decoration:none;color:inherit;display:block;overflow:hidden;position:relative;aspect-ratio:4/3;cursor:pointer}
+.lesson-card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,0.4)}
+.lesson-card-img-container{position:relative;width:100%;height:100%;overflow:hidden}
+.lesson-card-img{width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;z-index:1}
+.lesson-card-hue{position:absolute;inset:0;background-color:var(--accent);mix-blend-mode:multiply;z-index:2;transition:background-color .3s ease;pointer-events:none}
+.lesson-card-content{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;justify-content:flex-end;padding:16px;background:linear-gradient(transparent 30%,rgba(0,0,0,0.75));pointer-events:none}
+.lesson-card-body{position:relative;z-index:4;pointer-events:auto}
+.lesson-cat{font-family:var(--mono);font-size:.55rem;font-weight:510;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.lesson-card h3{font-size:.95rem;font-weight:510;color:var(--text);margin-bottom:2px;letter-spacing:-0.2px}
+.lesson-count{font-size:.7rem;color:var(--text-dim)}
+
+/* ═══ DECK / SLIDE VIEW ═══ */
+.deck-view{display:none;position:fixed;inset:0;z-index:100;background:var(--bg);flex-direction:column}
+.deck-view.open{display:flex;animation:fadeIn .2s ease}
+
+.deck-topbar{display:flex;align-items:center;gap:8px;padding:10px 20px;border-bottom:1px solid var(--border-subtle);flex-shrink:0;background:rgba(8,9,10,0.95);backdrop-filter:blur(12px)}
+
+/* ── Linear-style buttons ── */
+.deck-back,.deck-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);
+  color:var(--text-muted);padding:7px 14px;border-radius:6px;
+  cursor:pointer;font-family:var(--font);font-size:.7rem;font-weight:510;
+  transition:all .15s cubic-bezier(.4,0,.2,1);
+  position:relative;overflow:hidden;
+}
+.deck-back::before,.deck-btn::before{
+  content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.03),transparent);
+  opacity:0;transition:opacity .15s;
+}
+.deck-back:hover::before,.deck-btn:hover::before{opacity:1}
+.deck-back:hover,.deck-btn:hover{border-color:rgba(255,255,255,0.12);color:var(--text);background:rgba(255,255,255,0.05)}
+.deck-back:active,.deck-btn:active{transform:scale(0.97)}
+.deck-btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.deck-btn.primary:hover{background:var(--accent-hover);border-color:var(--accent-hover);box-shadow:0 2px 8px var(--accent-glow);transform:translateY(-1px)}
+.deck-btn.primary:active{transform:scale(0.97)}
+.deck-btn.icon-btn{width:36px;height:36px;padding:0;justify-content:center;border-radius:50%}
+
+.deck-title{font-family:var(--font);font-size:.85rem;font-weight:510;flex:1;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--text-secondary);letter-spacing:-0.2px}
+.deck-title-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:1px;min-width:0}
+.deck-title-topic{font-size:.85rem;font-weight:590;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%;letter-spacing:-0.2px}
+.deck-title-cat{font-family:var(--mono);font-size:.6rem;color:var(--text-dim);letter-spacing:1px;text-transform:uppercase}
+.deck-counter{font-family:var(--mono);font-size:.65rem;color:var(--text-dim);flex-shrink:0;display:flex;align-items:center;gap:6px;padding:4px 10px;border:1px solid var(--border-subtle);border-radius:9999px;background:rgba(255,255,255,0.02)}
+.deck-counter .dc-current{font-size:.85rem;font-weight:590;color:var(--accent)}
+
+/* ── Full-screen slide ── */
+.slide-container{flex:1;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+/* Full-bleed background image */
+.slide-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.slide-bg img{width:100%;height:100%;object-fit:cover;animation:kenBurns 12s ease-in-out infinite alternate}
+.slide-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.55) 50%,rgba(0,0,0,0.8) 100%)}
+
+/* Slide content overlay */
+.slide-content{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding:40px 60px;max-width:100%}
+@media(max-width:768px){.slide-content{padding:24px 20px}}
+
+/* ── Question text box ── */
+.slide-question-box{
+  background:rgba(0,0,0,0.60);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.08);border-radius:12px;
+  padding:28px 32px;margin-bottom:16px;
+  animation:slideUp .4s ease .1s both;
+  box-shadow:0 4px 24px rgba(0,0,0,0.3),0 0 0 1px rgba(255,255,255,0.04) inset;
+}
+.slide-cat{font-family:var(--mono);font-size:.6rem;font-weight:510;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.slide-question{font-size:1.5rem;font-weight:510;line-height:1.35;color:#fff;letter-spacing:-0.5px;margin-bottom:12px}
+@media(max-width:768px){.slide-question{font-size:1.15rem}}
+.slide-paraphrase{font-size:.95rem;color:rgba(255,255,255,0.65);line-height:1.6;font-style:italic;padding-left:14px;border-left:2px solid rgba(255,255,255,0.15)}
+
+/* ── Bottom controls ── */
+.deck-controls{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-top:1px solid var(--border-subtle);flex-shrink:0;background:rgba(8,9,10,0.9);backdrop-filter:blur(12px);z-index:5}
+.deck-progress{flex:1;height:3px;background:rgba(255,255,255,0.06);border-radius:2px;max-width:280px;overflow:hidden}
+.deck-progress-fill{height:100%;background:var(--accent);border-radius:2px;transition:width .3s cubic-bezier(.4,0,.2,1)}
+
+/* ── Shuffle indicator ── */
+.shuffle-indicator{position:fixed;bottom:70px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;padding:6px 16px;border-radius:9999px;font-family:var(--font);font-size:.65rem;font-weight:590;letter-spacing:.5px;opacity:0;transition:opacity .3s;z-index:101;box-shadow:0 4px 12px var(--accent-glow)}
+.shuffle-indicator.show{opacity:1}
+
+/* ── Category filter pills ── */
+.filter-bar{display:flex;gap:6px;padding:16px 32px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--border-subtle)}
+.filter-bar::-webkit-scrollbar{display:none}
+.filter-pill{
+  display:inline-flex;align-items:center;gap:4px;
+  background:rgba(255,255,255,0.03);border:1px solid var(--border-subtle);
+  color:var(--text-muted);padding:5px 14px;border-radius:9999px;
+  cursor:pointer;font-family:var(--font);font-size:.7rem;font-weight:510;
+  transition:all .15s;white-space:nowrap;flex-shrink:0;
+}
+.filter-pill:hover{border-color:var(--border-hover);color:var(--text);background:rgba(255,255,255,0.05)}
+.filter-pill.active{background:var(--accent-bg);border-color:var(--accent);color:var(--accent)}
+.filter-pill:active{transform:scale(0.96)}
+
+/* ═══ HOW IT WORKS ═══ */
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.how-step{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;padding:24px;transition:all .2s}
+.how-step:hover{border-color:var(--border);background:rgba(255,255,255,0.03)}
+.how-step-num{font-family:var(--mono);font-size:1.5rem;font-weight:500;color:var(--accent);opacity:.3;margin-bottom:8px}
+.how-step h3{font-size:.95rem;font-weight:510;letter-spacing:-0.2px;margin-bottom:6px}
+.how-step p{font-size:.85rem;color:var(--text-muted);line-height:1.6}
+
+/* ═══ FOOTER ═══ */
+.footer{padding:24px 32px;text-align:center;font-size:.7rem;color:var(--text-dim);border-top:1px solid var(--border-subtle)}
 .nav-cta:hover{background:var(--cta-hover);transform:translateY(-1px)}
 
 .hero{padding:70px 40px 50px;text-align:center;max-width:800px;margin:0 auto}
@@ -53,65 +190,27 @@ body{font-family:'Blogger Sans','Inter',system-ui,sans-serif;background:var(--bg
 .lesson-card-content{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;justify-content:flex-end;padding:20px;background:linear-gradient(transparent 40%, rgba(0,0,0,.8));pointer-events:none}
 .lesson-card-body{position:relative;z-index:4;pointer-events:auto}
 .lesson-cat{font-family:'Fira Code',monospace;font-size:.55rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
-.lesson-card h3{font-family:'Fira Code',monospace;font-size:.9rem;font-weight:600;color:var(--text);margin-bottom:4px;text-shadow:0 1px 3px rgba(0,0,0,0.5)}
-.lesson-count{font-size:.7rem;color:var(--text-dim);text-shadow:0 1px 3px rgba(0,0,0,0.5)}
+.lesson-card h3{font-family:var(--mono);font-size:.9rem;font-weight:510;color:var(--text);margin-bottom:4px}
+.lesson-count{font-size:.7rem;color:var(--text-dim)}
 
-.deck-view{display:none;position:fixed;inset:0;z-index:100;background:var(--bg);flex-direction:column}
-.deck-view.open{display:flex}
-.deck-topbar{display:flex;align-items:center;gap:12px;padding:10px 20px;border-bottom:1px solid var(--border);flex-shrink:0}
-.deck-back{background:none;border:1px solid var(--border);color:var(--text-muted);padding:6px 14px;border-radius:6px;cursor:pointer;font-family:'Fira Code',monospace;font-size:.65rem;font-weight:600;transition:all .15s}
-.deck-back:hover{border-color:var(--accent);color:var(--accent)}
-.deck-title{font-family:'Fira Code',monospace;font-size:.85rem;font-weight:600;flex:1;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.deck-counter{font-family:'Fira Code',monospace;font-size:.7rem;color:var(--text-dim);flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:4px 8px;min-width:40px}
-.deck-counter .dc-current{font-size:1.1rem;font-weight:700;color:var(--accent);line-height:1}
-.deck-counter .dc-sep{font-size:.6rem;color:var(--text-dim);line-height:1;letter-spacing:1px}
-.deck-counter .dc-total{font-size:.75rem;color:var(--text-dim);line-height:1}
+/* ═══ DECK VIEW ═══ */
 
-.slide-container{flex:1;display:flex;align-items:center;justify-content:center;padding:40px;overflow:hidden}
-.slide{width:100%;max-width:1100px;background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:50px;min-height:400px;display:flex;flex-direction:column;justify-content:center;position:relative}
-.slide-num-badge{position:absolute;top:16px;right:20px;font-family:'Fira Code',monospace;font-size:.6rem;font-weight:700;color:var(--text-dim);letter-spacing:2px}
-.slide-cat{font-family:'Fira Code',monospace;font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
-.slide h2{font-family:'Fira Code',monospace;font-size:1.8rem;font-weight:700;line-height:1.2;margin-bottom:20px}
-.slide-question{font-size:1.4rem;color:var(--text);line-height:1.7;margin-bottom:16px}
-.slide-paraphrase{font-size:1.05rem;color:var(--text-muted);line-height:1.6;font-style:italic;padding-left:16px;border-left:2px solid var(--border)}
-.slide-visual{height:220px;border-radius:10px;margin-bottom:20px;position:relative;overflow:hidden;background:var(--bg2)}
-.slide-visual img{width:100%;height:100%;object-fit:cover;display:block;animation:kenBurns 12s ease-in-out infinite alternate}
-@keyframes kenBurns{0%{transform:scale(1) translate(0,0)}50%{transform:scale(1.08) translate(-1%,-1%)}100%{transform:scale(1.04) translate(1%,1%)}}
-.slide-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,28,28,.25) 0%,rgba(28,28,28,.65) 100%);pointer-events:none}
-.slide-visual .visual-label{position:absolute;bottom:10px;left:14px;z-index:2;font-family:'Fira Code',monospace;font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);text-shadow:0 1px 4px rgba(0,0,0,.6)}
-
-.deck-nav{display:flex;align-items:center;justify-content:center;gap:12px;padding:14px 20px;border-top:1px solid var(--border);flex-shrink:0}
-.deck-btn{background:var(--bg3);border:1px solid var(--border);color:var(--text-muted);padding:8px 18px;border-radius:8px;cursor:pointer;font-family:'Fira Code',monospace;font-size:.65rem;font-weight:600;transition:all .15s}
-.deck-btn:hover{border-color:var(--accent);color:var(--accent)}
-.deck-btn.primary{background:var(--cta);border-color:var(--cta);color:var(--cta-text)}
-.deck-btn.primary:hover{background:var(--cta-hover)}
-.deck-progress{flex:1;height:4px;background:var(--bg3);border-radius:2px;max-width:300px}
-.deck-progress-fill{height:100%;background:var(--accent);border-radius:2px;transition:width .3s ease}
-
-.shuffle-indicator{position:fixed;bottom:70px;left:50%;transform:translateX(-50%);background:var(--accent);color:var(--bg);padding:6px 16px;border-radius:20px;font-family:'Fira Code',monospace;font-size:.6rem;font-weight:700;letter-spacing:1px;opacity:0;transition:opacity .3s;z-index:101}
-.shuffle-indicator.show{opacity:1}
-
-.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.how-step{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:24px}
-.how-step-num{font-family:'Fira Code',monospace;font-size:1.8rem;font-weight:700;color:var(--accent);opacity:.25;margin-bottom:8px}
-.how-step h3{font-family:'Fira Code',monospace;font-size:.9rem;font-weight:600;margin-bottom:8px}
-.how-step p{font-size:.85rem;color:var(--text-muted);line-height:1.6}
-
-.footer{padding:30px 40px;text-align:center;font-size:.7rem;color:var(--text-dim);border-top:1px solid var(--border)}
-
-@media(max-width:700px){
+@media(max-width:768px){
   .nav{padding:0 16px}.nav-links{display:none}
-  .hero h1{font-size:2rem}
+  .hero h1{font-size:2.2rem}
   .section,.hero{padding-left:16px;padding-right:16px}
   .lesson-grid{grid-template-columns:1fr}
-  .slide{padding:30px 20px;min-height:300px}
-  .slide h2{font-size:1.3rem}
+  .how-grid{grid-template-columns:1fr}
+}
+
+/* ═══ UTILITY ═══ */
+.hidden{display:none!important}
   .how-grid{grid-template-columns:1fr}
 }
 
 /* ═══ 3-IMAGE GRID ═══ */
-.slide-visuals{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
-.vis-slot{border-radius:10px;overflow:hidden;background:var(--bg2);position:relative;aspect-ratio:4/3}
+.slide-visuals{display:block;margin-bottom:24px}
+.vis-slot{border-radius:10px;overflow:hidden;background:var(--bg2);position:relative;aspect-ratio:16/9}
 .vis-slot img{width:100%;height:100%;object-fit:cover;display:block;animation:kenBurns 12s ease-in-out infinite alternate}
 .vis-slot::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,28,28,.15) 0%,rgba(28,28,28,.55) 100%);pointer-events:none}
 .vis-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:'Fira Code',monospace;font-size:.6rem;color:var(--text-dim);letter-spacing:1px;text-transform:uppercase}
@@ -209,37 +308,32 @@ body{font-family:'Blogger Sans','Inter',system-ui,sans-serif;background:var(--bg
 
 <div class="deck-view" id="deckView">
   <div class="deck-topbar">
-    <button class="deck-back" onclick="closeDeck()">&#8592; Back to Library</button>
-    <div class="deck-title" id="deckTitle">Topic Title</div>
-    <div class="deck-img-toggle" id="deckImgToggle" title="Toggle images (I)">
-        <span class="img-toggle-label">Pics</span>
-        <div class="img-toggle-btn on" id="deckImgToggleBtn"></div>
-      </div>
-      <a href="image-manager.html" target="_blank" class="deck-img-toggle" title="Open Image Manager" style="text-decoration:none;">
-        <span class="img-toggle-label" style="color:var(--accent);">Manage</span>
-      </a>
-      <div class="deck-counter" id="deckCounter">
-        <span class="dc-current" id="dcCurrent">1</span>
-        <span class="dc-sep">&mdash;</span>
-        <span class="dc-total" id="dcTotal">10</span>
-      </div>
+    <button class="deck-back" onclick="closeDeck()">&#8592; Back</button>
+    <div class="deck-title-wrap">
+      <div class="deck-title-topic" id="deckTitle">Topic Title</div>
+      <div class="deck-title-cat" id="deckTitleCat">Category</div>
+    </div>
+    <div class="deck-counter">
+      <span class="dc-current" id="dcCurrent">1</span>
+      <span style="color:var(--text-dim);font-size:.6rem">/</span>
+      <span class="dc-total" id="dcTotal">10</span>
+    </div>
   </div>
   <div class="slide-container">
-    <div class="slide" id="slideContent">
-      <div class="slide-cat" id="slideCat">Category</div>
-      <div class="slide-num-badge" id="slideNumBadge">1 / 10</div>
-      <div class="slide-visuals" id="slideVisuals">
-        <div class="vis-slot" id="visSlot1"><div class="vis-placeholder">Image 1</div></div>
-        <div class="vis-slot" id="visSlot2"><div class="vis-placeholder">Image 2</div></div>
-        <div class="vis-slot" id="visSlot3"><div class="vis-placeholder">Image 3</div></div>
-      </div>
-      <div class="slide-question" id="slideQuestion">Question goes here</div>
-      <div class="slide-paraphrase" id="slideParaphrase">Paraphrased version</div>
+    <div class="slide-bg" id="slideBg">
+      <img src="" alt="" id="slideBgImg">
     </div>
-    <div class="deck-progress"><div class="deck-progress-fill" id="deckProgressFill" style="width:10%"></div></div>
+    <div class="slide-content">
+      <div class="slide-question-box">
+        <div class="slide-cat" id="slideCat">Category</div>
+        <div class="slide-question" id="slideQuestion">Question goes here</div>
+        <div class="slide-paraphrase" id="slideParaphrase">Paraphrased version</div>
+      </div>
+    </div>
   </div>
-  <div class="deck-nav">
-    <button class="deck-btn" onclick="prevSlide()">&#8592; Previous</button>
+  <div class="deck-controls">
+    <button class="deck-btn icon-btn" onclick="prevSlide()">&#8592;</button>
+    <div class="deck-progress"><div class="deck-progress-fill" id="deckProgressFill" style="width:10%"></div></div>
     <button class="deck-btn" onclick="shuffleDeck()">&#128260; Shuffle</button>
     <button class="deck-btn primary" onclick="nextSlide()">Next &#8594;</button>
   </div>
@@ -529,49 +623,87 @@ window.closeDeck=function(){
 window.nextSlide=function(){if(currentIndex<questions.length-1){currentIndex++;renderSlide();}};
 window.prevSlide=function(){if(currentIndex>0){currentIndex--;renderSlide();}};
 
-window.shuffleDeck=function(){\n  for(var i=questions.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var tmp=questions[i];questions[i]=questions[j];questions[j]=tmp;}\n  currentIndex=0;renderSlide();\n  var ind=document.getElementById('shuffleIndicator');ind.classList.add('show');setTimeout(function(){ind.classList.remove('show');},1500);\n};\n\nwindow.cycleTheme=function(){\n  var themes = ['dark', 'light', 'wte', 'eloquenta'];\n  var current = document.documentElement.getAttribute('data-theme') || 'dark';\n  var nextIndex = (themes.indexOf(current) + 1) % themes.length;\n  var nextTheme = themes[nextIndex];\n  document.documentElement.setAttribute('data-theme', nextTheme);\n};
+window.shuffleDeck=function(){
+  for(var i=questions.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var tmp=questions[i];questions[i]=questions[j];questions[j]=tmp;}
+  currentIndex=0;renderSlide();
+  var ind=document.getElementById('shuffleIndicator');ind.classList.add('show');setTimeout(function(){ind.classList.remove('show');},1500);
+};
+
+window.cycleTheme=function(){
+  var themes = ['dark', 'light', 'wte', 'eloquenta'];
+  var current = document.documentElement.getAttribute('data-theme') || 'dark';
+  var nextIndex = (themes.indexOf(current) + 1) % themes.length;
+  var nextTheme = themes[nextIndex];
+  document.documentElement.setAttribute('data-theme', nextTheme);
+};
+
+// Color themes (7 palettes from William)
+var colorThemes = [
+  {name:'jungle',bg:'#0F1400',panel:'#1A2A0F',accent:'#ffe000',text:'#E8F5D0',cta:'#72ce27'},
+  {name:'ocean',bg:'#0A1428',panel:'#142850',accent:'#abc4ff',text:'#edf2fb',cta:'#ccdbfd'},
+  {name:'nebula',bg:'#1a0f2e',panel:'#382c83',accent:'#07f49e',text:'#E8E0FF',cta:'#11cc99'},
+  {name:'beach',bg:'#0E1A2E',panel:'#1A3050',accent:'#eca9bb',text:'#F0F0FF',cta:'#45a0ea'},
+  {name:'planet',bg:'#14121E',panel:'#221E3A',accent:'#f5ccd4',text:'#c9def4',cta:'#d0dbef'},
+  {name:'sunset',bg:'#1A0E0A',panel:'#3A1C14',accent:'#f9a470',text:'#FFF0E0',cta:'#ef9770'},
+  {name:'clouds',bg:'#0C1828',panel:'#182858',accent:'#abc4ff',text:'#edf2fb',cta:'#c1d3fe'}
+];
+var topicThemeMap = {};
+function getTopicTheme(slug){
+  if(!topicThemeMap[slug]){
+    topicThemeMap[slug] = colorThemes[Math.floor(Math.random()*colorThemes.length)];
+  }
+  return topicThemeMap[slug];
+}
+function extractKeyword(question, topicSlug, questionIndex){
+  var cleaned = question.toLowerCase()
+    .replace(/^(in your opinion|do you|what|how|why|when|where|who|would you|have you|are you|is|are|can you|do|does|did|would|could|should|have|has|had)/g, '')
+    .replace(/\?/g, '')
+    .replace(/\b(you|your|the|a|an|of|to|in|on|at|for|and|or|but|with|from|by|it|is|are|was|were|be|been|being|that|this|these|those|there|here|they|them|their|we|us|our|my|me|do|does|did|about|like|think|feel|know|want|need|go|get|make|take|have|has|had)\b/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  var words = cleaned.split(' ').filter(function(w){ return w.length > 3; });
+  if (words.length === 0) { return topicSlug + '-' + questionIndex; }
+  var keyword = words.slice(0, 2).join(' ');
+  return keyword + ' ' + topicSlug + questionIndex;
+}
+function getQuestionImage(question, topicSlug, questionIndex){
+  var keyword = extractKeyword(question, topicSlug, questionIndex);
+  var encoded = encodeURIComponent(keyword);
+  return 'https://image.pollinations.ai/prompt/' + encoded + '?width=1280&height=720&nologo=true&model=flux&seed=' + topicSlug + questionIndex;
+}
+
+// Load local image map (generated by download_images.py)
+// The image map is loaded via script tag below for reliability
+window.localImageMap = window.localImageMap || {};
 
 function renderSlide(){
   var q=questions[currentIndex];
   document.getElementById('deckTitle').textContent=currentTopic.replace(/ \\(\\d+ questions?\\)$/,'');
+  var catEl = document.getElementById('deckTitleCat');
+  if(catEl) catEl.textContent = currentCat;
   document.getElementById('dcCurrent').textContent=(currentIndex+1);
   document.getElementById('dcTotal').textContent=questions.length;
   document.getElementById('slideCat').textContent=currentCat;
-  document.getElementById('slideNumBadge').textContent=(currentIndex+1)+' / '+questions.length;
   document.getElementById('slideQuestion').textContent=q.original;
   document.getElementById('slideParaphrase').textContent=q.paraphrased||'';
   document.getElementById('deckProgressFill').style.width=((currentIndex+1)/questions.length*100)+'%';
-  
-  // Load images for this topic (3 slots)
-  // Get slug from the topic data
-  var slug = '';
-  if (currentTopicObj && currentTopicObj.slug) {
-    slug = currentTopicObj.slug;
-  } else {
-    slug = currentTopic.toLowerCase().replace(/[^a-z0-9]/g,'').replace(/\s+/g,'').replace(/\d+questions/g,'');
-  }
-  // Merge hardcoded images with localStorage images (localStorage takes priority)
-  var savedImages = {};
-  try {
-    var saved = localStorage.getItem('slidingInImages');
-    if (saved) savedImages = JSON.parse(saved);
-  } catch(e) {}
-  var hardcodedImages = window.topicImages || {};
-  var mergedImages = {};
-  for (var key in hardcodedImages) { mergedImages[key] = hardcodedImages[key]; }
-  for (var key in savedImages) { mergedImages[key] = savedImages[key]; }
-  var imgs = mergedImages[slug] || [];
-  var slots = document.querySelectorAll('.vis-slot');
-  for (var s = 0; s < 3; s++) {
-    var slot = slots[s];
-    if (imgs[s]) {
-      slot.innerHTML = '<img src="' + imgs[s] + '" alt="" onerror="this.parentElement.classList.add(\'empty\');this.style.display=\'none\'"><span class="vis-label">' + (currentTopic.replace(/ \(\d+ questions?\)$/,'')) + '</span>';
-      slot.classList.remove('empty');
-    } else {
-      slot.innerHTML = '<div class="vis-placeholder">Image ' + (s+1) + '</div>';
-      slot.classList.add('empty');
-    }
-  }
+
+  // Apply per-topic random color theme
+  var slug = currentTopicObj ? (currentTopicObj.slug||'') : currentTopic.toLowerCase().replace(/[^a-z0-9]/g,'');
+  var theme = getTopicTheme(slug);
+  document.documentElement.style.setProperty('--bg', theme.bg);
+  document.documentElement.style.setProperty('--bg-card', theme.panel);
+  document.documentElement.style.setProperty('--accent', theme.accent);
+  document.documentElement.style.setProperty('--text', theme.text);
+  document.documentElement.style.setProperty('--cta', theme.cta);
+  document.documentElement.style.setProperty('--bg2', theme.bg);
+  document.documentElement.style.setProperty('--bg3', theme.panel);
+
+  // Use local image if available, otherwise fallback to Pollinations
+  var localImg = (window.localImageMap[slug] && window.localImageMap[slug][String(currentIndex)]);
+  var imgUrl = localImg || getQuestionImage(q.original, slug, currentIndex);
+  document.getElementById('slideBgImg').src = imgUrl;
+  document.getElementById('slideBgImg').alt = currentTopic;
 }
 
 // Image toggle
@@ -593,5 +725,6 @@ document.addEventListener("keydown",function(e){
 });
 })();
 </script>
+<script src="sliding-in-image-map.js"></script>
 </body>
 </html>
