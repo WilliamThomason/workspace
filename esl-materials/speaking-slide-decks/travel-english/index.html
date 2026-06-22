@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0">
+ <title> Travel English — Speaking Slide Deck</title>
+ <style>
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+ * { margin:0; padding:0; box-sizing:border-box; }
+ html, body { height:100%; overflow:hidden; background:#0c1222; }
+ body { font-family:'Inter',system-ui,sans-serif; color:#f1f5f9; }
+
+ /* SLIDES */
+ .slide {
+ position:fixed; inset:0; display:flex; flex-direction:column;
+ align-items:center; justify-content:center; opacity:0;
+ transform:translateY(24px) scale(.98);
+ transition:opacity .5s ease, transform .5s ease;
+ pointer-events:none; padding:5vh 6vw; overflow-y:auto;
+ }
+ .slide.active { opacity:1; transform:translateY(0) scale(1); pointer-events:auto; z-index:2; }
+
+ /* GLOWING TEXT BOX */
+ .glow-box {
+ background: rgba(10, 16, 32, 0.85);
+ border: 1.5px solid rgba(251, 191, 36, 0.4);
+ border-radius: 18px;
+ padding: 2em 2.6em;
+ box-shadow:
+ 0 0 30px rgba(251, 191, 36, 0.12),
+ 0 0 60px rgba(34, 211, 238, 0.08),
+ 0 20px 60px rgba(0, 0, 0, 0.5);
+ max-width: 720px; width: 100%;
+ margin: 1em 0;
+ backdrop-filter: blur(8px);
+ }
+ .glow-box.cyan {
+ border-color: rgba(34, 211, 238, 0.5);
+ box-shadow:
+ 0 0 35px rgba(34, 211, 238, 0.18),
+ 0 0 70px rgba(34, 211, 238, 0.08),
+ 0 20px 60px rgba(0, 0, 0, 0.5);
+ }
+ .glow-box.lime {
+ border-color: rgba(163, 230, 53, 0.5);
+ box-shadow:
+ 0 0 35px rgba(163, 230, 53, 0.18),
+ 0 0 70px rgba(163, 230, 53, 0.08),
+ 0 20px 60px rgba(0, 0, 0, 0.5);
+ }
+ .glow-box.rose {
+ border-color: rgba(251, 113, 133, 0.4);
+ box-shadow:
+ 0 0 30px rgba(251, 113, 133, 0.15),
+ 0 0 60px rgba(251, 113, 133, 0.06),
+ 0 20px 60px rgba(0, 0, 0, 0.5);
+ }
+
+ /* TYPOGRAPHY */
+ .title-box {
+   background:rgba(10,16,32,.88);
+   border:1.5px solid rgba(251,191,36,.5);
+   border-radius:14px;
+   padding:.8em 2em;
+   margin-bottom:1em;
+   box-shadow:
+     0 0 25px rgba(251,191,36,.2),
+     0 0 50px rgba(34,211,238,.1),
+     inset 0 1px 0 rgba(255,255,255,.05);
+   backdrop-filter:blur(8px);
+   text-align:center;
+ }
+ .title-box.cyan { border-color:rgba(34,211,238,.5); box-shadow:0 0 25px rgba(34,211,238,.2),0 0 50px rgba(34,211,238,.1); }
+ .title-box.lime { border-color:rgba(163,230,53,.5); box-shadow:0 0 25px rgba(163,230,53,.2),0 0 50px rgba(163,230,53,.1); }
+ .title-box.rose { border-color:rgba(251,113,133,.5); box-shadow:0 0 25px rgba(251,113,133,.2),0 0 50px rgba(251,113,133,.1); }
+
+ h1 {
+   font-family:'Montserrat',sans-serif;
+   font-size:clamp(2.4rem,5vw,4rem); font-weight:800;
+   background:linear-gradient(135deg,#fbbf24,#f472b6,#22d3ee);
+   -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+   margin-bottom:.3em; text-align:center; line-height:1.1;
+ }
+ h2 {
+   font-family:'Montserrat',sans-serif;
+   font-size:clamp(1.4rem,2.8vw,2.2rem); font-weight:700;
+   margin-bottom:.3em;
+ }
+ h3 {
+ font-family:'Oswald',sans-serif;
+ font-size:clamp(1.1rem,2vw,1.5rem); font-weight:600;
+ color:#22d3ee; margin-bottom:.5em; text-transform:uppercase; letter-spacing:1px;
+ }
+ .phrase-it { color:#fbbf24; font-weight:600; font-size:clamp(1rem,1.8vw,1.35rem); }
+ .phrase-en { color:#67e8f9; font-size:clamp(.9rem,1.5vw,1.15rem); }
+ .label { color:#94a3b8; font-size:clamp(.85rem,1.3vw,1.05rem); font-family:'Oswald',sans-serif; }
+ .tag {
+ display:inline-block; padding:.35em 1em; border-radius:8px;
+ font-size:clamp(.8rem,1.2vw,1rem); font-weight:600; margin:.3em;
+ font-family:'Oswald',sans-serif;
+ }
+ .tag-amber { background:rgba(251,191,36,.15); color:#fbbf24; border:1px solid rgba(251,191,36,.3); }
+ .tag-cyan { background:rgba(34,211,238,.15); color:#22d3ee; border:1px solid rgba(34,211,238,.3); }
+ .tag-lime { background:rgba(163,230,53,.15); color:#a3e635; border:1px solid rgba(163,230,53,.3); }
+ .tag-rose { background:rgba(251,113,133,.15); color:#fb7185; border:1px solid rgba(251,113,133,.3); }
+
+ /* INTERACTIVE EXERCISES */
+ .exercise {
+ display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin:1em 0;
+ }
+ .ex-btn {
+ background:rgba(34,211,238,.12); border:1.5px solid rgba(34,211,238,.4);
+ color:#22d3ee; padding:.7em 1.4em; border-radius:12px;
+ cursor:pointer; font-size:clamp(.9rem,1.4vw,1.1rem); font-weight:500;
+ transition:all .2s; font-family:'Inter',sans-serif;
+ }
+ .ex-btn:hover { background:rgba(34,211,238,.25); box-shadow:0 0 20px rgba(34,211,238,.3); }
+ .ex-btn.revealed { background:rgba(163,230,53,.15); border-color:rgba(163,230,53,.5); color:#a3e635; }
+ .ex-btn.wrong { background:rgba(251,113,133,.15); border-color:rgba(251,113,133,.5); color:#fb7185; }
+
+ .answer-reveal {
+ background:rgba(163,230,53,.1); border:1px solid rgba(163,230,53,.3);
+ border-radius:12px; padding:1em 1.5em; margin:.8em 0;
+ color:#a3e635; font-size:clamp(.95rem,1.5vw,1.2rem);
+ display:none; animation:fadeSlide .3s ease;
+ }
+ .answer-reveal.show { display:block; }
+ @keyframes fadeSlide { from{opacity:0;transform:translateY(-8px)} to{opacity:1;transform:translateY(0)} }
+
+ .fill-blank {
+ border:none; border-bottom:2px solid #22d3ee; background:transparent;
+ color:#fbbf24; font-size:1.1rem; font-weight:600;
+ text-align:center; width:120px; padding:.2em; outline:none;
+ font-family:'Inter',sans-serif;
+ }
+ .fill-blank:focus { border-bottom-color:#a3e635; }
+
+ /* NAV */
+ .nav {
+ position:fixed; bottom:20px; left:50%; transform:translateX(-50%); z-index:100;
+ display:flex; gap:10px; align-items:center;
+ background:rgba(10,16,32,.9); padding:10px 20px;
+ border-radius:30px; border:1px solid rgba(34,211,238,.3);
+ backdrop-filter:blur(12px); box-shadow:0 0 25px rgba(34,211,238,.15);
+ }
+ .nav button {
+ background:rgba(34,211,238,.12); border:1px solid rgba(34,211,238,.4);
+ color:#22d3ee; padding:8px 18px; border-radius:20px;
+ cursor:pointer; font-size:.9rem; transition:all .2s;
+ font-family:'JetBrains Mono',monospace;
+ }
+ .nav button:hover { background:rgba(34,211,238,.25); box-shadow:0 0 15px rgba(34,211,238,.3); }
+ .nav button:disabled { opacity:.3; cursor:not-allowed; }
+ .counter { font-size:.85rem; color:#64748b; min-width:50px; text-align:center; font-family:'JetBrains Mono',monospace; }
+ .progress { position:fixed; top:0; left:0; height:3px; background:linear-gradient(90deg,#fbbf24,#22d3ee,#a3e635); width:0%; transition:width .3s; z-index:100; box-shadow:0 0 10px rgba(251,191,36,.4); }
+
+ /* RESPONSIVE */
+ @media(max-width:768px){
+ .slide{padding:3vh 4vw}
+ h1{font-size:2rem}
+ h2{font-size:1.4rem}
+ .glow-box{padding:1.4em 1.6em}
+ }
+ </style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+<div class="counter" id="counter">1 / 15</div>
+<div class="nav">
+ <button id="prev"> Prev</button>
+ <span class="counter" id="navCounter">1 / 15</span>
+ <button id="next">Next </button>
+</div>
+
+<!-- SLIDE 1: Title -->
+<div class="slide" data-slide="0" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80');background-size:cover;background-position:center">
+ <div class="title-box"><h1> Travel English</h1></div>
+ <div class="glow-box" style="text-align:center">
+ <p style="font-size:1.2rem;color:#e2e8f0;font-weight:500">Essential Phrases for Your Trip to England</p>
+ <p style="color:#94a3b8;margin-top:.8em;font-size:1rem">Click, speak, and learn — even without internet!</p>
+ </div>
+</div>
+
+<!-- SLIDE 2: At the Airport -->
+<div class="slide" data-slide="1" style="background-image:url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&q=80');background-size:cover;background-position:center">
+ <div class="title-box"><h2> At the Airport</h2></div>
+ <div class="glow-box cyan">
+ <p class="phrase-it">"Buongiorno, il mio nome è Marco. Ho un bagaglio smarrito."</p>
+ <p class="phrase-en">"Good morning, my name is Marco. I have a lost suitcase."</p>
+ </div>
+ <div class="glow-box">
+ <p class="phrase-it">"Dov'è l'uscita per la raccolta bagagli?"</p>
+ <p class="phrase-en">"Where is the exit for baggage claim?"</p>
+ </div>
+ <div class="glow-box lime">
+ <p class="phrase-it">"Quanto costa un taxi per il centro città?"</p>
+ <p class="phrase-en">"How much is a taxi to the city centre?"</p>
+ </div>
+ <div class="exercise">
+ <button class="ex-btn" onclick="this.classList.toggle('revealed')"> Tap to reveal: "I need a window seat"</button>
+ <div class="answer-reveal">Ho bisogno di un posto finestrino</div>
+ </div>
+</div>
+
+<!-- SLIDE 3: Hotel Check-in -->
+<div class="slide" data-slide="2" style="background-image:url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1600&q=80');background-size:cover;background-position:center">
+ <div class="title-box"><h2> Hotel Check-in</h2></div>
+ <div class="glow-box cyan">
+ <p class="phrase-it">"Buonasera, ho una prenotazione a nome Rossi."</p>
+ <p class="phrase-en">"Good evening, I have a reservation under the name Rossi."</p>
+ </div>
+ <div class="glow-box">
+ <p class="phrase-it">"A che ora è la colazione?"</p>
+ <p class="phrase-en">"What time is breakfast?"</p>
+ </div>
+ <div class="glow-box lime">
+ <p class="phrase-it">"Avete una camera con vista, per favore?"</p>
+ <p class="phrase-en">"Do you have a room with a view, please?"</p>
+ </div>
+ <div class="exercise">
+ <button class="ex-btn" onclick="this.classList.toggle('revealed')"> Tap to reveal: "Is Wi-Fi included?"</button>
+ <div class="answer-reveal">Il Wi-Fi è incluso?</div>
+ </div>
+</div>
+
+<!-- SLIDE 4: Restaurant -->
+<div class="slide" data-slide="3" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600&q=80');background-size:cover;background-position:center">
+ <div class="title-box"><h2> At the Restaurant</h2></div>
+ <div class="glow-box cyan">
+ <p class="phrase-it">"Ci porta il menù, per favore?"</p>
+ <p class="phrase-en">"Could you bring us the menu, please?"</p>
+ </div>
+ <div class="glow-box">
+ <p class="phrase-it">"Cosa mi consiglia? Non ho mai provato il roast beef!"</p>
+ <p class="phrase-en">"What do you recommend? I've never tried roast beef!"</p>
+ </div>
+ <div class="glow-box lime">
+ <p class="phrase-it">"Il conto, per favore. Possiamo pagare separatamente?"</p>
+ <p class="phrase-en">"The bill, please. Can we pay separately?"</p>
+ </div>
+ <div class="exercise">
+ <button class="ex-btn" onclick="this.classList.toggle('revealed')"> Tap to reveal: "I'm vegetarian"</button>
+ <div class="answer-reveal">Sono vegetariano/a</div>
+ </div>
+</div>
+
+<!-- SLIDE 5: Shopping -->
+<div class="slide" data-slide="4" style="background-image:url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600&q=80');background-size:cover;background-position:center">
+ <div class="title-box"><h2> Shopping</h2></div>
+ <div class="glow-box cyan">
+ <p class="phrase-it">"Posso provarmi questo? Che taglia è?"</p>
+ <p class="phrase-en">"Can I try this on? What size is it?"</p>
+ </div>
+ <div class="glow-box">
+ <p class="phrase-it">"Avete una taglia più grande?"</p>
+ <p class="phrase-en">"Do you have a bigger size?"</p>
+ </div>
+ <div class="glow-box lime">
+ <p class="phrase-it">"Quanto costa? C'è uno sconto?"</p>
+ <p class="phrase-en">"How much is it? Is there a discount?"</p>
+ </div>
+ <div class="exercise">
+ <button class="ex-btn" onclick="this.classList.toggle('revealed')"> Tap to reveal: "Can I pay by card?"</button>
+ <div class="answer-reveal">Posso pagare con la carta?</div>
+ </div>
+</div>
+
+<!-- SLIDE 6: Asking Directions -->
+<div class="slide" data-slide="5" style="background-image:url('https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1600&q=80');background-size:cover;background-position:center">
+ <div class="title-box"><h2> Asking Directions</h2></div>
+ <div class="glow-box cyan">
+ <p class="phrase-it">"Scusi, come si arriva alla stazione?"</p>
+ <p class="phrase-en">"Excuse me, how do I get to the station?"</p>
+ </div>
+ <div class="glow-box">
+ <p class="phrase-it">"È lontano? Posso andare a piedi?"</p>
+ <p class="phrase-en">"Is it far? Can I walk?"</p>
+ </div>
+ <div class="glow-box lime">
+ <p class="phrase-it">"Dov'è la fermata dell'autobus più vicina?"</p>
+ <p class="phrase-en">"Where is the nearest bus stop?"</p>
+ </div>
+ <div class="exercise">
+ <button class="ex-btn" onclick="this.classList.toggle('revealed')"> Tap to reveal: "Straight ahead, then turn left"</button>
+ <div class="answer-reveal">Dritto, poi giri a sinistra</div>
+ </div>
+</div>
+
+<!-- SLIDE 7: At the Beach -->
+<div class="slide" data-slide="6" style="background-image:url('https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1600&q=80');background-size:cover;background-position:center">
+ <div class="title-box"><h2> At the Beach</h2></div>
+ <div class="glow-box cyan">
+ <p class="phrase-it">"C'è un posto dove posso noleggiare un ombrellone?"</p>
+ <p class="phrase-en">"Is there a place where I can rent a sun lounger?"</p>
+ </div>
+ <div class="glow-box">
+ <p class="phrase-it">"Quanto costa noleggiare un lettino per due ore?"</p>
+ <p class="phrase-en">"How much to rent a sun lounger for two hours?"</p>
+ </div>
+ <div class="glow-box lime">
+ <p class="phrase-it">"È sicuro nuotare qui?"</p>
+ <p class="phrase-en">"Is it safe to swim here?"</p>
+ </div>
+ <div class="exercise">
+ <button class="ex-btn" onclick="this.classList.toggle('revealed')"> Tap to reveal: "Where is the nearest toilet?"</button>
+ <div class="answer-reveal">Dov'è il bagno più vicino?</div>
+ </div>
+</div>
+
+<!-- SLIDE 8: Vocabulary Match -->
+<div class="slide" data-slide="7" style="background-image:url('https://images.unsplash.com/photo-1559034432-ee2972257952?w=1600&q=80');background-size:cover;background-position:center">
+ <div class="title-box"><h2> Vocabulary Match</h2></div>
+ <p style="color:#94a3b8;margin-bottom:1em;font-size:1rem">Tap the English word that matches the Italian meaning:</p>
+ <div class="glow-box">
+ <div class="exercise">
+ <button class="ex-btn" onclick="checkAnswer(this,'correct')">Receipt</button>
+ <button class="ex-btn" onclick="checkAnswer(this,'wrong')">Entrance</button>
+ <button class="ex-btn" onclick="checkAnswer(this,'wrong')">Museum</button>
+ </div>
+ <p style="text-align:center;color:#fbbf24;font-size:1.1rem;margin-top:.5em"> "Lo scontrino"</p>
+ </div>
+ <div class="glow-box">
+ <div class="exercise">
+ <button class="ex-btn" onclick="checkAnswer(this,'wrong')">Beach</button>
+ <button class="ex-btn" onclick="checkAnswer(this,'correct')">Luggage</button>
+ <button class="ex-btn" onclick="checkAnswer(this,'wrong')">Ticket</button>
+ </div>
+ <p style="text-align:center;color:#fbbf24;font-size:1.1rem;margin-top:.5em"> "Il bagaglio"</p>
+ </div>
+</div>
+
+<!-- SLIDE 9: Fill in the Blank -->
+<div class="slide" data-slide="8" style="background-image:url('https://images.unsplash.com/photo-1454942901704-3c44c11b2ad1?w=1600&q=80');background-size:cover;background-position:center">
+ <div class="title-box"><h2> Fill in the Blank</h2></div>
+ <div class="glow-box cyan" style="text-align:center">
+ <p style="font-size:1.1rem;color:#e2e8f0">Complete the phrase:</p>
+ <p style="font-size:1.2rem;margin:1em 0">
+ <span class="phrase-en">"Could you </span>
+ <input type="text" class="fill-blank" placeholder="???" oninput="checkBlank(this,'pass')">
+ <span class="phrase-en"> me the bill?"</span>
+ </p>
+ <p class="label" style="color:#94a3b8"> "Mi porta il conto, per favore?"</p>
+ </div>
+ <div class="glow-box" style="text-align:center">
+ <p style="font-size:1.2rem;color:#e2e8f0">
+ <span class="phrase-en">"Where is the </span>
+ <input type="text" class="fill-blank" placeholder="???" oninput="checkBlank(this,'nearest')">
+ <span class="phrase-en"> hospital?"</span>
+ </p>
+ <p class="label" style="color:#94a3b8"> "Dov'è l'ospedale più vicino?"</p>
+ </div>
+</div>
+
+<!-- SLIDE 10: At the Host Family -->
+<div class="slide" data-slide="9" style="background-image:url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1600&q=80');background-size:cover;background-position:center">
+ <div class="title-box"><h2> With Your Host Family</h2></div>
+ <div class="glow-box cyan">
+ <p class="phrase-it">"Buonasera! Sono Marco, il ragazzo italiano. Piacere!"</p>
+ <p class="phrase-en">"Good evening! I'm Marco, the Italian boy. Nice to meet you!"</p>
+ </div>
+ <div class="glow-box">
+ <p class="phrase-it">"A che ora si cena di solito?"</p>
+ <p class="phrase-en">"What time do you usually have dinner?"</p>
+ </div>
+ <div class="glow-box lime">
+ <p class="phrase-it">"Posso aiutarti a sparecchiare?"</p>
+ <p class="phrase-en">"Can I help you clear the table?"</p>
+ </div>
+ <div class="exercise">
+ <button class="ex-btn" onclick="this.classList.toggle('revealed')"> Tap to reveal: "Thank you for hosting me!"</button>
+ <div class="answer-reveal">Grazie per avermi ospitato!</div>
+ </div>
+</div>
+
+<!-- SLIDE 11: Emergencies -->
+<div class="slide" data-slide="10" style="background-image:url('https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=1600&q=80');background-size:cover;background-position:center">
+ <div class="title-box"><h2> Emergencies</h2></div>
+ <div class="glow-box rose">
+ <p class="phrase-it">"Ho perso il mio passaporto! Cosa devo fare?"</p>
+ <p class="phrase-en">"I lost my passport! What should I do?"</p>
+ </div>
+ <div class="glow-box rose">
+ <p class="phrase-it">"Chiamate un'ambulanza! Il mio amico sta male!"</p>
+ <p class="phrase-en">"Call an ambulance! My friend is feeling sick!"</p>
+ </div>
+ <div class="glow-box rose">
+ <p class="phrase-it">"Il numero di emergenza è il 999."</p>
+ <p class="phrase-en">"The emergency number is 999."</p>
+ </div>
+ <div class="exercise">
+ <button class="ex-btn" onclick="this.classList.toggle('revealed')"> Tap to reveal: "I need to contact the embassy"</button>
+ <div class="answer-reveal">Devo contattare l'ambasciata</div>
+ </div>
+</div>
+
+<!-- SLIDE 12: Vocabulary Match 2 -->
+<div class="slide" data-slide="11" style="background-image:url('https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=1600&q=80');background-size:cover;background-position:center">
+ <div class="title-box"><h2> Vocabulary Match 2</h2></div>
+ <p style="color:#94a3b8;margin-bottom:1em;font-size:1rem">Tap the correct English translation:</p>
+ <div class="glow-box">
+ <div class="exercise">
+ <button class="ex-btn" onclick="checkAnswer(this,'wrong')">Kitchen</button>
+ <button class="ex-btn" onclick="checkAnswer(this,'correct')">Bathroom</button>
+ <button class="ex-btn" onclick="checkAnswer(this,'wrong')">Bedroom</button>
+ </div>
+ <p style="text-align:center;color:#fbbf24;font-size:1.1rem;margin-top:.5em"> "Il bagno"</p>
+ </div>
+ <div class="glow-box">
+ <div class="exercise">
+ <button class="ex-btn" onclick="checkAnswer(this,'correct')">Pharmacy</button>
+ <button class="ex-btn" onclick="checkAnswer(this,'wrong')">Bank</button>
+ <button class="ex-btn" onclick="checkAnswer(this,'wrong')">Post office</button>
+ </div>
+ <p style="text-align:center;color:#fbbf24;font-size:1.1rem;margin-top:.5em"> "La farmacia"</p>
+ </div>
+</div>
+
+<!-- SLIDE 13: Travel Tips -->
+<div class="slide" data-slide="12" style="background-image:url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1600&q=80');background-size:cover;background-position:center">
+ <div class="title-box"><h2> Travel Tips</h2></div>
+ <div class="glow-box">
+ <h3> Before You Go</h3>
+ <p class="label">• Download offline Google Translate (Italian ↔ English)</p>
+ <p class="label">• Save an emergency contact number in your phone</p>
+ <p class="label">• Take a photo of your passport (store in cloud)</p>
+ </div>
+ <div class="glow-box cyan">
+ <h3> Speaking Tip</h3>
+ <p class="label" style="font-size:1rem;color:#e2e8f0">"Don't worry about making mistakes. English people appreciate that you're trying. A smile and 'sorry, my English isn't perfect' goes a long way!"</p>
+ </div>
+ <div class="exercise">
+ <button class="ex-btn" onclick="this.classList.toggle('revealed')"> Tap to reveal: "Sorry, my English isn't perfect"</button>
+ <div class="answer-reveal">Scusa, il mio inglese non è perfetto</div>
+ </div>
+</div>
+
+<!-- SLIDE 14: Quick Review -->
+<div class="slide" data-slide="13" style="background-image:url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600&q=80');background-size:cover;background-position:center">
+ <div class="title-box"><h2> Quick Review</h2></div>
+ <div class="glow-box cyan" style="text-align:center">
+ <p class="phrase-en" style="font-size:1.2rem">"Where is the nearest pharmacy?"</p>
+ <p style="margin-top:.8em"><input type="text" class="fill-blank" placeholder="???" oninput="checkBlank(this,'pharmacy')"></p>
+ </div>
+ <div class="glow-box" style="text-align:center">
+ <p class="phrase-en" style="font-size:1.2rem">"Can I pay by card?"</p>
+ <p style="margin-top:.8em"><input type="text" class="fill-blank" placeholder="???" oninput="checkBlank(this,'card')"></p>
+ </div>
+ <div class="glow-box lime" style="text-align:center">
+ <p class="phrase-en" style="font-size:1.2rem">"I'm vegetarian"</p>
+ <p style="margin-top:.8em"><input type="text" class="fill-blank" placeholder="???" oninput="checkBlank(this,'vegetarian')"></p>
+ </div>
+</div>
+
+<!-- SLIDE 15: Congratulations -->
+<div class="slide" data-slide="14" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80');background-size:cover;background-position:center">
+ <div class="glow-box" style="text-align:center">
+ <p style="font-size:1.2rem;color:#e2e8f0;margin-bottom:.8em">You're ready for your trip to England!</p>
+ <p style="color:#94a3b8;font-size:1rem">Practice these phrases daily for 10 minutes and you'll feel confident.</p>
+ </div>
+</div>
+
+<script>
+ const slides = document.querySelectorAll('.slide');
+ let current = 0;
+
+ function update() {
+ slides.forEach((s, i) => s.classList.toggle('active', i === current));
+ document.getElementById('progress').style.width = ((current + 1) / slides.length * 100) + '%';
+ document.getElementById('counter').textContent = (current + 1) + ' / ' + slides.length;
+ document.getElementById('navCounter').textContent = (current + 1) + ' / ' + slides.length;
+ document.getElementById('prev').disabled = current === 0;
+ document.getElementById('next').disabled = current === slides.length - 1;
+ }
+
+ function next() { if (current < slides.length - 1) { current++; update(); } }
+ function prev() { if (current > 0) { current--; update(); } }
+
+ document.getElementById('next').addEventListener('click', next);
+ document.getElementById('prev').addEventListener('click', prev);
+
+ document.addEventListener('keydown', (e) => {
+ if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); next(); }
+ if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
+ });
+
+ // Exercise: reveal answers
+ document.querySelectorAll('.ex-btn').forEach(btn => {
+ btn.addEventListener('click', function() {
+ const reveal = this.nextElementSibling;
+ if (reveal && reveal.classList.contains('answer-reveal')) {
+ reveal.classList.toggle('show');
+ }
+ });
+ });
+
+ // Vocabulary match
+ window.checkAnswer = function(btn, result) {
+ if (result === 'correct') {
+ btn.classList.add('revealed');
+ btn.style.pointerEvents = 'none';
+ } else {
+ btn.classList.add('wrong');
+ setTimeout(() => btn.classList.remove('wrong'), 800);
+ }
+ };
+
+ // Fill in the blank
+ window.checkBlank = function(input, answer) {
+ const val = input.value.toLowerCase().trim();
+ if (val === answer.toLowerCase()) {
+ input.style.borderBottomColor = '#a3e635';
+ input.style.color = '#a3e635';
+ }
+ };
+
+ update();
+</script>
+</body>
+</html>
