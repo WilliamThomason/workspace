@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>B1 IELTS Practice Batch 1</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #060a14;
+  --cyan: #22d3ee;
+  --purple: #a78bfa;
+  --gold: #fbbf24;
+  --green: #34d399;
+  --red: #f87171;
+  --text: #e2e8f0;
+  --text-dim: #b0bec5;
+  --hue-rotate: 0deg;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(.95rem, 1.4vw, 1.2rem);
+  line-height: 1.75;
+}
+
+.slide {
+  position: fixed;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .35s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 3vh 5vw 10vh;
+  overflow-y: auto;
+  filter: hue-rotate(var(--hue-rotate));
+}
+
+.slide::-webkit-scrollbar { width: 0; background: transparent; }
+.slide { scrollbar-width: none; -ms-overflow-style: none; }
+
+.slide.active { opacity: 1; pointer-events: auto; }
+
+.slide::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+    rgba(6,10,20,.78) 0%,
+    rgba(6,10,20,.45) 45%,
+    rgba(6,10,20,.18) 100%);
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 80vw;
+  width: 100%;
+  background: rgba(6,10,20,.72);
+  border: 1px solid rgba(34,211,238,.4);
+  box-shadow: 0 0 25px rgba(34,211,238,.25), 0 0 60px rgba(34,211,238,.1);
+  border-radius: 16px;
+  padding: 2.5em 3em;
+  backdrop-filter: blur(8px);
+  margin: auto 0;
+}
+
+/* Glow control */
+.hue-control {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(6,10,20,.85);
+  border: 1px solid rgba(34,211,238,.3);
+  border-radius: 24px;
+  padding: 8px 16px;
+  backdrop-filter: blur(6px);
+}
+
+.hue-control label {
+  font-size: .75rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+.hue-control input[type="range"] {
+  width: 100px;
+  height: 4px;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+#hueSlider {
+  background: linear-gradient(90deg, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000);
+}
+
+#glowSlider {
+  background: linear-gradient(90deg, #1a1a2e, #22d3ee, #fbbf24);
+}
+
+.hue-control input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid var(--cyan);
+  cursor: pointer;
+}
+
+/* Progress bar */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--cyan), var(--purple));
+  z-index: 200;
+  transition: width .35s ease;
+}
+
+/* Navigation */
+.nav {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+  z-index: 200;
+  background: rgba(6,10,20,.85);
+  border: 1px solid rgba(34,211,238,.3);
+  border-radius: 40px;
+  padding: 10px 24px;
+  backdrop-filter: blur(6px);
+}
+
+.nav button {
+  background: none;
+  border: 1px solid rgba(34,211,238,.5);
+  color: var(--cyan);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  padding: 8px 18px;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: all .2s;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.nav button:hover {
+  background: rgba(34,211,238,.15);
+  box-shadow: 0 0 15px rgba(34,211,238,.3);
+}
+
+.nav .slide-counter {
+  font-family: 'Inter', monospace;
+  color: var(--text-dim);
+  font-size: .85rem;
+  min-width: 60px;
+  text-align: center;
+}
+
+/* Typography */
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 4.5vw, 3.8rem);
+  background: linear-gradient(135deg, var(--cyan), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 20px rgba(34,211,238,.4));
+  margin-bottom: .5em;
+  line-height: 1.15;
+}
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  margin-bottom: .7em;
+  text-shadow: 0 0 12px rgba(34,211,238,.3);
+}
+
+h3 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: var(--purple);
+  margin: 1em 0 .5em;
+}
+
+p, li { margin-bottom: .5em; }
+
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  color: var(--text-dim);
+  margin-top: -.3em;
+}
+
+/* IELTS Part badges */
+.part-badge {
+  display: inline-block;
+  font-size: .7rem;
+  padding: 3px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: .6em;
+}
+
+.part-1 { background: rgba(52,211,153,.15); color: var(--green); border: 1px solid rgba(52,211,153,.4); }
+.part-2 { background: rgba(251,191,36,.15); color: var(--gold); border: 1px solid rgba(251,191,36,.4); }
+.part-3 { background: rgba(167,139,250,.15); color: var(--purple); border: 1px solid rgba(167,139,250,.4); }
+
+/* Question cards */
+.ielts-question {
+  background: linear-gradient(135deg, rgba(34,211,238,.06), rgba(167,139,250,.06));
+  border: 1px solid rgba(34,211,238,.3);
+  border-radius: 12px;
+  padding: 1em 1.4em;
+  margin: .6em 0;
+}
+
+.ielts-question .question-text {
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: .4em;
+}
+
+.ielts-question .think-time {
+  font-size: .8rem;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+/* Cue card */
+.cue-card {
+  background: linear-gradient(135deg, rgba(251,191,36,.08), rgba(34,211,238,.08));
+  border: 2px solid rgba(251,191,36,.4);
+  border-radius: 14px;
+  padding: 1.2em 1.6em;
+  margin: 1em 0;
+}
+
+.cue-card .cue-title {
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 1.1rem;
+  margin-bottom: .6em;
+}
+
+.cue-card .cue-bullets {
+  list-style: none;
+  padding: 0;
+}
+
+.cue-card .cue-bullets li {
+  padding: 3px 0 3px 1.2em;
+  position: relative;
+  color: var(--text);
+}
+
+.cue-card .cue-bullets li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+.cue-card .cue-note {
+  margin-top: .8em;
+  font-size: .85rem;
+  color: var(--text-dim);
+  padding: .4em .8em;
+  background: rgba(251,191,36,.08);
+  border-radius: 6px;
+}
+
+/* Model answer */
+.model-answer {
+  background: rgba(52,211,153,.08);
+  border: 1px solid rgba(52,211,153,.35);
+  border-radius: 10px;
+  padding: 1em 1.4em;
+  margin: .8em 0;
+}
+
+.model-answer .answer-label {
+  font-size: .75rem;
+  color: var(--green);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-bottom: .5em;
+}
+
+.model-answer .answer-text {
+  color: var(--text);
+  line-height: 1.8;
+}
+
+/* Reveal button */
+.reveal-btn {
+  display: inline-block;
+  margin-top: .8em;
+  background: linear-gradient(135deg, rgba(52,211,153,.15), rgba(34,211,238,.15));
+  border: 1px solid rgba(52,211,153,.5);
+  color: var(--green);
+  font-family: 'Inter', sans-serif;
+  font-size: .95rem;
+  padding: 10px 24px;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: all .2s;
+  min-width: 44px;
+  min-height: 44px;
+  font-weight: 600;
+}
+
+.reveal-btn:hover {
+  background: rgba(52,211,153,.25);
+  box-shadow: 0 0 15px rgba(52,211,153,.3);
+  transform: translateY(-2px);
+}
+
+.reveal-btn:active {
+  transform: translateY(1px) scale(.96);
+  background: rgba(52,211,153,.35);
+  box-shadow: 0 0 8px rgba(52,211,153,.2);
+  transition: all .1s;
+}
+
+.reveal-btn.revealed {
+  background: linear-gradient(135deg, rgba(52,211,153,.3), rgba(168,224,99,.2));
+  border-color: rgba(168,224,99,.7);
+  box-shadow: 0 0 20px rgba(168,224,99,.4);
+}
+
+.reveal-btn.revealed:hover {
+  box-shadow: 0 0 25px rgba(168,224,99,.6);
+}
+
+.reveal-btn.revealed:active {
+  transform: translateY(1px) scale(.96);
+  transition: all .1s;
+}
+
+/* Ensure buttons never touch content edges */
+.content > button,
+.content > .mark-complete-btn,
+.content > div > button {
+  margin-left: .5em;
+  margin-right: .5em;
+}
+
+/* Timer badge */
+.timer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(248,113,113,.1);
+  border: 1px solid rgba(248,113,113,.3);
+  color: var(--red);
+  font-size: .8rem;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+/* Self-assessment */
+.self-check {
+  background: rgba(6,10,20,.55);
+  border: 1px solid rgba(167,139,250,.3);
+  border-radius: 12px;
+  padding: 1em 1.4em;
+  margin: 1em 0;
+}
+
+.self-check .check-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  cursor: pointer;
+}
+
+.self-check .check-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--green);
+  cursor: pointer;
+}
+
+.self-check .check-item label {
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* Mark Complete */
+.mark-complete-btn {
+  background: rgba(52,211,153,.1);
+  border: 1px solid rgba(52,211,153,.4);
+  color: var(--green);
+  font-family: 'Inter', sans-serif;
+  font-size: .95rem;
+  padding: 10px 24px;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: all .25s;
+  font-weight: 600;
+}
+
+.mark-complete-btn:hover {
+  background: rgba(52,211,153,.2);
+  box-shadow: 0 0 15px rgba(52,211,153,.3);
+}
+
+.mark-complete-btn.completed {
+  background: rgba(52,211,153,.25);
+  border-color: rgba(52,211,153,.7);
+  box-shadow: 0 0 20px rgba(52,211,153,.4);
+}
+
+.start-prompt {
+  color: var(--text-dim);
+  font-size: .9rem;
+  margin-top: 1em;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: .6; }
+  50% { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .content { max-width: 92vw; padding: 1.5em 1.8em; }
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.3rem; }
+  .nav { bottom: 12px; padding: 8px 16px; gap: .6em; }
+  .nav button { padding: 6px 12px; font-size: .85rem; }
+  .hue-control { top: 8px; right: 8px; padding: 6px 10px; }
+  .hue-control input[type="range"] { width: 60px; }
+}
+</style></head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+<div class="hue-control" id="hueControl"><label>HUE</label><input type="range" id="hueSlider" min="0" max="360" value="0"><span style="width:1px;height:20px;background:rgba(255,255,255,.2)"></span><label>GLOW</label><input type="range" id="glowSlider" min="0" max="100" value="50"></div>
+<section class="slide active" style="background-image:url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1600&q=80')"><div class="content narrow" style="text-align:center;"><h1>IELTS Practice 1</h1><p style="font-size:1.2rem;color:var(--text-dim);">Music & Entertainment</p>
+<div style="display:flex;gap:12px;justify-content:center;margin-top:1.2em;"><button class="mark-complete-btn" id="markCompleteBtn" onclick="toggleMarkComplete(this)">✓ Mark Complete</button></div>
+<p class="start-prompt">Press → or Space to start</p></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600&q=80')"><div class="content"><span class="part-badge part-1">Part 1 - Interview</span><h2>Music</h2>
+<div class="ielts-question"><p class="question-text">('How do you listen to music?', 'When do you listen to music?')</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy music because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+<div class="ielts-question"><p class="question-text">("What's your favourite kind of music?", 'Is music an important subject at school?')</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy music because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+<div class="ielts-question"><p class="question-text">('Have you ever been to a concert?', 'Do you like to listen to live music?')</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy music because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+</div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80')"><div class="content"><span class="part-badge part-2">Part 2 - Long Turn</span><h2>Cue Card</h2><div class="cue-card"><div class="cue-title">Describe a concert you really enjoyed.</div><ul class="cue-bullets">
+<li>['What kind of concert it was', 'When and where it happened', 'Who you went with', 'And explain why you enjoyed it so much']</li>
+</ul><div class="cue-note"><span class="timer-badge">1 min prepare</span><span class="timer-badge">2 min speak</span></div></div>
+<button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (2 minutes)</div><div class="answer-text">I'd like to talk about describe a concert you really enjoyed.. It was something I experienced about two years ago, and it was particularly memorable because it was the first time I had ever done anything like that. I went with some close friends, and we had an absolutely fantastic time.</div></div></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1600&q=80')"><div class="content"><span class="part-badge part-3">Part 3 - Discussion</span><h2>Abstract Questions</h2>
+<div class="ielts-question"><p class="question-text">What kind of music is popular in your country?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think music plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+<div class="ielts-question"><p class="question-text">Do you think people should learn to play a musical instrument?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think music plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+<div class="ielts-question"><p class="question-text">Is live music better than recorded music?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think music plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+</div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600&q=80')"><div class="content"><span class="part-badge part-1">Self-Assessment</span><h2>How Did You Do?</h2><div class="self-check">
+<div class="check-item"><input type="checkbox"><label>I answered all Part 1 questions in 3 sentences</label></div>
+<div class="check-item"><input type="checkbox"><label>I gave reasons and specific examples</label></div>
+<div class="check-item"><input type="checkbox"><label>I spoke for the full 2 minutes in Part 2</label></div>
+<div class="check-item"><input type="checkbox"><label>I gave balanced opinions in Part 3</label></div>
+<div class="check-item"><input type="checkbox"><label>I used vocabulary from today's lesson</label></div>
+</div><p style="color:var(--text-dim);margin-top:1em;">Tip: Record yourself and listen back.</p></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80')"><div class="content"><h2>Vocabulary Review</h2><div class="glow-box">
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">concert</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">festival</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">live music</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">perform</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">genre</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">instrument</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">song</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">band</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">audience</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">atmosphere</span></p>
+</div></div></section>
+<section class="slide active" style="background-image:url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600&q=80')"><div class="content narrow" style="text-align:center;"><h1>IELTS Practice 2</h1><p style="font-size:1.2rem;color:var(--text-dim);">Travel & Tourism</p>
+<p class="start-prompt">Press → or Space to start</p></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80')"><div class="content"><span class="part-badge part-1">Part 1 - Interview</span><h2>Travel</h2>
+<div class="ielts-question"><p class="question-text">('Where was the last place you visited on holiday?', 'Would you like to go back there again?')</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy travel because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+<div class="ielts-question"><p class="question-text">('What kind of tourist destinations do you usually prefer?', 'Has a foreign visitor ever stayed at your home?')</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy travel because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+<div class="ielts-question"><p class="question-text">What's the best way to save money while travelling?</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy travel because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+</div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1600&q=80')"><div class="content"><span class="part-badge part-2">Part 2 - Long Turn</span><h2>Cue Card</h2><div class="cue-card"><div class="cue-title">Describe a journey you have been on.</div><ul class="cue-bullets">
+<li>['Where you went', 'What kind of transport you used', 'How long the journey took', 'And say whether it was easy or difficult']</li>
+</ul><div class="cue-note"><span class="timer-badge">1 min prepare</span><span class="timer-badge">2 min speak</span></div></div>
+<button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (2 minutes)</div><div class="answer-text">I'd like to talk about describe a journey you have been on.. It was something I experienced about two years ago, and it was particularly memorable because it was the first time I had ever done anything like that. I went with some close friends, and we had an absolutely fantastic time.</div></div></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600&q=80')"><div class="content"><span class="part-badge part-3">Part 3 - Discussion</span><h2>Abstract Questions</h2>
+<div class="ielts-question"><p class="question-text">How do most people travel long distances in your country?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think travel plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+<div class="ielts-question"><p class="question-text">Have the types of transport changed over the last few decades?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think travel plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+<div class="ielts-question"><p class="question-text">Is it better to travel in your own country or abroad?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think travel plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+</div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80')"><div class="content"><span class="part-badge part-1">Self-Assessment</span><h2>How Did You Do?</h2><div class="self-check">
+<div class="check-item"><input type="checkbox"><label>I answered all Part 1 questions in 3 sentences</label></div>
+<div class="check-item"><input type="checkbox"><label>I gave reasons and specific examples</label></div>
+<div class="check-item"><input type="checkbox"><label>I spoke for the full 2 minutes in Part 2</label></div>
+<div class="check-item"><input type="checkbox"><label>I gave balanced opinions in Part 3</label></div>
+<div class="check-item"><input type="checkbox"><label>I used vocabulary from today's lesson</label></div>
+</div><p style="color:var(--text-dim);margin-top:1em;">Tip: Record yourself and listen back.</p></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1600&q=80')"><div class="content"><h2>Vocabulary Review</h2><div class="glow-box">
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">travel</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">journey</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">destination</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">transport</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">flight</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">accommodation</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">tourist</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">luggage</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">passport</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">explore</span></p>
+</div></div></section>
+<section class="slide active" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80')"><div class="content narrow" style="text-align:center;"><h1>IELTS Practice 3</h1><p style="font-size:1.2rem;color:var(--text-dim);">Work & Career</p>
+<p class="start-prompt">Press → or Space to start</p></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1600&q=80')"><div class="content"><span class="part-badge part-1">Part 1 - Interview</span><h2>Work</h2>
+<div class="ielts-question"><p class="question-text">('Do you have a job right now?', 'Do you enjoy your job?')</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy work because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+<div class="ielts-question"><p class="question-text">('What responsibilities do you have at work?', 'What job do you think you will be doing in five years?')</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy work because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+<div class="ielts-question"><p class="question-text">What skills and qualifications are required for your job?</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy work because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+</div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600&q=80')"><div class="content"><span class="part-badge part-2">Part 2 - Long Turn</span><h2>Cue Card</h2><div class="cue-card"><div class="cue-title">Describe your dream job.</div><ul class="cue-bullets">
+<li>['What kind of things you would do', 'What the working conditions would be', 'What kind of workplace you would work in', 'And say why you would like this job']</li>
+</ul><div class="cue-note"><span class="timer-badge">1 min prepare</span><span class="timer-badge">2 min speak</span></div></div>
+<button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (2 minutes)</div><div class="answer-text">I'd like to talk about describe your dream job.. It was something I experienced about two years ago, and it was particularly memorable because it was the first time I had ever done anything like that. I went with some close friends, and we had an absolutely fantastic time.</div></div></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80')"><div class="content"><span class="part-badge part-3">Part 3 - Discussion</span><h2>Abstract Questions</h2>
+<div class="ielts-question"><p class="question-text">How do you think AI will affect people's work?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think work plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+<div class="ielts-question"><p class="question-text">Is it better to work for a big company or a small one?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think work plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+<div class="ielts-question"><p class="question-text">What makes a good boss?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think work plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+</div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1600&q=80')"><div class="content"><span class="part-badge part-1">Self-Assessment</span><h2>How Did You Do?</h2><div class="self-check">
+<div class="check-item"><input type="checkbox"><label>I answered all Part 1 questions in 3 sentences</label></div>
+<div class="check-item"><input type="checkbox"><label>I gave reasons and specific examples</label></div>
+<div class="check-item"><input type="checkbox"><label>I spoke for the full 2 minutes in Part 2</label></div>
+<div class="check-item"><input type="checkbox"><label>I gave balanced opinions in Part 3</label></div>
+<div class="check-item"><input type="checkbox"><label>I used vocabulary from today's lesson</label></div>
+</div><p style="color:var(--text-dim);margin-top:1em;">Tip: Record yourself and listen back.</p></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80')"><div class="content"><h2>Vocabulary Review</h2><div class="glow-box">
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">work</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">job</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">career</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">responsibility</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">skills</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">qualifications</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">colleague</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">boss</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">salary</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">promotion</span></p>
+</div></div></section>
+<section class="slide active" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1600&q=80')"><div class="content narrow" style="text-align:center;"><h1>IELTS Practice 4</h1><p style="font-size:1.2rem;color:var(--text-dim);">Health & Lifestyle</p>
+<p class="start-prompt">Press → or Space to start</p></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600&q=80')"><div class="content"><span class="part-badge part-1">Part 1 - Interview</span><h2>Health</h2>
+<div class="ielts-question"><p class="question-text">('Do you do much exercise?', 'Do you have a healthy diet?')</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy health because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+<div class="ielts-question"><p class="question-text">('What do you think is the best exercise to keep fit?', 'Do people in your country do a lot of exercise?')</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy health because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+<div class="ielts-question"><p class="question-text">Have the types of exercise people like to do changed?</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy health because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+</div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80')"><div class="content"><span class="part-badge part-2">Part 2 - Long Turn</span><h2>Cue Card</h2><div class="cue-card"><div class="cue-title">Describe something healthy you enjoy doing.</div><ul class="cue-bullets">
+<li>['What you do', 'Where you do it', 'Who you do it with', 'And explain why you think doing this is healthy']</li>
+</ul><div class="cue-note"><span class="timer-badge">1 min prepare</span><span class="timer-badge">2 min speak</span></div></div>
+<button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (2 minutes)</div><div class="answer-text">I'd like to talk about describe something healthy you enjoy doing.. It was something I experienced about two years ago, and it was particularly memorable because it was the first time I had ever done anything like that. I went with some close friends, and we had an absolutely fantastic time.</div></div></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1600&q=80')"><div class="content"><span class="part-badge part-3">Part 3 - Discussion</span><h2>Abstract Questions</h2>
+<div class="ielts-question"><p class="question-text">How can people improve their health?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think health plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+<div class="ielts-question"><p class="question-text">Do elderly people exercise much in your country?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think health plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+<div class="ielts-question"><p class="question-text">Should healthcare be free?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think health plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+</div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80')"><div class="content"><span class="part-badge part-1">Self-Assessment</span><h2>How Did You Do?</h2><div class="self-check">
+<div class="check-item"><input type="checkbox"><label>I answered all Part 1 questions in 3 sentences</label></div>
+<div class="check-item"><input type="checkbox"><label>I gave reasons and specific examples</label></div>
+<div class="check-item"><input type="checkbox"><label>I spoke for the full 2 minutes in Part 2</label></div>
+<div class="check-item"><input type="checkbox"><label>I gave balanced opinions in Part 3</label></div>
+<div class="check-item"><input type="checkbox"><label>I used vocabulary from today's lesson</label></div>
+</div><p style="color:var(--text-dim);margin-top:1em;">Tip: Record yourself and listen back.</p></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600&q=80')"><div class="content"><h2>Vocabulary Review</h2><div class="glow-box">
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">health</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">exercise</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">fitness</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">diet</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">active</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">workout</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">running</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">swimming</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">strength</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">wellness</span></p>
+</div></div></section>
+<section class="slide active" style="background-image:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600&q=80')"><div class="content narrow" style="text-align:center;"><h1>IELTS Practice 5</h1><p style="font-size:1.2rem;color:var(--text-dim);">Environment & Nature</p>
+<p class="start-prompt">Press → or Space to start</p></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80')"><div class="content"><span class="part-badge part-1">Part 1 - Interview</span><h2>Environment</h2>
+<div class="ielts-question"><p class="question-text">('Do you like outdoor activities?', 'What outdoor sports do you like?')</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy environment because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+<div class="ielts-question"><p class="question-text">('What types of outdoor activities are popular in your country?', 'What environmental problems concern you?')</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy environment because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+<div class="ielts-question"><p class="question-text">How can people protect the environment?</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy environment because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+</div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1600&q=80')"><div class="content"><span class="part-badge part-2">Part 2 - Long Turn</span><h2>Cue Card</h2><div class="cue-card"><div class="cue-title">Describe an environmental problem or event.</div><ul class="cue-bullets">
+<li>['What it is', 'Where it is happening', 'What problems it causes', 'And what you think will happen in the future']</li>
+</ul><div class="cue-note"><span class="timer-badge">1 min prepare</span><span class="timer-badge">2 min speak</span></div></div>
+<button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (2 minutes)</div><div class="answer-text">I'd like to talk about describe an environmental problem or event.. It was something I experienced about two years ago, and it was particularly memorable because it was the first time I had ever done anything like that. I went with some close friends, and we had an absolutely fantastic time.</div></div></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80')"><div class="content"><span class="part-badge part-3">Part 3 - Discussion</span><h2>Abstract Questions</h2>
+<div class="ielts-question"><p class="question-text">What are the main environmental problems in your country?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think environment plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+<div class="ielts-question"><p class="question-text">Do you think more should be done to protect natural scenic spots?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think environment plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+<div class="ielts-question"><p class="question-text">What can individuals do to help?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think environment plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+</div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600&q=80')"><div class="content"><span class="part-badge part-1">Self-Assessment</span><h2>How Did You Do?</h2><div class="self-check">
+<div class="check-item"><input type="checkbox"><label>I answered all Part 1 questions in 3 sentences</label></div>
+<div class="check-item"><input type="checkbox"><label>I gave reasons and specific examples</label></div>
+<div class="check-item"><input type="checkbox"><label>I spoke for the full 2 minutes in Part 2</label></div>
+<div class="check-item"><input type="checkbox"><label>I gave balanced opinions in Part 3</label></div>
+<div class="check-item"><input type="checkbox"><label>I used vocabulary from today's lesson</label></div>
+</div><p style="color:var(--text-dim);margin-top:1em;">Tip: Record yourself and listen back.</p></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80')"><div class="content"><h2>Vocabulary Review</h2><div class="glow-box">
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">environment</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">pollution</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">climate</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">recycle</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">waste</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">sustainable</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">nature</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">protect</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">conserve</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">species</span></p>
+</div></div></section>
+<section class="slide active" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80')"><div class="content narrow" style="text-align:center;"><h1>IELTS Practice 6</h1><p style="font-size:1.2rem;color:var(--text-dim);">Technology & Media</p>
+<p class="start-prompt">Press → or Space to start</p></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1600&q=80')"><div class="content"><span class="part-badge part-1">Part 1 - Interview</span><h2>Technology</h2>
+<div class="ielts-question"><p class="question-text">('How important is the Internet to you?', 'What are your favourite websites?')</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy technology because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+<div class="ielts-question"><p class="question-text">('Do you think you use the Internet too much?', 'How will the Internet develop in the future?')</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy technology because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+<div class="ielts-question"><p class="question-text">What are the positive and negative things about the Internet?</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy technology because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+</div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80')"><div class="content"><span class="part-badge part-2">Part 2 - Long Turn</span><h2>Cue Card</h2><div class="cue-card"><div class="cue-title">Describe a useful electronic device you would like to own.</div><ul class="cue-bullets">
+<li>['What it is', 'How it would help your life', 'If it would be expensive', 'And explain why you would like it']</li>
+</ul><div class="cue-note"><span class="timer-badge">1 min prepare</span><span class="timer-badge">2 min speak</span></div></div>
+<button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (2 minutes)</div><div class="answer-text">I'd like to talk about describe a useful electronic device you would like to own.. It was something I experienced about two years ago, and it was particularly memorable because it was the first time I had ever done anything like that. I went with some close friends, and we had an absolutely fantastic time.</div></div></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600&q=80')"><div class="content"><span class="part-badge part-3">Part 3 - Discussion</span><h2>Abstract Questions</h2>
+<div class="ielts-question"><p class="question-text">What are the most popular electronic devices today?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think technology plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+<div class="ielts-question"><p class="question-text">Do people spend too much money on electronic devices?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think technology plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+<div class="ielts-question"><p class="question-text">Should children be taught to use computers at school?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think technology plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+</div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80')"><div class="content"><span class="part-badge part-1">Self-Assessment</span><h2>How Did You Do?</h2><div class="self-check">
+<div class="check-item"><input type="checkbox"><label>I answered all Part 1 questions in 3 sentences</label></div>
+<div class="check-item"><input type="checkbox"><label>I gave reasons and specific examples</label></div>
+<div class="check-item"><input type="checkbox"><label>I spoke for the full 2 minutes in Part 2</label></div>
+<div class="check-item"><input type="checkbox"><label>I gave balanced opinions in Part 3</label></div>
+<div class="check-item"><input type="checkbox"><label>I used vocabulary from today's lesson</label></div>
+</div><p style="color:var(--text-dim);margin-top:1em;">Tip: Record yourself and listen back.</p></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1600&q=80')"><div class="content"><h2>Vocabulary Review</h2><div class="glow-box">
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">technology</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">internet</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">website</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">device</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">screen</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">app</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">download</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">upload</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">social media</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">online</span></p>
+</div></div></section>
+<section class="slide active" style="background-image:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1600&q=80')"><div class="content narrow" style="text-align:center;"><h1>IELTS Practice 7</h1><p style="font-size:1.2rem;color:var(--text-dim);">Education & Learning</p>
+<p class="start-prompt">Press → or Space to start</p></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80')"><div class="content"><span class="part-badge part-1">Part 1 - Interview</span><h2>Education</h2>
+<div class="ielts-question"><p class="question-text">('Do you work or study?', 'What is your major?')</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy education because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+<div class="ielts-question"><p class="question-text">('Did you or do you like it?', 'Why did you choose that major?')</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy education because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+<div class="ielts-question"><p class="question-text">Do you plan to use the subject you are studying in the future?</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy education because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+</div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600&q=80')"><div class="content"><span class="part-badge part-2">Part 2 - Long Turn</span><h2>Cue Card</h2><div class="cue-card"><div class="cue-title">Describe a school you attended.</div><ul class="cue-bullets">
+<li>['What it looked like from the outside', 'What it looked like inside', 'What facilities it had', 'And say if you think it is a good school']</li>
+</ul><div class="cue-note"><span class="timer-badge">1 min prepare</span><span class="timer-badge">2 min speak</span></div></div>
+<button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (2 minutes)</div><div class="answer-text">I'd like to talk about describe a school you attended.. It was something I experienced about two years ago, and it was particularly memorable because it was the first time I had ever done anything like that. I went with some close friends, and we had an absolutely fantastic time.</div></div></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80')"><div class="content"><span class="part-badge part-3">Part 3 - Discussion</span><h2>Abstract Questions</h2>
+<div class="ielts-question"><p class="question-text">How are education priorities today different from the past?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think education plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+<div class="ielts-question"><p class="question-text">What changes will happen in classrooms in the near future?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think education plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+<div class="ielts-question"><p class="question-text">Is higher education too expensive?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think education plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+</div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1600&q=80')"><div class="content"><span class="part-badge part-1">Self-Assessment</span><h2>How Did You Do?</h2><div class="self-check">
+<div class="check-item"><input type="checkbox"><label>I answered all Part 1 questions in 3 sentences</label></div>
+<div class="check-item"><input type="checkbox"><label>I gave reasons and specific examples</label></div>
+<div class="check-item"><input type="checkbox"><label>I spoke for the full 2 minutes in Part 2</label></div>
+<div class="check-item"><input type="checkbox"><label>I gave balanced opinions in Part 3</label></div>
+<div class="check-item"><input type="checkbox"><label>I used vocabulary from today's lesson</label></div>
+</div><p style="color:var(--text-dim);margin-top:1em;">Tip: Record yourself and listen back.</p></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600&q=80')"><div class="content"><h2>Vocabulary Review</h2><div class="glow-box">
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">education</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">study</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">major</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">university</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">subject</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">professor</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">classroom</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">exam</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">research</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">degree</span></p>
+</div></div></section>
+<section class="slide active" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80')"><div class="content narrow" style="text-align:center;"><h1>IELTS Practice 8</h1><p style="font-size:1.2rem;color:var(--text-dim);">Daily Life & Routine</p>
+<p class="start-prompt">Press → or Space to start</p></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600&q=80')"><div class="content"><span class="part-badge part-1">Part 1 - Interview</span><h2>Daily Life</h2>
+<div class="ielts-question"><p class="question-text">('Tell me about your daily routine.', 'Has your daily routine changed since you were a child?')</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy daily life because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+<div class="ielts-question"><p class="question-text">('Is your daily routine different at the weekend?', 'What would you like to change about your daily routine?')</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy daily life because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+<div class="ielts-question"><p class="question-text">Do you think it's important to have a daily routine?</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy daily life because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+</div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80')"><div class="content"><span class="part-badge part-2">Part 2 - Long Turn</span><h2>Cue Card</h2><div class="cue-card"><div class="cue-title">Describe your favourite part of the day.</div><ul class="cue-bullets">
+<li>['What time of day this is', 'What you like to do', 'Who you are usually with', 'And explain why this is your favourite part']</li>
+</ul><div class="cue-note"><span class="timer-badge">1 min prepare</span><span class="timer-badge">2 min speak</span></div></div>
+<button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (2 minutes)</div><div class="answer-text">I'd like to talk about describe your favourite part of the day.. It was something I experienced about two years ago, and it was particularly memorable because it was the first time I had ever done anything like that. I went with some close friends, and we had an absolutely fantastic time.</div></div></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1600&q=80')"><div class="content"><span class="part-badge part-3">Part 3 - Discussion</span><h2>Abstract Questions</h2>
+<div class="ielts-question"><p class="question-text">What are the benefits of getting up early?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think daily life plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+<div class="ielts-question"><p class="question-text">Why do some people like to stay up late?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think daily life plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+<div class="ielts-question"><p class="question-text">Do you think people have enough free time?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think daily life plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+</div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600&q=80')"><div class="content"><span class="part-badge part-1">Self-Assessment</span><h2>How Did You Do?</h2><div class="self-check">
+<div class="check-item"><input type="checkbox"><label>I answered all Part 1 questions in 3 sentences</label></div>
+<div class="check-item"><input type="checkbox"><label>I gave reasons and specific examples</label></div>
+<div class="check-item"><input type="checkbox"><label>I spoke for the full 2 minutes in Part 2</label></div>
+<div class="check-item"><input type="checkbox"><label>I gave balanced opinions in Part 3</label></div>
+<div class="check-item"><input type="checkbox"><label>I used vocabulary from today's lesson</label></div>
+</div><p style="color:var(--text-dim);margin-top:1em;">Tip: Record yourself and listen back.</p></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80')"><div class="content"><h2>Vocabulary Review</h2><div class="glow-box">
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">routine</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">daily</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">schedule</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">morning</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">evening</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">weekend</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">busy</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">social</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">hobbies</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">free time</span></p>
+</div></div></section>
+<section class="slide active" style="background-image:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600&q=80')"><div class="content narrow" style="text-align:center;"><h1>IELTS Practice 9</h1><p style="font-size:1.2rem;color:var(--text-dim);">Relationships & Family</p>
+<p class="start-prompt">Press → or Space to start</p></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80')"><div class="content"><span class="part-badge part-1">Part 1 - Interview</span><h2>Relationships</h2>
+<div class="ielts-question"><p class="question-text">('Do you have a lot of friends?', 'Who is your best friend and why?')</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy relationships because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+<div class="ielts-question"><p class="question-text">('What kind of person can you make friends with easily?', 'Which is more important to you, friends or family?')</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy relationships because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+<div class="ielts-question"><p class="question-text">Do you get on well with your family?</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy relationships because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+</div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1600&q=80')"><div class="content"><span class="part-badge part-2">Part 2 - Long Turn</span><h2>Cue Card</h2><div class="cue-card"><div class="cue-title">Describe a family member you get on well with.</div><ul class="cue-bullets">
+<li>['What their personality is like', 'What things they like doing', 'If they have any strong dislikes', 'And say why you have a good relationship']</li>
+</ul><div class="cue-note"><span class="timer-badge">1 min prepare</span><span class="timer-badge">2 min speak</span></div></div>
+<button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (2 minutes)</div><div class="answer-text">I'd like to talk about describe a family member you get on well with.. It was something I experienced about two years ago, and it was particularly memorable because it was the first time I had ever done anything like that. I went with some close friends, and we had an absolutely fantastic time.</div></div></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600&q=80')"><div class="content"><span class="part-badge part-3">Part 3 - Discussion</span><h2>Abstract Questions</h2>
+<div class="ielts-question"><p class="question-text">Is family important in your country?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think relationships plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+<div class="ielts-question"><p class="question-text">Who should be responsible for caring for the elderly?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think relationships plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+<div class="ielts-question"><p class="question-text">How has the size of the average family changed?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think relationships plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+</div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80')"><div class="content"><span class="part-badge part-1">Self-Assessment</span><h2>How Did You Do?</h2><div class="self-check">
+<div class="check-item"><input type="checkbox"><label>I answered all Part 1 questions in 3 sentences</label></div>
+<div class="check-item"><input type="checkbox"><label>I gave reasons and specific examples</label></div>
+<div class="check-item"><input type="checkbox"><label>I spoke for the full 2 minutes in Part 2</label></div>
+<div class="check-item"><input type="checkbox"><label>I gave balanced opinions in Part 3</label></div>
+<div class="check-item"><input type="checkbox"><label>I used vocabulary from today's lesson</label></div>
+</div><p style="color:var(--text-dim);margin-top:1em;">Tip: Record yourself and listen back.</p></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1600&q=80')"><div class="content"><h2>Vocabulary Review</h2><div class="glow-box">
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">friends</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">family</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">relationship</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">personality</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">trust</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">support</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">loyal</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">honest</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">together</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">memories</span></p>
+</div></div></section>
+<section class="slide active" style="background-image:url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80')"><div class="content narrow" style="text-align:center;"><h1>IELTS Practice 10</h1><p style="font-size:1.2rem;color:var(--text-dim);">City & Local Area</p>
+<p class="start-prompt">Press → or Space to start</p></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1600&q=80')"><div class="content"><span class="part-badge part-1">Part 1 - Interview</span><h2>City</h2>
+<div class="ielts-question"><p class="question-text">('Where is your hometown?', 'What do you like about it?')</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy city because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+<div class="ielts-question"><p class="question-text">('What do you not like about it?', 'How has your hometown changed over the years?')</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy city because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+<div class="ielts-question"><p class="question-text">How often do you visit your hometown?</p><p class="think-time">Think for 10 seconds, then answer in 3 sentences with reasons.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (3 sentences with reasons)</div><div class="answer-text">Yes, I really enjoy city because it allows me to express myself and connect with others. I particularly like discovering new artists and sharing music with friends.</div></div></div>
+</div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600&q=80')"><div class="content"><span class="part-badge part-2">Part 2 - Long Turn</span><h2>Cue Card</h2><div class="cue-card"><div class="cue-title">Describe an important building in your hometown.</div><ul class="cue-bullets">
+<li>['Where it is', 'What it looks like', 'What it is used for', 'And explain why you think it is important']</li>
+</ul><div class="cue-note"><span class="timer-badge">1 min prepare</span><span class="timer-badge">2 min speak</span></div></div>
+<button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer (2 minutes)</div><div class="answer-text">I'd like to talk about describe an important building in your hometown.. It was something I experienced about two years ago, and it was particularly memorable because it was the first time I had ever done anything like that. I went with some close friends, and we had an absolutely fantastic time.</div></div></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80')"><div class="content"><span class="part-badge part-3">Part 3 - Discussion</span><h2>Abstract Questions</h2>
+<div class="ielts-question"><p class="question-text">What makes a city a good one to live in?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think city plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+<div class="ielts-question"><p class="question-text">What are the negative aspects of crowded cities?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think city plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+<div class="ielts-question"><p class="question-text">Would you say urban planning is important?</p><p class="think-time">Give a balanced answer with examples.</p><button class="reveal-btn" onclick="revealAnswer(this)">Reveal Model Answer ▶</button><div class="model-answer hidden-answer"><div class="answer-label">Model Answer</div><div class="answer-text">That's an interesting question. I think city plays a significant role in society because it shapes how we connect with others and express our identity. In my country, it has become increasingly important, especially among younger generations.</div></div></div>
+</div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1600&q=80')"><div class="content"><span class="part-badge part-1">Self-Assessment</span><h2>How Did You Do?</h2><div class="self-check">
+<div class="check-item"><input type="checkbox"><label>I answered all Part 1 questions in 3 sentences</label></div>
+<div class="check-item"><input type="checkbox"><label>I gave reasons and specific examples</label></div>
+<div class="check-item"><input type="checkbox"><label>I spoke for the full 2 minutes in Part 2</label></div>
+<div class="check-item"><input type="checkbox"><label>I gave balanced opinions in Part 3</label></div>
+<div class="check-item"><input type="checkbox"><label>I used vocabulary from today's lesson</label></div>
+</div><p style="color:var(--text-dim);margin-top:1em;">Tip: Record yourself and listen back.</p></div></section>
+<section class="slide" style="background-image:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600&q=80')"><div class="content"><h2>Vocabulary Review</h2><div class="glow-box">
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">hometown</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">city</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">building</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">neighborhood</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">local</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">famous</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">oldest</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">population</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">jobs</span></p>
+<p style="display:inline-block;margin:.3em;"><span class="vocab-word">change</span></p>
+</div></div></section>
+<div class="nav"><button id="prevBtn">◀ Prev</button><span class="slide-counter" id="slideCounter">1 / 60</span><button id="nextBtn">Next ▶</button></div>
+<script>
+// Shared systems
+let audioCtx = null, reverbNode = null;
+
+function ensureAudio() {
+  if (!audioCtx) {
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const rate = audioCtx.sampleRate;
+    const length = rate * 1.2;
+    const impulse = audioCtx.createBuffer(2, length, rate);
+    for (let ch = 0; ch < 2; ch++) {
+      const data = impulse.getChannelData(ch);
+      for (let i = 0; i < length; i++) {
+        data[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / length, 2.5);
+      }
+    }
+    reverbNode = audioCtx.createConvolver();
+    reverbNode.buffer = impulse;
+    const reverbGain = audioCtx.createGain();
+    reverbGain.gain.value = 0.4;
+    reverbNode.connect(reverbGain);
+    reverbGain.connect(audioCtx.destination);
+  }
+  if (audioCtx.state === 'suspended') audioCtx.resume();
+}
+
+function playSwish(direction) {
+  ensureAudio();
+  const now = audioCtx.currentTime;
+  const bufferSize = Math.floor(audioCtx.sampleRate * 0.18);
+  const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+  const data = buffer.getChannelData(0);
+  for (let i = 0; i < bufferSize; i++) {
+    const env = Math.sin((i / bufferSize) * Math.PI);
+    data[i] = (Math.random() * 2 - 1) * env;
+  }
+  const src = audioCtx.createBufferSource();
+  src.buffer = buffer;
+  const filter = audioCtx.createBiquadFilter();
+  filter.type = 'bandpass';
+  filter.Q.value = 8;
+  if (direction === 'forward') {
+    filter.frequency.setValueAtTime(800, now);
+    filter.frequency.exponentialRampToValueAtTime(4000, now + 0.15);
+  } else {
+    filter.frequency.setValueAtTime(4000, now);
+    filter.frequency.exponentialRampToValueAtTime(800, now + 0.15);
+  }
+  const gain = audioCtx.createGain();
+  gain.gain.setValueAtTime(0, now);
+  gain.gain.linearRampToValueAtTime(0.12, now + 0.02);
+  gain.gain.exponentialRampToValueAtTime(0.001, now + 0.18);
+  const dryGain = audioCtx.createGain();
+  dryGain.gain.value = 0.6;
+  const wetGain = audioCtx.createGain();
+  wetGain.gain.value = 0.4;
+  src.connect(filter);
+  filter.connect(gain);
+  gain.connect(dryGain);
+  gain.connect(wetGain);
+  dryGain.connect(audioCtx.destination);
+  wetGain.connect(reverbNode);
+  src.start(now);
+  src.stop(now + 0.2);
+  const osc = audioCtx.createOscillator();
+  osc.type = 'sine';
+  const oscGain = audioCtx.createGain();
+  if (direction === 'forward') {
+    osc.frequency.setValueAtTime(600, now);
+    osc.frequency.exponentialRampToValueAtTime(1200, now + 0.1);
+  } else {
+    osc.frequency.setValueAtTime(1200, now);
+    osc.frequency.exponentialRampToValueAtTime(600, now + 0.1);
+  }
+  oscGain.gain.setValueAtTime(0, now);
+  oscGain.gain.linearRampToValueAtTime(0.04, now + 0.02);
+  oscGain.gain.exponentialRampToValueAtTime(0.001, now + 0.12);
+  osc.connect(oscGain);
+  oscGain.connect(audioCtx.destination);
+  osc.start(now);
+  osc.stop(now + 0.15);
+}
+
+// Reveal single answer — toggle show/hide
+function revealAnswer(btn) {
+  const answer = btn.nextElementSibling;
+  if (!answer) return;
+  
+  if (answer.classList.contains('hidden-answer')) {
+    // Show
+    answer.classList.remove('hidden-answer');
+    btn.textContent = '▲ Hide Answer';
+    btn.classList.add('revealed');
+  } else {
+    // Hide
+    answer.classList.add('hidden-answer');
+    btn.textContent = 'Reveal Model Answer ▶';
+    btn.classList.remove('revealed');
+  }
+}
+
+// Hue slider
+const hueSlider = document.getElementById('hueSlider');
+const root = document.documentElement;
+hueSlider.addEventListener('input', (e) => {
+  const hue = e.target.value;
+  root.style.setProperty('--hue-rotate', hue + 'deg');
+  document.querySelectorAll('.slide').forEach(slide => {
+    slide.style.filter = `hue-rotate(${hue}deg) saturate(${1 + hue/720})`;
+  });
+  const accent = `hsl(${hue}, 80%, 60%)`;
+  const accentLight = `hsl(${hue}, 80%, 75%)`;
+  root.style.setProperty('--cyan', accent);
+  root.style.setProperty('--gold', accentLight);
+});
+
+// Glow slider
+const glowSlider = document.getElementById('glowSlider');
+glowSlider.addEventListener('input', (e) => {
+  const intensity = e.target.value / 100;
+  const glowSize = 10 + intensity * 40;
+  const glowOpacity = 0.2 + intensity * 0.5;
+  document.querySelectorAll('.content').forEach(c => {
+    c.style.boxShadow = `0 0 ${glowSize}px rgba(34,211,238,${glowOpacity}), 0 0 ${glowSize * 2}px rgba(167,139,250,${glowOpacity * 0.5})`;
+  });
+});
+
+// Mark Complete
+function toggleMarkComplete(btn) {
+  const deckId = window.location.pathname;
+  const progress = JSON.parse(localStorage.getItem('esl-progress') || '{}');
+  if (btn.classList.contains('completed')) {
+    btn.classList.remove('completed');
+    btn.textContent = '✓ Mark Complete';
+    if (progress[deckId]) progress[deckId].completed = false;
+  } else {
+    btn.classList.add('completed');
+    btn.textContent = '✓ Completed!';
+    if (!progress[deckId]) progress[deckId] = {};
+    progress[deckId].completed = true;
+    progress[deckId].date = new Date().toISOString().split('T')[0];
+  }
+  localStorage.setItem('esl-progress', JSON.stringify(progress));
+}
+
+(function restoreProgress() {
+  const deckId = window.location.pathname;
+  const progress = JSON.parse(localStorage.getItem('esl-progress') || '{}');
+  const btn = document.getElementById('markCompleteBtn');
+  if (btn && progress[deckId] && progress[deckId].completed) {
+    btn.classList.add('completed');
+    btn.textContent = '✓ Completed!';
+  }
+})();
+
+// Navigation
+const slides = document.querySelectorAll('.slide');
+let current = 0;
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const slideCounter = document.getElementById('slideCounter');
+const progressBar = document.getElementById('progressBar');
+
+function update() {
+  slides.forEach((s, i) => s.classList.toggle('active', i === current));
+  slideCounter.textContent = `${current + 1} / ${slides.length}`;
+  progressBar.style.width = `${((current + 1) / slides.length) * 100}%`;
+  document.getElementById('hueControl').style.display = current === 0 ? 'flex' : 'none';
+}
+
+prevBtn.addEventListener('click', () => {
+  if (current > 0) { current--; playSwish('back'); } update();
+});
+nextBtn.addEventListener('click', () => {
+  if (current < slides.length - 1) { current++; playSwish('forward'); } update();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight' || e.key === ' ') {
+    if (current < slides.length - 1) { current++; playSwish('forward'); } update();
+  }
+  if (e.key === 'ArrowLeft') {
+    if (current > 0) { current--; playSwish('back'); } update();
+  }
+});
+
+update();
+</script>
+</body></html>
+</body></html>
