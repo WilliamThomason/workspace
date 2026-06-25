@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>B2 First for Schools — Technology & Social Media</title>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#1c1c1c;--bg2:#161616;--bg3:#222222;--bg4:#232323;--border:#333333;--border-light:#444444;--text:#e8e8e8;--text-muted:#999999;--text-dim:#555555;--accent:#a3e635;--accent-dim:rgba(163,230,53,.08);--accent-glow:rgba(163,230,53,.3);--green:#34d399;--amber:#fbbf24;--rose:#fb7185;--violet:#a78bfa;--cyan:#22d3ee}
+[data-theme="2"]{--bg:#0a1628;--bg2:#0d1f3c;--bg3:#132744;--bg4:#1a3352;--border:#1e3a5f;--border-light:#254a73;--text:#e0f2fe;--text-muted:#7dd3fc;--text-dim:#38bdf8;--accent:#38bdf8;--accent-dim:rgba(56,189,248,.08);--accent-glow:rgba(56,189,248,.3);--green:#22d3ee;--amber:#fbbf24;--rose:#f472b6;--violet:#a78bfa;--cyan:#22d3ee}
+[data-theme="3"]{--bg:#1a0f0a;--bg2:#2d1810;--bg3:#3d2218;--bg4:#4a2c20;--border:#5c3a28;--border-light:#6b4834;--text:#fef3c7;--text-muted:#fbbf24;--text-dim:#d97706;--accent:#f59e0b;--accent-dim:rgba(245,158,11,.08);--accent-glow:rgba(245,158,11,.3);--green:#34d399;--amber:#fbbf24;--rose:#fb7185;--violet:#a78bfa;--cyan:#22d3ee}
+[data-theme="4"]{--bg:#0a1a0f;--bg2:#0f2d18;--bg3:#183d22;--bg4:#224a2e;--border:#2d5a3a;--border-light:#3a6b48;--text:#ecfdf5;--text-muted:#6ee7b7;--text-dim:#10b981;--accent:#10b981;--accent-dim:rgba(16,185,129,.08);--accent-glow:rgba(16,185,129,.3);--green:#34d399;--amber:#fbbf24;--rose:#fb7185;--violet:#a78bfa;--cyan:#22d3ee}
+[data-theme="5"]{--bg:#120a1a;--bg2:#1e0f2d;--bg3:#2a183d;--bg4:#35204a;--border:#4a2d6b;--border-light:#5b3a7d;--text:#f3e8ff;--text-muted:#c4b5fd;--text-dim:#a78bfa;--accent:#a78bfa;--accent-dim:rgba(167,139,250,.08);--accent-glow:rgba(167,139,250,.3);--green:#34d399;--amber:#fbbf24;--rose:#fb7185;--violet:#a78bfa;--cyan:#22d3ee}
+[data-theme="6"]{--bg:#1a0a12;--bg2:#2d0f1e;--bg3:#3d1828;--bg4:#4a2035;--border:#6b2d4a;--border-light:#7d3a5b;--text:#fce7f3;--text-muted:#f9a8d4;--text-dim:#ec4899;--accent:#ec4899;--accent-dim:rgba(236,72,153,.08);--accent-glow:rgba(236,72,153,.3);--green:#34d399;--amber:#fbbf24;--rose:#fb7185;--violet:#a78bfa;--cyan:#22d3ee}
+[data-theme="7"]{--bg:#000000;--bg2:#0a0a0a;--bg3:#141414;--bg4:#1a1a1a;--border:#444444;--border-light:#555555;--text:#ffffff;--text-muted:#cccccc;--text-dim:#888888;--accent:#ffff00;--accent-dim:rgba(255,255,0,.08);--accent-glow:rgba(255,255,0,.3);--green:#00ff00;--amber:#ffaa00;--rose:#ff4444;--violet:#aa66ff;--cyan:#00ffff}
+*{margin:0;padding:0;box-sizing:border-box}
+html{font-size:16px}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow:hidden;transition:background .3s,color .3s}
+button{font-family:inherit}
+
+/* ═══ NOISE TEXTURE OVERLAY ═══ */
+body::after{
+  content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;
+  opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat:repeat;
+  background-size:128px 128px;
+}
+.theme-cycle-dot{width:28px;height:28px;border-radius:50%;cursor:pointer;transition:all .2s;background:var(--accent);border:2px solid rgba(255,255,255,.2);position:relative;flex-shrink:0}
+.theme-cycle-dot:hover{transform:scale(1.15);box-shadow:0 0 12px var(--accent-glow)}
+.theme-cycle-dot::after{content:'';position:absolute;inset:5px;border-radius:50%;background:conic-gradient(from 0deg,#a3e635,#38bdf8,#f59e0b,#10b981,#a78bfa,#ec4899,#a3e635);opacity:.4;transition:opacity .2s}
+.theme-cycle-dot:hover::after{opacity:.8}
+.slides{height:100vh;width:100vw;overflow:hidden;position:relative}
+.slide{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 60px;opacity:0;transform:translateY(20px);pointer-events:none;transition:opacity .4s ease,transform .4s ease}
+.slide.active{opacity:1;transform:translateY(0);pointer-events:auto}
+.slide-content{max-width:960px;width:100%;max-height:100%;overflow-y:auto}
+.slide-content::-webkit-scrollbar{width:4px}
+.slide-content::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+.timer-bar{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;gap:12px;padding:10px 20px;background:rgba(28,28,28,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+.timer-display{font-family:'Fira Code',monospace;font-size:28px;font-weight:700;color:var(--text-dim);min-width:90px;text-align:center;letter-spacing:2px;line-height:1}
+.timer-display.running{color:var(--green)}
+.timer-display.warning{color:var(--amber)}
+.timer-display.danger{color:var(--rose);animation:timerPulse 1s ease-in-out infinite}
+@keyframes timerPulse{0%,100%{opacity:1}50%{opacity:.5}}
+.timer-track{flex:1;height:6px;background:var(--bg3);border-radius:3px;overflow:hidden}
+.timer-fill{height:100%;background:var(--green);border-radius:3px;transition:width .3s ease,background .3s ease}
+.timer-fill.warning{background:var(--amber)}
+.timer-fill.danger{background:var(--rose)}
+.timer-label{font-family:'Fira Code',monospace;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-dim);white-space:nowrap}
+.timer-btn{height:30px;padding:0 12px;border-radius:6px;border:1px solid var(--border);background:var(--bg3);color:var(--text-muted);font-size:10px;font-weight:600;cursor:pointer;font-family:'Fira Code',monospace;transition:all .15s;white-space:nowrap}
+.timer-btn:hover{border-color:var(--accent);color:var(--accent)}
+.timer-btn.active{background:var(--accent-dim);border-color:var(--accent);color:var(--accent)}
+.slide-timer-info{display:flex;align-items:center;gap:6px;font-family:'Fira Code',monospace;font-size:10px;color:var(--text-dim);margin-bottom:12px}
+.slide-timer-info .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.slide h1{font-family:'Fira Code',monospace;font-size:2.4rem;font-weight:700;line-height:1.15;margin-bottom:16px;color:var(--text)}
+.slide h1 span{color:var(--accent)}
+.slide h2{font-size:1.6rem;font-weight:700;line-height:1.2;margin-bottom:12px;color:var(--text)}
+.slide h2 span{color:var(--accent)}
+.slide h3{font-size:1.1rem;font-weight:600;margin-bottom:8px;color:var(--accent);font-family:'Fira Code',monospace}
+.slide p{font-size:1rem;color:var(--text-muted);margin-bottom:10px;line-height:1.7}
+.slide .lead{font-size:1.15rem;color:var(--text);margin-bottom:16px}
+.slide .instruction{font-size:.95rem;color:var(--text-muted);background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin:12px 0;font-style:italic}
+.slide .tip{font-size:.85rem;color:var(--text-dim);border-left:3px solid var(--accent);padding-left:12px;margin:10px 0}
+.slide ul{list-style:none;padding:0;margin:12px 0}
+.slide ul li{font-size:.95rem;color:var(--text-muted);padding:6px 0 6px 24px;position:relative;border-bottom:1px solid rgba(51,51,51,.5)}
+.slide ul li::before{content:'\2192';position:absolute;left:0;color:var(--accent);font-weight:700;font-size:.85rem}
+.slide ol{list-style:none;padding:0;margin:12px 0;counter-reset:step}
+.slide ol li{font-size:.95rem;color:var(--text-muted);padding:6px 0 6px 32px;position:relative;border-bottom:1px solid rgba(51,51,51,.5)}
+.slide ol li::before{content:counter(step);counter-increment:step;position:absolute;left:0;color:var(--accent);font-family:'Fira Code',monospace;font-size:.8rem;font-weight:700;width:22px;height:22px;border-radius:50%;background:var(--accent-dim);display:flex;align-items:center;justify-content:center}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:16px 0}
+.col h3{font-size:1rem;margin-bottom:8px}
+.col p{font-size:.9rem}
+.callout{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin:12px 0}
+.callout.warning{border-color:var(--amber);background:rgba(251,191,36,.06)}
+.callout.info{border-color:var(--cyan);background:rgba(34,211,238,.06)}
+.callout.success{border-color:var(--green);background:rgba(52,211,153,.06)}
+.callout-label{font-family:'Fira Code',monospace;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px}
+.callout.warning .callout-label{color:var(--amber)}
+.callout.info .callout-label{color:var(--cyan)}
+.callout.success .callout-label{color:var(--green)}
+.part-label{display:inline-flex;align-items:center;gap:8px;padding:4px 12px;border-radius:6px;font-family:'Fira Code',monospace;font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:16px}
+.part-label.part1{background:var(--accent-dim);color:var(--accent);border:1px solid rgba(163,230,53,.25)}
+.part-label.part2{background:rgba(34,211,238,.1);color:var(--cyan);border:1px solid rgba(34,211,238,.25)}
+.part-label.part3{background:rgba(167,139,250,.1);color:var(--violet);border:1px solid rgba(167,139,250,.25)}
+.part-label.part4{background:rgba(251,191,36,.1);color:var(--amber);border:1px solid rgba(251,191,36,.25)}
+.image-prompt{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+.image-box{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:16px;text-align:center}
+.image-box img{border-radius:8px}
+.image-box p{font-size:.85rem;color:var(--text-dim);margin-top:8px}
+.reveal-btn{display:inline-block;padding:8px 18px;border-radius:6px;border:1px solid var(--accent);background:var(--accent-dim);color:var(--accent);font-family:'Fira Code',monospace;font-size:11px;font-weight:700;cursor:pointer;transition:all .15s;margin:8px 0}
+.reveal-btn:hover{background:var(--accent);color:var(--bg)}
+.reveal-btn.revealed{background:rgba(52,211,153,.15);border-color:var(--green);color:var(--green)}
+.model-answer{display:none;margin:10px 0;padding:12px 16px;background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.25);border-radius:8px;font-size:.92rem;color:var(--text);line-height:1.65}
+.model-answer.visible{display:block;animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
+.nav-bar{position:fixed;bottom:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:10px 20px;background:rgba(28,28,28,.95);backdrop-filter:blur(8px);border-top:1px solid var(--border)}
+.nav-left{display:flex;align-items:center;gap:8px}
+.nav-right{display:flex;align-items:center;gap:8px}
+.nav-btn{height:32px;padding:0 14px;border-radius:6px;border:1px solid var(--border);background:var(--bg3);color:var(--text-muted);font-size:10px;font-weight:600;cursor:pointer;font-family:'Fira Code',monospace;transition:all .15s;display:flex;align-items:center;gap:6px}
+.nav-btn:hover{border-color:var(--accent);color:var(--accent)}
+.nav-btn:disabled{opacity:.3;cursor:not-allowed}
+.nav-btn.primary{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.nav-btn.primary:hover{filter:brightness(1.1)}
+.slide-counter{font-family:'Fira Code',monospace;font-size:11px;color:var(--text-dim);padding:0 8px}
+.progress-track{flex:1;height:4px;background:var(--bg3);border-radius:2px;margin:0 16px;overflow:hidden}
+.progress-fill{height:100%;background:var(--accent);border-radius:2px;transition:width .3s ease}
+.dots{display:flex;gap:4px}
+.dot-nav{width:8px;height:8px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);cursor:pointer;transition:all .15s}
+.dot-nav.active{background:var(--accent);border-color:var(--accent)}
+.dot-nav:hover{border-color:var(--accent)}
+.title-slide{text-align:center}
+.title-slide h1{font-size:3rem;margin-bottom:8px}
+.title-slide .subtitle{font-size:1.1rem;color:var(--text-muted);margin-bottom:24px}
+.title-slide .meta{display:flex;justify-content:center;gap:24px;margin-top:24px}
+.title-slide .meta-item{text-align:center}
+.title-slide .meta-item .value{font-family:'Fira Code',monospace;font-size:1.8rem;font-weight:700;color:var(--accent)}
+.title-slide .meta-item .label{font-size:.75rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:1px}
+.end-slide{text-align:center}
+.end-slide h1{font-size:2.8rem;margin-bottom:12px}
+.end-slide .score-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:24px 0}
+.score-item{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:16px}
+.score-item .score{font-family:'Fira Code',monospace;font-size:1.8rem;font-weight:700;color:var(--accent)}
+.score-item .label{font-size:.75rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+@media(max-width:700px){.slide{padding:24px 20px}.slide h1{font-size:1.6rem}.slide h2{font-size:1.2rem}.cols,.image-prompt{grid-template-columns:1fr}.timer-bar{padding:8px 12px}.timer-display{font-size:20px;min-width:70px}.nav-bar{padding:8px 12px}.title-slide h1{font-size:2rem}}
+</style>
+</head>
+<body data-theme="1">
+
+<div class="timer-bar" id="timerBar">
+  <span class="timer-label" id="timerLabel">READY</span>
+  <div class="timer-track"><div class="timer-fill" id="timerFill" style="width:100%"></div></div>
+  <span class="timer-display" id="timerDisplay">0:00</span>
+  <div class="theme-cycle-dot" id="themeCycleDot" title="Click to cycle theme" onclick="cycleTheme()"></div>
+  <button class="timer-btn" id="timerStartBtn" onclick="timerStart()">START</button>
+  <button class="timer-btn" onclick="timerPause()">PAUSE</button>
+  <button class="timer-btn" onclick="timerReset()">RESET</button>
+</div>
+
+<div class="slide active" data-slide="0" data-timer="0"><div class="slide-content title-slide"><h1>Cambridge <span>B2 First</span> for Schools</h1><p class="subtitle">Speaking Paper — Friends & Family</p><div class="meta"><div class="meta-item"><div class="value">4</div><div class="label">Parts</div></div><div class="meta-item"><div class="value">~14</div><div class="label">Minutes</div></div><div class="meta-item"><div class="value">2</div><div class="label">Candidates</div></div><div class="meta-item"><div class="value">19</div><div class="label">Slides</div></div></div></div></div>
+<div class="slide" data-slide="1" data-timer="0"><div class="slide-content"><span class="part-label part1">PART 1 — Interview</span><h2>Part 1: <span>Interview</span></h2><p class="lead">The examiner asks questions about everyday topics. Candidates answer individually.</p><div class="callout info"><div class="callout-label">Format</div><p><strong>Duration:</strong> 2 minutes (pair) / 3 minutes (group of 3)</p><p><strong>Focus:</strong> Giving personal information, expressing opinions on familiar topics</p></div><h3 style="margin-top:16px">Topics covered:</h3><ul><li>spending time with family</li><li>making and keeping friends</li><li>family traditions and celebrations</li><li>friendship conflicts</li><li>peer pressure</li></ul><p class="tip">Candidates should give full answers — not just "yes" or "no". Aim for 2-3 sentences per answer.</p></div></div>
+<div class="slide" data-slide="2" data-timer="120"><div class="slide-content"><span class="part-label part1">PART 1 — Practice</span><div class="slide-timer-info"><span class="dot"></span>Timer: 2 minutes — Answer all questions</div><h2>Interview <span>Questions</span></h2><p class="instruction">Answer each question in turn. Speak in full sentences. The timer starts automatically.</p><ol><li>How much time do you spend with family?</li><li>How do you make new friends?</li><li>Does your family have any traditions?</li><li>How do you deal with friendship conflicts?</li><li>Do you feel peer pressure?</li></ol><div class="callout warning"><div class="callout-label">Examiner tip</div><p>Don't memorise answers. The examiner can tell. Speak naturally and show your personality.</p></div></div></div>
+<div class="slide" data-slide="3" data-timer="0"><div class="slide-content"><span class="part-label part1">PART 1 — Model Answers</span><h2>Sample <span>Answers</span></h2><p class="instruction">Click each button to reveal a model answer. Try to say your answer first!</p><button class="reveal-btn" onclick="toggleAnswer(this)">Q1: How much time do you spend with family?</button><div class="model-answer"><strong>Model Answer:</strong> I have dinner with my family every evening. We talk about our day.</div><button class="reveal-btn" onclick="toggleAnswer(this)">Q2: How do you make new friends?</button><div class="model-answer"><strong>Model Answer:</strong> I make friends through shared interests like sports and hobbies.</div><button class="reveal-btn" onclick="toggleAnswer(this)">Q3: Does your family have any traditions?</button><div class="model-answer"><strong>Model Answer:</strong> We always have a big family dinner on Sundays with my grandparents.</div><button class="reveal-btn" onclick="toggleAnswer(this)">Q4: How do you deal with friendship conflicts?</button><div class="model-answer"><strong>Model Answer:</strong> When I have a conflict with a friend, I talk to them directly and try to understand their perspective.</div><button class="reveal-btn" onclick="toggleAnswer(this)">Q5: Do you feel peer pressure?</button><div class="model-answer"><strong>Model Answer:</strong> Yes, sometimes I feel pressure to dress a certain way or have the latest phone.</div></div></div>
+<div class="slide" data-slide="4" data-timer="0"><div class="slide-content"><span class="part-label part2">PART 2 — Long Turn</span><h2>Part 2: <span>Long Turn</span></h2><p class="lead">Each candidate speaks for 1 minute about two photographs. Then the other candidate answers a short question.</p><div class="cols"><div class="col"><h3>Candidate A</h3><p>Looks at two photos for 1 minute</p><p>Compares them and answers a question</p><p>Speaks for <strong>1 minute</strong></p></div><div class="col"><h3>Candidate B</h3><p>Listens to Candidate A</p><p>Answers a short question about the photos</p><p>Speaks for <strong>30 seconds</strong></p></div></div><div class="callout success"><div class="callout-label">Key skill</div><p>Compare the photos — don't just describe them. Use language of similarity and difference: <em>"Both photos show...", "In the first photo... whereas in the second..."</em></p></div></div></div>
+<div class="slide" data-slide="5" data-timer="60"><div class="slide-content"><span class="part-label part2">PART 2 — Practice A</span><div class="slide-timer-info"><span class="dot"></span>Timer: 1 minute — Compare the photos</div><h2>Long Turn: <span>Set A</span></h2><p class="instruction">Candidate A: Look at these two photographs. They show people using technology in different ways. Compare the photographs and say which way of using technology you think is more beneficial.</p><div class="image-prompt"><div class="image-box"><img src="https://pixabay.com/get/g9ac1ce89b628092fd9ac6ff1ffd78529f37965f3b3fdd001eb4094956fbba0ca3f0a66ab04a36c173110ab2d4b9cd10ea764276968c5fe143b4d053d2099552f_640.jpg" alt="Family having dinner together" style="width:100%;height:180px;object-fit:cover;" onerror="this.style.display='none'"><p><strong>Photo A:</strong> Family having dinner together</p></div><div class="image-box"><img src="https://pixabay.com/get/ge6dff09140215e744f8c1c36efa5a1a4e51625833beb14b1a9e2f386f6cc232a35fc3fe0e4177511451f83713f00a4bfc609ce119a830136b4618063eba50c0d_640.jpg" alt="Group of friends hanging out in a park" style="width:100%;height:180px;object-fit:cover;" onerror="this.style.display='none'"><p><strong>Photo B:</strong> Group of friends hanging out in a park</p></div></div><div class="callout info" style="margin-top:12px"><div class="callout-label">Follow-up (Candidate B)</div><p>Which way of using technology do you prefer? <em>(30 seconds)</em></p></div></div></div>
+<div class="slide" data-slide="6" data-timer="0"><div class="slide-content"><span class="part-label part2">PART 2 — Model Answer A</span><h2>Long Turn <span>Model Answer</span></h2><button class="reveal-btn" onclick="toggleAnswer(this)">Show Model Answer (Candidate A)</button><div class="model-answer"><strong>Model Answer:</strong> Both photos show people spending time together. The family dinner shows tradition and connection. The friends in the park show freedom and fun. Both relationships are important.</div><button class="reveal-btn" onclick="toggleAnswer(this)">Show Model Answer (Candidate B — Follow-up)</button><div class="model-answer"><strong>Follow-up Answer:</strong> I value both, but I think family is more important because they're always there for you.</div></div></div>
+<div class="slide" data-slide="7" data-timer="60"><div class="slide-content"><span class="part-label part2">PART 2 — Practice B</span><div class="slide-timer-info"><span class="dot"></span>Timer: 1 minute — Compare the photos</div><h2>Long Turn: <span>Set B</span></h2><p class="instruction">Candidate B: Look at these two photographs. They show people enjoying technology in different ways. Compare the photographs and say how you think the people are feeling in each photo.</p><div class="image-prompt"><div class="image-box"><img src="https://pixabay.com/get/ge6dff09140215e744f8c1c36efa5a1a4e51625833beb14b1a9e2f386f6cc232a35fc3fe0e4177511451f83713f00a4bfc609ce119a830136b4618063eba50c0d_640.jpg" alt="Group of friends hanging out in a park" style="width:100%;height:180px;object-fit:cover;" onerror="this.style.display='none'"><p><strong>Photo A:</strong> Group of friends hanging out in a park</p></div><div class="image-box"><img src="https://pixabay.com/get/g9ac1ce89b628092fd9ac6ff1ffd78529f37965f3b3fdd001eb4094956fbba0ca3f0a66ab04a36c173110ab2d4b9cd10ea764276968c5fe143b4d053d2099552f_640.jpg" alt="Family having dinner together" style="width:100%;height:180px;object-fit:cover;" onerror="this.style.display='none'"><p><strong>Photo B:</strong> Family having dinner together</p></div></div><div class="callout info" style="margin-top:12px"><div class="callout-label">Follow-up (Candidate A)</div><p>Do you prefer using technology alone or with others? <em>(30 seconds)</em></p></div></div></div>
+<div class="slide" data-slide="8" data-timer="0"><div class="slide-content"><span class="part-label part2">PART 2 — Model Answer B</span><h2>Long Turn <span>Model Answer</span></h2><button class="reveal-btn" onclick="toggleAnswer(this)">Show Model Answer (Candidate B)</button><div class="model-answer"><strong>Model Answer:</strong> Both photos show people spending time together. The family dinner shows tradition and connection. The friends in the park show freedom and fun. Both relationships are important.</div><button class="reveal-btn" onclick="toggleAnswer(this)">Show Model Answer (Candidate A — Follow-up)</button><div class="model-answer"><strong>Follow-up Answer:</strong> I value both, but I think family is more important because they're always there for you.</div></div></div>
+<div class="slide" data-slide="9" data-timer="0"><div class="slide-content"><span class="part-label part3">PART 3 — Collaborative Task</span><h2>Part 3: <span>Collaborative Task</span></h2><p class="lead">Candidates discuss a situation together and make a decision. The examiner gives a question with five prompts.</p><div class="callout info"><div class="callout-label">Format</div><p><strong>Phase 1:</strong> 2 minutes — Discuss all five prompts together</p><p><strong>Phase 2:</strong> 1 minute — Make a final decision together</p></div><h3 style="margin-top:16px">Skills tested:</h3><ul><li>Exchanging ideas and opinions</li><li>Agreeing and disagreeing politely</li><li>Suggesting and speculating</li><li>Negotiating and reaching a decision</li><li>Justifying your choices</li></ul><p class="tip">This is a discussion — talk TO each other, not to the examiner. Build on what your partner says.</p></div></div>
+<div class="slide" data-slide="10" data-timer="120"><div class="slide-content"><span class="part-label part3">PART 3 — Practice A</span><div class="slide-timer-info"><span class="dot"></span>Timer: 2 minutes — Discuss all options</div><h2>Collaborative <span>Task A</span></h2><p class="instruction">A youth centre is planning activities for teenagers. Discuss which would be most popular.</p><div class="callout warning"><div class="callout-label">Discuss these options</div><ul style="margin:8px 0 0;padding:0;list-style:none"><li style="padding:4px 0;border:none">🎬 Movie nights</li><li style="padding:4px 0;border:none">🎵 Open mic evenings</li><li style="padding:4px 0;border:none">🏕️ Weekend camping trips</li><li style="padding:4px 0;border:none">🎮 Gaming tournaments</li><li style="padding:4px 0;border:none">🍳 Cooking classes</li></ul></div><p class="tip" style="margin-top:12px"><strong>Phase 2 (after timer):</strong> Decide together which one would be best.</p></div></div>
+<div class="slide" data-slide="11" data-timer="60"><div class="slide-content"><span class="part-label part3">PART 3 — Decision</span><div class="slide-timer-info"><span class="dot"></span>Timer: 1 minute — Make your final decision</div><h2>Make Your <span>Decision</span></h2><p class="instruction">Now decide together: which <strong>one</strong> option should be chosen? Be ready to explain your reasons.</p><div class="callout success"><div class="callout-label">Useful language</div><p><em>"I think we should choose... because..."</em></p><p><em>"That's a good point, but I feel that..."</em></p><p><em>"How about we go with...?"</em></p><p><em>"I agree with you. Let's decide on..."</em></p></div></div></div>
+<div class="slide" data-slide="12" data-timer="0"><div class="slide-content"><span class="part-label part3">PART 3 — Model Answer A</span><h2>Collaborative Task <span>Model Answer</span></h2><button class="reveal-btn" onclick="toggleAnswer(this)">Show Discussion Model Answer</button><div class="model-answer"><strong>Model Discussion:</strong><br><br>A: Movie nights would be popular and affordable.
+
+B: Gaming tournaments would attract competitive students.
+
+A: Camping trips would be memorable and adventurous.
+
+B: Let's choose gaming tournaments and movie nights.
+
+A: I agree.</div><button class="reveal-btn" onclick="toggleAnswer(this)">Show Decision Model Answer</button><div class="model-answer"><strong>Decision:</strong> We decided on gaming tournaments and movie nights.</div></div></div>
+<div class="slide" data-slide="13" data-timer="0"><div class="slide-content"><span class="part-label part4">PART 4 — Discussion</span><h2>Part 4: <span>Extended Discussion</span></h2><p class="lead">The examiner asks further questions related to the Part 3 topic. Candidates discuss together and with the examiner.</p><div class="callout info"><div class="callout-label">Format</div><p><strong>Duration:</strong> 4-5 minutes</p><p><strong>Focus:</strong> Expressing and justifying opinions, agreeing/disagreeing, speculating about broader themes</p></div><h3 style="margin-top:16px">Skills tested:</h3><ul><li>Discussing abstract and social issues</li><li>Expressing opinions with reasons and examples</li><li>Responding to and challenging partner's ideas</li><li>Speculating about the future</li><li>Using a range of vocabulary and structures</li></ul><p class="tip">This is the highest-level part. Show you can discuss ideas, not just facts. Use phrases like <em>"I think the main issue is...", "In my country...", "I suppose it depends on..."</em></p></div></div>
+<div class="slide" data-slide="14" data-timer="180"><div class="slide-content"><span class="part-label part4">PART 4 — Practice</span><div class="slide-timer-info"><span class="dot"></span>Timer: 3 minutes — Discuss all questions</div><h2>Extended <span>Discussion</span></h2><p class="instruction">Discuss these questions together. Give your opinions and reasons. The timer starts automatically.</p><ol><li>Do you spend enough time with family?</li><li>How has social media affected friendships?</li><li>Is it okay to have friends older or younger than you?</li><li>Should parents be your friends?</li><li>At what age should children have their own phone?</li></ol><div class="callout success"><div class="callout-label">Top tip</div><p>Extend your answers with examples: <em>"For example, in my school...", "I read that...", "My friend told me that..."</em></p></div></div></div>
+<div class="slide" data-slide="15" data-timer="0"><div class="slide-content"><span class="part-label part4">PART 4 — Model Answers</span><h2>Discussion <span>Model Answers</span></h2><button class="reveal-btn" onclick="toggleAnswer(this)">Q1</button><div class="model-answer"><strong>Model Answer:</strong> I could spend more time with family. I'm always busy with school.</div><button class="reveal-btn" onclick="toggleAnswer(this)">Q2</button><div class="model-answer"><strong>Model Answer:</strong> Social media helps maintain friendships but can also cause jealousy.</div><button class="reveal-btn" onclick="toggleAnswer(this)">Q3</button><div class="model-answer"><strong>Model Answer:</strong> It's fine to have friends of different ages. You can learn from them.</div><button class="reveal-btn" onclick="toggleAnswer(this)">Q4</button><div class="model-answer"><strong>Model Answer:</strong> Parents should be parents, not friends. But they can still be supportive.</div><button class="reveal-btn" onclick="toggleAnswer(this)">Q5</button><div class="model-answer"><strong>Model Answer:</strong> I think 12 or 13 is old enough for a basic phone, but not a smartphone.</div></div></div>
+<div class="slide" data-slide="16" data-timer="0"><div class="slide-content"><h2>Assessment <span>Criteria</span></h2><p class="lead">Candidates are marked on four areas, each scored 0-5:</p><div class="cols" style="margin-top:16px"><div class="col"><div class="callout success"><div class="callout-label">Grammar & Vocabulary</div><p>Range and accuracy of grammar. Variety and appropriacy of vocabulary.</p></div></div><div class="col"><div class="callout info"><div class="callout-label">Discourse Management</div><p>Can you organise your ideas clearly? Use linking words?</p></div></div><div class="col"><div class="callout warning"><div class="callout-label">Pronunciation</div><p>Clear and understandable? Correct stress and intonation?</p></div></div><div class="col"><div class="callout" style="border-color:var(--violet)"><div class="callout-label" style="color:var(--violet)">Interactive Communication</div><p>Do you respond to your partner? Start and maintain conversation?</p></div></div></div></div></div>
+<div class="slide" data-slide="17" data-timer="0"><div class="slide-content"><h2>Useful <span>Phrases</span></h2><div class="cols"><div class="col"><h3>Comparing (Part 2)</h3><ul><li>Both photos show...</li><li>In the first photo... whereas in the second...</li><li>The main difference is that...</li><li>One similarity is...</li><li>This person looks... while that one seems...</li></ul></div><div class="col"><h3>Discussing (Parts 3 & 4)</h3><ul><li>I think... because...</li><li>That's a good point, but...</li><li>I see what you mean, however...</li><li>How about...? / What about...?</li><li>I agree with you. Also...</li></ul></div><div class="col"><h3>Speculating</h3><ul><li>I suppose it depends on...</li><li>It might be that...</li><li>I imagine most people would...</li><li>It's difficult to say, but...</li><li>Perhaps the reason is...</li></ul></div><div class="col"><h3>Buying Time</h3><ul><li>That's an interesting question...</li><li>Let me think about that...</li><li>Well, I'm not sure, but...</li><li>I haven't thought about that before, but...</li><li>Off the top of my head...</li></ul></div></div></div></div>
+<div class="slide" data-slide="18" data-timer="0"><div class="slide-content end-slide"><h1>Well <span>Done</span>!</h1><p class="lead">You have completed a full B2 First for Schools Speaking practice on <strong>Friends & Family</strong>.</p><div class="score-grid"><div class="score-item"><div class="score">2<span style="font-size:.9rem">min</span></div><div class="label">Part 1</div></div><div class="score-item"><div class="score">1<span style="font-size:.9rem">min</span></div><div class="label">Part 2 each</div></div><div class="score-item"><div class="score">3<span style="font-size:.9rem">min</span></div><div class="label">Part 3</div></div><div class="score-item"><div class="score">3<span style="font-size:.9rem">min</span></div><div class="label">Part 4</div></div></div><p style="color:var(--text-dim);font-size:.9rem;margin-top:20px">Total speaking time: ~14 minutes</p><div style="margin-top:24px"><button class="nav-btn primary" onclick="goTo(0)">↺ Start Over</button></div></div></div><div class="nav-bar">
+  <div class="nav-left"><button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">\2190 Prev</button><button class="nav-btn primary" id="nextBtn" onclick="changeSlide(1)">Next \2192</button></div>
+  <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:5.26%"></div></div>
+  <span class="slide-counter" id="slideCounter">1 / 19</span>
+  <div class="nav-right"><div class="dots" id="dots"></div></div>
+</div>
+
+<script>
+const themes = [1,2,3,4,5,6,7];
+var currentTheme = parseInt(localStorage.getItem('b2-theme')) || 1;
+
+function applyTheme(themeNum) {
+  currentTheme = themeNum;
+  if (themeNum === 1) { document.body.removeAttribute('data-theme'); }
+  else { document.body.setAttribute('data-theme', themeNum); }
+  localStorage.setItem('b2-theme', themeNum);
+  updateCycleDotColor();
+}
+
+function updateCycleDotColor() {
+  var dot = document.getElementById('themeCycleDot');
+  var colors = {1:'#a3e635',2:'#38bdf8',3:'#f59e0b',4:'#10b981',5:'#a78bfa',6:'#ec4899',7:'#ffff00'};
+  dot.style.background = colors[currentTheme] || colors[1];
+}
+
+function cycleTheme() {
+  var idx = themes.indexOf(currentTheme);
+  var nextIdx = (idx + 1) % themes.length;
+  applyTheme(themes[nextIdx]);
+}
+
+applyTheme(currentTheme);
+updateCycleDotColor();
+
+function beep() {
+  try {
+    var ctx = new (window.AudioContext || window.webkitAudioContext)();
+    var osc = ctx.createOscillator();
+    var gain = ctx.createGain();
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.frequency.value = 880;
+    gain.gain.value = 0.3;
+    osc.start();
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.3);
+    osc.stop(ctx.currentTime + 0.3);
+  } catch(e) {}
+}
+
+var slides = document.querySelectorAll('.slide');
+var current = 0;
+var total = slides.length;
+var timerInterval = null;
+var timerRemaining = 0;
+var timerTotal = 0;
+var timerRunning = false;
+var timerPaused = false;
+
+var dotsContainer = document.getElementById('dots');
+slides.forEach(function(slide, i) {
+  var dot = document.createElement('div');
+  dot.className = 'dot-nav' + (i === 0 ? ' active' : '');
+  dot.onclick = function() { goTo(i); };
+  dotsContainer.appendChild(dot);
+});
+
+function updateUI() {
+  slides.forEach(function(slide, i) { slide.classList.toggle('active', i === current); });
+  var dots = dotsContainer.querySelectorAll('.dot-nav');
+  dots.forEach(function(d, i) { d.classList.toggle('active', i === current); });
+  document.getElementById('slideCounter').textContent = (current + 1) + ' / ' + total;
+  document.getElementById('progressFill').style.width = ((current + 1) / total * 100) + '%';
+  document.getElementById('prevBtn').disabled = current === 0;
+  document.getElementById('nextBtn').disabled = current === total - 1;
+  var activeSlide = slides[current];
+  var slideTimer = parseInt(activeSlide.dataset.timer);
+  if (slideTimer > 0) {
+    timerSet(slideTimer);
+    document.getElementById('timerLabel').textContent = 'READY \2014 Press START';
+    setTimeout(function() {
+      if (!timerRunning && !timerPaused && current === parseInt(activeSlide.dataset.slide)) {
+        timerStart();
+      }
+    }, 800);
+  } else {
+    timerReset();
+    document.getElementById('timerLabel').textContent = 'NO TIMER';
+    document.getElementById('timerDisplay').textContent = '\2014';
+    document.getElementById('timerDisplay').className = 'timer-display';
+    document.getElementById('timerFill').style.width = '100%';
+    document.getElementById('timerFill').className = 'timer-fill';
+  }
+}
+
+function goTo(n) {
+  if (n < 0 || n >= total) return;
+  timerStop();
+  current = n;
+  updateUI();
+}
+
+window.changeSlide = function(dir) { goTo(current + dir); };
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'ArrowRight' || e.code === 'Space') {
+    e.preventDefault();
+    if (e.code === 'Space' && timerRunning) return;
+    changeSlide(1);
+  } else if (e.key === 'ArrowLeft') { e.preventDefault(); changeSlide(-1); }
+  else if (e.key === 's' || e.key === 'S') { timerStart(); }
+  else if (e.key === 'p' || e.key === 'P') { timerPause(); }
+  else if (e.key === 'r' || e.key === 'R') { timerReset(); }
+});
+
+var touchStartX = 0;
+document.addEventListener('touchstart', function(e) { touchStartX = e.touches[0].clientX; }, { passive: true });
+document.addEventListener('touchend', function(e) {
+  var dx = e.changedTouches[0].clientX - touchStartX;
+  if (Math.abs(dx) > 50) { changeSlide(dx < 0 ? 1 : -1); }
+}, { passive: true });
+
+function timerSet(seconds) {
+  timerTotal = seconds;
+  timerRemaining = seconds;
+  timerRunning = false;
+  timerPaused = false;
+  timerUpdateDisplay();
+  document.getElementById('timerStartBtn').textContent = 'START';
+  document.getElementById('timerStartBtn').classList.remove('active');
+}
+
+function timerStart() {
+  if (timerRunning) return;
+  if (timerRemaining <= 0) timerRemaining = timerTotal;
+  timerRunning = true;
+  timerPaused = false;
+  document.getElementById('timerStartBtn').textContent = 'RUNNING';
+  document.getElementById('timerStartBtn').classList.add('active');
+  document.getElementById('timerLabel').textContent = 'SPEAK';
+  timerInterval = setInterval(function() {
+    timerRemaining--;
+    timerUpdateDisplay();
+    if (timerRemaining <= 0) {
+      timerStop();
+      document.getElementById('timerLabel').textContent = 'TIME UP';
+      document.getElementById('timerDisplay').classList.add('danger');
+      beep();
+      setTimeout(function() { beep(); }, 350);
+    }
+  }, 1000);
+}
+
+function timerPause() {
+  if (!timerRunning) return;
+  timerRunning = false;
+  timerPaused = true;
+  clearInterval(timerInterval);
+  document.getElementById('timerStartBtn').textContent = 'RESUME';
+  document.getElementById('timerStartBtn').classList.remove('active');
+  document.getElementById('timerLabel').textContent = 'PAUSED';
+}
+
+function timerStop() {
+  timerRunning = false;
+  timerPaused = false;
+  clearInterval(timerInterval);
+  document.getElementById('timerStartBtn').textContent = 'START';
+  document.getElementById('timerStartBtn').classList.remove('active');
+}
+
+function timerReset() {
+  timerStop();
+  timerRemaining = timerTotal;
+  timerUpdateDisplay();
+  if (timerTotal > 0) { document.getElementById('timerLabel').textContent = 'READY'; }
+}
+
+function timerUpdateDisplay() {
+  var display = document.getElementById('timerDisplay');
+  var fill = document.getElementById('timerFill');
+  var m = Math.floor(timerRemaining / 60);
+  var s = timerRemaining % 60;
+  display.textContent = m + ':' + String(s).padStart(2, '0');
+  var pct = timerTotal > 0 ? (timerRemaining / timerTotal * 100) : 100;
+  fill.style.width = pct + '%';
+  display.className = 'timer-display';
+  fill.className = 'timer-fill';
+  if (timerRunning || timerPaused) { display.classList.add('running'); }
+  if (timerRemaining <= 30 && timerRemaining > 10) {
+    display.classList.add('warning');
+    fill.classList.add('warning');
+  } else if (timerRemaining <= 10) {
+    display.classList.add('danger');
+    fill.classList.add('danger');
+  }
+}
+
+window.toggleAnswer = function(btn) {
+  var answer = btn.nextElementSibling;
+  answer.classList.toggle('visible');
+  btn.classList.toggle('revealed');
+  btn.textContent = btn.classList.contains('revealed') ? btn.textContent.replace('Show', 'Hide') : btn.textContent.replace('Hide', 'Show');
+};
+
+updateUI();
+</script>
+</body>
+</html>
