@@ -1,0 +1,72 @@
+{
+  "title": "Transport & Getting Around",
+  "file_key": "11-transport",
+  "bg": "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1920&q=80",
+  "vocab": {
+    "commute": "the journey to and from work or school every day",
+    "convenient": "easy and suitable for a particular purpose",
+    "congestion": "too much traffic making movement difficult",
+    "reliable": "able to be trusted to do what is needed",
+    "sustainable": "able to continue without damaging the environment"
+  },
+  "phrases": [
+    "I would say that...",
+    "From my point of view...",
+    "That's a tricky question because...",
+    "On the one hand... on the other hand...",
+    "I tend to...",
+    "It depends on the situation."
+  ],
+  "part1": {
+    "questions": [
+      "How do you usually travel to school or work?",
+      "Do you prefer travelling by bus or by train?",
+      "Have you ever got lost while travelling?",
+      "Is public transport good where you live?",
+      "What is the longest journey you have ever made?"
+    ],
+    "answers": [
+      "I would say I usually take the bus to school because it is cheap and reliable. When I am in a hurry, I cycle instead.",
+      "I prefer trains because they are faster and more comfortable. Buses can get stuck in traffic, which is frustrating.",
+      "Yes, I once got lost in a big city because I took the wrong metro line. I had to ask a local person for help.",
+      "Public transport is quite good in my city during the day, but the buses are less frequent late at night. Trains are usually more reliable.",
+      "The longest journey I have made was a flight to Asia. It took about twelve hours, but the films on the plane made it bearable."
+    ]
+  },
+  "part2": {
+    "question": "What are the advantages of cycling compared to driving?",
+    "photoA": "A busy city street full of cars stuck in traffic",
+    "photoB": "A cyclist moving quickly through a bike lane in a park",
+    "model": "In photo A, cars are stuck in heavy traffic in a city centre, which looks stressful and slow. In photo B, a cyclist is moving freely along a dedicated lane near a park. I think cycling has many advantages over driving in cities. It is healthier, cheaper, and better for the environment. However, it is not practical in bad weather or for long distances. Overall, I believe cities should invest in bike lanes to make cycling safer and more convenient."
+  },
+  "part3": {
+    "task": "A city wants to reduce traffic problems. Discuss the ideas and decide which two would be most effective.",
+    "options": [
+      "More cycle lanes",
+      "Cheaper public transport tickets",
+      "Higher parking charges",
+      "Car-free zones in the centre",
+      "Better park-and-ride services"
+    ],
+    "model": "A: I think cheaper public transport would encourage many people to leave their cars at home.\nB: That's a good point, but car-free zones in the centre could immediately reduce congestion.\nA: I see what you mean. However, car-free zones might hurt businesses if customers cannot drive there.\nB: More cycle lanes are also a long-term solution because they make cycling safer and more popular.\nA: So let's choose cheaper public transport and more cycle lanes.\nB: Yes, I agree with you."
+  },
+  "part4": {
+    "questions": [
+      "Should cities ban cars from their centres?",
+      "Is flying the best way to travel long distances?",
+      "How can public transport be improved?",
+      "Will electric cars solve pollution problems?"
+    ],
+    "answers": [
+      "I think cars should be limited in city centres, not completely banned. Public transport and deliveries still need access.",
+      "Flying is fast for long distances, but it is not the best in every way. Trains are more comfortable for medium journeys and produce less pollution.",
+      "Public transport could be improved with more frequent services, cleaner vehicles, and better connections between buses, trains, and metro systems.",
+      "Electric cars will help reduce air pollution in cities, but they are not a perfect solution. Making batteries still has environmental costs."
+    ]
+  },
+  "homework": {
+    "reading": "Read an article about a city that improved its transport system. Summarise the three main changes.",
+    "listening": "Listen to a transport announcement in English. Write down the destination, time, and platform or gate number.",
+    "writing": "Write an essay (140\u2013190 words): 'Should governments spend more money on public transport or roads?'"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "title": "The Internet & AI",
+  "file_key": "12-internet-ai",
+  "bg": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1920&q=80",
+  "vocab": {
+    "artificial intelligence": "computer systems that can perform tasks that normally need human intelligence",
+    "algorithm": "a set of rules followed by a computer to solve problems",
+    "privacy": "the right to keep your personal information secret",
+    "misinformation": "false information that is spread, whether or not the person knows it is false",
+    "addicted": "unable to stop using or doing something"
+  },
+  "phrases": [
+    "I would say that...",
+    "From my point of view...",
+    "That's a tricky question because...",
+    "On the one hand... on the other hand...",
+    "I tend to...",
+    "It depends on the situation."
+  ],
+  "part1": {
+    "questions": [
+      "How much time do you spend online every day?",
+      "Do you think the internet has made life easier?",
+      "Have you ever used an AI tool?",
+      "What do you mainly use the internet for?",
+      "Do you worry about your online privacy?"
+    ],
+    "answers": [
+      "I would say I spend about four or five hours online every day. That includes schoolwork, messaging friends, and watching videos.",
+      "I think the internet has made many things easier, like communication and research. However, it can also be distracting and sometimes overwhelming.",
+      "Yes, I have used AI tools for help with homework and grammar checking. They are useful, but I make sure I understand the answers myself.",
+      "I mainly use the internet for school, social media, and entertainment. I also use it to learn new skills through tutorials.",
+      "Yes, I do worry about privacy. I try not to share too much personal information, but it is hard to know who can see your data."
+    ]
+  },
+  "part2": {
+    "question": "How might AI change the way students learn in the future?",
+    "photoA": "A student studying alone with books and handwritten notes",
+    "photoB": "A student using a tablet with an AI learning assistant",
+    "model": "In photo A, a student is learning in a traditional way with books and notes, which helps develop independent thinking. In photo B, a student is using AI on a tablet, which can give instant feedback and personalised exercises. I think AI will change learning by making it more flexible, but it could also make students lazy if they rely on it too much. The best approach is probably a balance: students use AI for support but still do their own thinking and writing."
+  },
+  "part3": {
+    "task": "A school is deciding how students should use AI responsibly. Discuss the ideas and decide which two rules would be most important.",
+    "options": [
+      "AI can only be used for checking grammar",
+      "Students must declare when they use AI",
+      "AI is banned for homework",
+      "Teachers must explain how AI works",
+      "AI can be used for research but not writing essays"
+    ],
+    "model": "A: I think students should have to declare when they use AI. That makes them honest and responsible.\nB: That's a good point, but teachers also need to explain how AI works so students understand its limits.\nA: I agree. Banning AI completely is unrealistic because students will use it anyway.\nB: Yes. Allowing AI for research but not for writing essays seems fair. It helps students learn without doing the work for them.\nA: So let's choose declaring AI use and limiting it to research.\nB: Yes, I agree with you."
+  },
+  "part4": {
+    "questions": [
+      "Is social media good for young people?",
+      "Should AI replace teachers?",
+      "How can people avoid misinformation online?",
+      "What laws should exist for AI?"
+    ],
+    "answers": [
+      "Social media can be good for connecting with friends, but it can also harm mental health. It depends on how much time you spend and what content you follow.",
+      "I do not think AI should replace teachers. It can help with marking and explanations, but teachers understand emotions and motivate students.",
+      "People should check information from multiple sources and avoid trusting headlines without reading the full article. Critical thinking is essential.",
+      "There should be laws about data privacy, transparent AI decisions, and clear rules about who is responsible when AI causes harm."
+    ]
+  },
+  "homework": {
+    "reading": "Read an article about the benefits and risks of AI. Summarise both sides in four sentences.",
+    "listening": "Watch a short documentary about the internet. Note three advantages and three disadvantages mentioned.",
+    "writing": "Write an essay (140\u2013190 words): 'Do the benefits of the internet outweigh the disadvantages?'"
+  }
+}

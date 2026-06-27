@@ -1,0 +1,72 @@
+{
+  "title": "Food & Cooking",
+  "file_key": "04-food-cooking",
+  "bg": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920&q=80",
+  "vocab": {
+    "cuisine": "a style of cooking from a particular country or region",
+    "ingredient": "one of the foods that you use to make a dish",
+    "appetising": "looking or smelling so good that you want to eat it",
+    "from scratch": "made using basic ingredients rather than a prepared mixture",
+    "balanced diet": "a diet that includes the right amounts of different types of food"
+  },
+  "phrases": [
+    "I would say that...",
+    "From my point of view...",
+    "That's a tricky question because...",
+    "On the one hand... on the other hand...",
+    "I tend to...",
+    "It depends on the situation."
+  ],
+  "part1": {
+    "questions": [
+      "Do you like cooking?",
+      "What is your favourite dish?",
+      "How often do you eat out?",
+      "Do you prefer sweet or savoury food?",
+      "Have you ever tried cooking something from another country?"
+    ],
+    "answers": [
+      "I would say I enjoy cooking, but only when I have enough time. During the week I usually cook simple pasta, but at the weekend I like trying new recipes.",
+      "My favourite dish is probably homemade pizza because you can put anything you like on it. I especially love it with fresh basil and mozzarella.",
+      "I eat out about once a week, usually with friends on a Friday evening. It's a nice way to relax, but it can be expensive.",
+      "I definitely prefer savoury food. I like sweet things occasionally, but I would always choose a good sandwich or pizza over a cake.",
+      "Yes, I recently tried making Thai curry from scratch. It was more difficult than I expected, but the fresh ingredients made it taste amazing."
+    ]
+  },
+  "part2": {
+    "question": "Why do you think some people prefer cooking at home to eating in restaurants?",
+    "photoA": "A busy restaurant with elegant lighting and a waiter serving food",
+    "photoB": "A person preparing a fresh meal in a cosy kitchen",
+    "model": "In photo A, people are eating in a restaurant which looks convenient and special, perhaps for a celebration. In photo B, someone is cooking at home in a relaxed environment. I think many people prefer home cooking because it is cheaper and healthier, and they can control the ingredients. Restaurants are nice for treats or social occasions, but cooking at home gives you a sense of achievement. Also, sharing a homemade meal with family can feel more personal than a restaurant dinner."
+  },
+  "part3": {
+    "task": "A school wants to encourage healthier eating habits. Discuss the ideas and decide which two would work best.",
+    "options": [
+      "Cooking classes for all students",
+      "Only healthy food in the cafeteria",
+      "Free fruit at break time",
+      "Information campaigns about sugar",
+      "Gardening club to grow vegetables"
+    ],
+    "model": "A: I think cooking classes would be useful because students learn skills they can use for life.\nB: That's true, but banning unhealthy food might make students rebel and buy junk food outside school.\nB: What about free fruit? It's simple and gives everyone a healthy option.\nA: I agree, and a gardening club could also teach students where food comes from, which might make them eat more vegetables.\nB: So let's choose cooking classes and the gardening club.\nA: Yes, I agree with you."
+  },
+  "part4": {
+    "questions": [
+      "Should schools teach cooking as a compulsory subject?",
+      "Is fast food always bad for you?",
+      "How important is it to eat meals together as a family?",
+      "What food trends are popular in your country?"
+    ],
+    "answers": [
+      "I think cooking should be taught in schools because it is a life skill. However, I would not make it compulsory at exam level; it could be a practical workshop instead.",
+      "Fast food is not always bad if you choose wisely. Salads or grilled options can be healthy, but burgers and fried food eaten every day are definitely harmful.",
+      "Eating together is very important because it strengthens family bonds. It also encourages slower, healthier eating habits.",
+      "In my country, plant-based and gluten-free options are becoming popular. People are also more interested in local, organic ingredients."
+    ]
+  },
+  "homework": {
+    "reading": "Read a recipe from a different cuisine. List the ingredients and explain how it is made in five steps.",
+    "listening": "Watch a cooking video in English. Write down five cooking verbs you hear.",
+    "writing": "Write an essay (140\u2013190 words): 'Is it better to cook at home or eat out?'"
+  }
+}

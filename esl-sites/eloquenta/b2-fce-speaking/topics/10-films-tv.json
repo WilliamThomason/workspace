@@ -1,0 +1,72 @@
+{
+  "title": "Films & TV Shows",
+  "file_key": "10-films-tv",
+  "bg": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1920&q=80",
+  "vocab": {
+    "plot": "the main events of a film or story",
+    "cast": "all the actors in a film or play",
+    "series": "a set of television or radio programmes with the same characters",
+    "episode": "one part of a television or radio series",
+    "script": "the written text of a film, play, or programme"
+  },
+  "phrases": [
+    "I would say that...",
+    "From my point of view...",
+    "That's a tricky question because...",
+    "On the one hand... on the other hand...",
+    "I tend to...",
+    "It depends on the situation."
+  ],
+  "part1": {
+    "questions": [
+      "What kind of films do you enjoy?",
+      "Do you prefer watching films at home or at the cinema?",
+      "How often do you watch TV?",
+      "Do you have a favourite TV series?",
+      "Have you ever watched a film in English?"
+    ],
+    "answers": [
+      "I would say I enjoy action films and comedies the most. I like films that are fast-paced but also have some humour.",
+      "I prefer watching films at home because it is cheaper and more comfortable. However, the cinema is better for big action films with special effects.",
+      "I do not watch much traditional TV anymore. I mostly watch series on streaming platforms, usually one episode a day.",
+      "My favourite series is a British crime drama. The plot is clever and the characters are very believable.",
+      "Yes, I often watch films in English with subtitles. It helps me improve my listening skills and learn natural expressions."
+    ]
+  },
+  "part2": {
+    "question": "Why do many people prefer watching TV series to films?",
+    "photoA": "A group of people watching a long film in a cinema",
+    "photoB": "A person watching multiple episodes of a series on a laptop",
+    "model": "In photo A, people are watching a film which tells a complete story in a few hours. In photo B, someone is binge-watching a series, which develops characters over many episodes. I think series are popular because viewers become attached to the characters and want to know what happens next. Films are good for a single experience, but series create long-term interest. However, watching too many episodes can be addictive and time-consuming."
+  },
+  "part3": {
+    "task": "A school film club wants to attract more members. Discuss the ideas and decide which two would be most effective.",
+    "options": [
+      "Film screenings every week",
+      "Discussions after each film",
+      "Inviting a local filmmaker",
+      "Short film competitions",
+      "Trips to the cinema"
+    ],
+    "model": "A: I think weekly screenings would be the foundation of the club because people need a regular event to attend.\nB: That's true, but discussions after films would make it more engaging and help members share opinions.\nA: I agree. A local filmmaker might be interesting, but it could be hard to organise.\nB: Short film competitions could encourage creativity, but they might only appeal to people who want to make films.\nA: So let's choose weekly screenings and post-film discussions.\nB: Yes, I agree with you."
+  },
+  "part4": {
+    "questions": [
+      "Do films influence society?",
+      "Should children watch less TV?",
+      "Are subtitles helpful for learning English?",
+      "What makes a TV series successful?"
+    ],
+    "answers": [
+      "I think films can influence society by showing different perspectives. However, they usually reflect society more than they change it.",
+      "I believe children should watch less passive TV and more educational content. Parents should also set clear limits on screen time.",
+      "Yes, subtitles are very helpful because they connect spoken and written English. I started with subtitles and gradually stopped needing them.",
+      "A successful series needs good characters, an interesting plot, and enough mystery to keep people watching. Strong acting is also essential."
+    ]
+  },
+  "homework": {
+    "reading": "Read a film review online. Note the reviewer's opinion and the reasons given.",
+    "listening": "Watch an English-language film trailer. Write down five words or phrases used to describe it.",
+    "writing": "Write an essay (140\u2013190 words): 'Is it better to watch films at home or at the cinema?'"
+  }
+}

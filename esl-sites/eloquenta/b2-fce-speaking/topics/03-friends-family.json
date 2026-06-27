@@ -1,0 +1,72 @@
+{
+  "title": "Friends & Family",
+  "file_key": "03-friends-family",
+  "bg": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1920&q=80",
+  "vocab": {
+    "sibling": "a brother or sister",
+    "bond": "a close connection or relationship between people",
+    "rely on": "to depend on someone for help or support",
+    "get on with": "to have a friendly relationship with someone",
+    "extended family": "all the people in a family group, including cousins, aunts, and uncles"
+  },
+  "phrases": [
+    "I would say that...",
+    "From my point of view...",
+    "That's a tricky question because...",
+    "On the one hand... on the other hand...",
+    "I tend to...",
+    "It depends on the situation."
+  ],
+  "part1": {
+    "questions": [
+      "Do you have a large family?",
+      "How often do you see your relatives?",
+      "What do you usually do with your friends at the weekend?",
+      "Who do you get on with best in your family?",
+      "Have your friendships changed much over the years?"
+    ],
+    "answers": [
+      "I would say my family is quite average. I have one sibling, my parents, and we see my grandparents regularly, especially during holidays.",
+      "I see my close relatives about once a month. My cousins live in another city, so we usually meet for birthdays or special occasions.",
+      "At the weekend, I normally meet my friends at a cafe or go to the cinema. Sometimes we just hang out at someone's house and chat.",
+      "I probably get on best with my older sister because we share a lot of interests and she gives me good advice about school and friends.",
+      "Yes, some friendships have changed. I am still close to my childhood friends, but I have also made new friends through hobbies and school activities."
+    ]
+  },
+  "part2": {
+    "question": "What is important for a strong friendship?",
+    "photoA": "Two friends laughing together while having coffee",
+    "photoB": "Two friends supporting each other during a difficult moment",
+    "model": "In photo A, two friends are enjoying themselves and laughing over coffee. This suggests that fun and shared interests are important in a friendship. In photo B, one friend is clearly supporting the other, which shows that trust and emotional support matter too. I think both elements are essential. A strong friendship needs laughter, but it also needs someone you can rely on when life is hard. Personally, I value trust more because a fun friend is not enough if they disappear when you need them."
+  },
+  "part3": {
+    "task": "A youth club wants to help teenagers build better friendships. Discuss the ideas and decide which two would be most useful.",
+    "options": [
+      "Group sports activities",
+      "Workshops on communication skills",
+      "Team-building trips",
+      "Online discussion groups",
+      "Volunteering projects"
+    ],
+    "model": "A: I think group sports would be great because people bond when they work towards a common goal.\nB: That's a good point, but not everyone likes sport. Workshops on communication skills could help shy students make friends more easily.\nA: I agree. And team-building trips might create strong memories, although they are expensive.\nB: Volunteering projects are also powerful because people connect when they help others together.\nA: So maybe communication workshops and volunteering would reach the most people.\nB: Yes, I agree with you."
+  },
+  "part4": {
+    "questions": [
+      "Is it better to have a few close friends or many acquaintances?",
+      "Should parents choose their children's friends?",
+      "How has social media changed friendships?",
+      "What role should family play in a teenager's life?"
+    ],
+    "answers": [
+      "I would say a few close friends are better because quality matters more than quantity. Close friends are the ones who really know you and support you.",
+      "I don't think parents should choose their children's friends. Teenagers need to learn how to judge people themselves, although parents can give advice.",
+      "Social media has made it easier to stay in touch, but I think it can also make friendships more shallow. Real connection needs face-to-face time.",
+      "Family should provide a safe base and emotional support, but they also need to give teenagers freedom to become independent."
+    ]
+  },
+  "homework": {
+    "reading": "Read a short story about friendship. Identify one conflict and how it was resolved.",
+    "listening": "Listen to a podcast episode about family relationships. Write down three new expressions you hear.",
+    "writing": "Write an essay (140\u2013190 words): 'Is it more important to spend time with family or friends?'"
+  }
+}

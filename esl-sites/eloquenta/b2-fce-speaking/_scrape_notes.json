@@ -1,0 +1,40 @@
+{
+  "source": "https://b2firstexampreparation.com/speaking/",
+  "note": "Format reference only. No question text or transcripts copied.",
+  "format": {
+    "parts": 4,
+    "total_time": "14 minutes",
+    "percentage": "20% of total exam",
+    "part1": {
+      "description": "Interview. Two candidates answer examiner questions about themselves, opinions, habits, past experiences.",
+      "timing": "~2 minutes",
+      "question_count": "~8 questions",
+      "answer_length": "~15 seconds / 2-3 sentences per answer"
+    },
+    "part2": {
+      "description": "Long turn. Candidate compares two photos and answers a question, then partner briefly responds.",
+      "timing": "1 minute speaking + 30-second response",
+      "prompt": "Compare the photos and answer the question"
+    },
+    "part3": {
+      "description": "Collaborative task. Both candidates discuss a task with five prompts and reach a decision.",
+      "timing": "~2-3 minutes discussion + 1-minute decision",
+      "prompt_count": 5
+    },
+    "part4": {
+      "description": "Discussion. Examiner asks broader questions related to the Part 3 topic.",
+      "timing": "~4 minutes"
+    }
+  },
+  "vocabulary_style": "Words tagged by CEFR level (B1/B2/C1) with short definitions. Useful grammar and phrases listed per lesson.",
+  "observed_topics": [
+    "Music",
+    "Environment",
+    "Losing Weight / Health",
+    "Gym / Fitness",
+    "Growing Up",
+    "Running a Business",
+    "Working From Home",
+    "Young People and the Environment"
+  ]
+}

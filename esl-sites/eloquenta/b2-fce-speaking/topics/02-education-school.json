@@ -1,0 +1,72 @@
+{
+  "title": "Education & School Life",
+  "file_key": "02-education-school",
+  "bg": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1920&q=80",
+  "vocab": {
+    "curriculum": "the subjects that are studied in a school or college",
+    "extracurricular": "activities done outside normal classes, such as clubs or sports",
+    "revision": "studying again something you have already learned to prepare for an exam",
+    "peer": "a person of the same age or status as another",
+    "tuition": "the act of teaching, especially when given to a small group or one person"
+  },
+  "phrases": [
+    "I would say that...",
+    "From my point of view...",
+    "That's a tricky question because...",
+    "On the one hand... on the other hand...",
+    "I tend to...",
+    "It depends on the situation."
+  ],
+  "part1": {
+    "questions": [
+      "Do you enjoy going to school?",
+      "What is your favourite subject and why?",
+      "How do you usually revise for exams?",
+      "Have you ever taken extra lessons outside school?",
+      "What would you change about your school?"
+    ],
+    "answers": [
+      "I would say that I generally enjoy school, especially when the lessons are practical. However, I find long days exhausting, especially after a late night of homework.",
+      "My favourite subject is probably biology because I find the human body fascinating. I also like doing experiments, which makes the lessons more memorable.",
+      "I usually revise by making flashcards and testing myself. I also meet up with friends to explain topics to each other, which helps me remember things better.",
+      "Yes, I took private maths lessons last year because I was struggling with algebra. The extra tuition helped me catch up with the rest of the class.",
+      "If I could change one thing, I would make the school day shorter. I think students would concentrate better if they had more time to rest and do extracurricular activities."
+    ]
+  },
+  "part2": {
+    "question": "What can schools do to help students enjoy learning more?",
+    "photoA": "A traditional classroom with students listening to a teacher at the front",
+    "photoB": "A modern classroom where students are working together in small groups",
+    "model": "In photo A, the students are sitting in rows and listening to the teacher, which looks quite formal and maybe a bit boring. In photo B, they are working in groups and seem more active and engaged. I think group work is better for motivation because students can discuss ideas and learn from each other. On the other hand, traditional lessons are sometimes necessary for explaining difficult concepts. Overall, a mixture of both approaches is probably the best way to help students enjoy learning."
+  },
+  "part3": {
+    "task": "A school wants to improve student motivation. Discuss the ideas and decide which two would be most effective.",
+    "options": [
+      "More interactive technology in lessons",
+      "Regular school trips",
+      "Student choice in some subjects",
+      "Rewards for good behaviour",
+      "Shorter lessons with more breaks"
+    ],
+    "model": "A: I think interactive technology would make lessons more engaging, especially for subjects like history or science.\nB: That's true, but school trips might be even better because students remember real experiences.\nA: I see what you mean. However, trips can be expensive and only happen a few times a year.\nB: Yes, you're right. What about giving students more choice in subjects? That could increase motivation because they study things they actually care about.\nA: I agree. And rewards for good behaviour would probably help too, especially with younger students.\nB: So let's choose student choice and rewards.\nA: Yes, I agree with you."
+  },
+  "part4": {
+    "questions": [
+      "Do you think homework is necessary?",
+      "Should students wear uniforms?",
+      "How important are teachers compared to technology?",
+      "What skills should schools teach more?"
+    ],
+    "answers": [
+      "I think homework is necessary in moderation. It helps students practise what they learned, but too much homework can cause stress and reduce free time.",
+      "I believe uniforms are a good idea because they stop students from being judged by their clothes. On the other hand, some people argue that uniforms limit personal expression.",
+      "Teachers are still very important because they can adapt to students' needs and explain things in different ways. Technology is useful, but it cannot replace human interaction.",
+      "Schools should teach more practical skills like financial literacy, communication, and critical thinking. These are essential for adult life but often missing from the curriculum."
+    ]
+  },
+  "homework": {
+    "reading": "Read an article about a country with a different school system. Compare it with your own in three sentences.",
+    "listening": "Watch a TED Talk about education reform. Note down the speaker's three main arguments.",
+    "writing": "Write an essay (140\u2013190 words): 'Should students be allowed to choose all their own subjects? Give reasons for your answer.'"
+  }
+}

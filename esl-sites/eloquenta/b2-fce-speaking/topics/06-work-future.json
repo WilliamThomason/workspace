@@ -1,0 +1,72 @@
+{
+  "title": "Work & Future Plans",
+  "file_key": "06-work-future",
+  "bg": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&q=80",
+  "vocab": {
+    "career": "the series of jobs that a person has during their working life",
+    "qualification": "an official document showing you have passed an exam or completed a course",
+    "experience": "knowledge or skill gained from doing a job or activity",
+    "ambition": "a strong desire to achieve something",
+    "internship": "a period of work experience offered by an employer for a limited time"
+  },
+  "phrases": [
+    "I would say that...",
+    "From my point of view...",
+    "That's a tricky question because...",
+    "On the one hand... on the other hand...",
+    "I tend to...",
+    "It depends on the situation."
+  ],
+  "part1": {
+    "questions": [
+      "What job would you like to do in the future?",
+      "Do you think it is important to go to university?",
+      "What skills do you think employers want?",
+      "Have you ever had a part-time job?",
+      "What would be your ideal working environment?"
+    ],
+    "answers": [
+      "I would say I would like to work in software engineering because I enjoy solving problems and building things. I am also interested in how technology can improve people's lives.",
+      "I think university is important for some careers, like medicine or law, but not for everything. Practical experience can sometimes be more valuable than a degree.",
+      "Employers want communication skills, teamwork, and reliability. They also value people who are willing to learn and adapt to new situations.",
+      "Yes, I worked in a cafe last summer. It taught me how to deal with customers and manage my time better.",
+      "My ideal working environment would be flexible and friendly. I would prefer a mix of working from home and meeting colleagues in person."
+    ]
+  },
+  "part2": {
+    "question": "What is more important when choosing a job: money or job satisfaction?",
+    "photoA": "A person looking happy while working in a creative studio",
+    "photoB": "A person in a formal office with a high salary but looking stressed",
+    "model": "In photo A, the person seems to enjoy their work in a creative environment. In photo B, the person probably earns more but looks stressed and unhappy. I think job satisfaction is more important in the long term because money cannot fix burnout or unhappiness. However, everyone needs enough money to live comfortably. I would say the ideal job balances both: fair pay and work you actually enjoy."
+  },
+  "part3": {
+    "task": "A school is designing a programme to help students prepare for work. Discuss the ideas and decide which two would be most useful.",
+    "options": [
+      "Career talks from professionals",
+      "Work experience placements",
+      "CV writing workshops",
+      "Interview practice sessions",
+      "Entrepreneurship competitions"
+    ],
+    "model": "A: I think work experience placements are the most useful because students see what real jobs are like.\nB: That's a good point, but they can be difficult to organise for everyone.\nA: True. Career talks from professionals are easier to arrange and expose students to many different jobs.\nB: I agree. And interview practice would help students feel confident when they actually apply for jobs.\nA: So let's choose career talks and interview practice.\nB: Yes, I agree with you."
+  },
+  "part4": {
+    "questions": [
+      "Is it better to have one career or change jobs many times?",
+      "Should work-life balance be more important than salary?",
+      "How will technology change jobs in the future?",
+      "What advice would you give someone choosing a career?"
+    ],
+    "answers": [
+      "I think changing jobs can be positive because it gives you new experiences and skills. However, staying in one career can lead to deeper expertise and promotions.",
+      "I believe work-life balance is crucial. A high salary is nice, but it means nothing if you are too stressed or tired to enjoy life.",
+      "Technology will automate many routine jobs, so people will need to learn new skills. Jobs that require creativity and emotional intelligence will probably grow.",
+      "I would advise them to choose something they are genuinely interested in, not just what pays well. Passion usually leads to better long-term success."
+    ]
+  },
+  "homework": {
+    "reading": "Read a job advertisement for a position you might like. Identify the qualifications and skills required.",
+    "listening": "Listen to a podcast about future careers. Note down two jobs that may disappear and two that may grow.",
+    "writing": "Write an essay (140\u2013190 words): 'Should young people choose a career based on passion or salary?'"
+  }
+}

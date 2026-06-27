@@ -1,0 +1,72 @@
+{
+  "title": "Sports & Games",
+  "file_key": "08-sports-games",
+  "bg": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1920&q=80",
+  "vocab": {
+    "competitive": "wanting to win or be more successful than others",
+    "fitness": "the condition of being physically strong and healthy",
+    "teamwork": "working cooperatively with a group of people",
+    "amateur": "a person who does something for enjoyment, not as a job",
+    "tournament": "a competition involving a number of teams or players"
+  },
+  "phrases": [
+    "I would say that...",
+    "From my point of view...",
+    "That's a tricky question because...",
+    "On the one hand... on the other hand...",
+    "I tend to...",
+    "It depends on the situation."
+  ],
+  "part1": {
+    "questions": [
+      "Do you like doing sport?",
+      "What is your favourite sport to watch?",
+      "Did you do much sport when you were younger?",
+      "Do you prefer individual or team sports?",
+      "How do you think sport helps people?"
+    ],
+    "answers": [
+      "I would say I like sport, but I am not very competitive. I prefer activities like swimming or cycling where I can go at my own pace.",
+      "My favourite sport to watch is football because it is fast and unpredictable. I also enjoy the World Cup because of the international atmosphere.",
+      "When I was younger, I played a lot of football at school and in a local club. I stopped when I started secondary school because I had less free time.",
+      "I prefer individual sports because I can practise whenever I want. Team sports are fun, but they depend on everyone being available.",
+      "I think sport helps people physically and mentally. It improves fitness, reduces stress, and teaches discipline and teamwork."
+    ]
+  },
+  "part2": {
+    "question": "Why do you think some people prefer watching sport to playing it?",
+    "photoA": "A group of friends watching a football match in a crowded stadium",
+    "photoB": "A person running alone early in the morning",
+    "model": "In photo A, people are watching a sport together in a stadium, which looks exciting and social. In photo B, a person is running alone, which is more personal and requires self-motivation. I think some people prefer watching because it is easier and more entertaining, especially when the match is tense. Playing sport takes more effort and time. However, doing sport is better for your health. I enjoy both, but watching is definitely less tiring."
+  },
+  "part3": {
+    "task": "A school wants to get more students involved in sport. Discuss the ideas and decide which two would be most effective.",
+    "options": [
+      "More PE lessons",
+      "Inter-school competitions",
+      "Free sports equipment",
+      "A wider variety of sports",
+      "Rewards for participation"
+    ],
+    "model": "A: I think a wider variety of sports would help because not everyone likes football or basketball. Some students might prefer yoga or climbing.\nB: That's a good point, but inter-school competitions could motivate students who are already sporty.\nA: Yes, but they might put less confident students off. Free sports equipment would remove the cost barrier for everyone.\nB: I agree. So maybe a wider variety of sports and free equipment would include the most students.\nA: Yes, I agree with you."
+  },
+  "part4": {
+    "questions": [
+      "Should sport be compulsory at school?",
+      "Are professional athletes paid too much?",
+      "How important are sports fans to a team?",
+      "Do video games count as a sport?"
+    ],
+    "answers": [
+      "I think sport should be compulsory because physical health is important. However, schools should offer different options so every student can find something they enjoy.",
+      "I would say some athletes earn far too much, especially in football. On the other hand, their careers are short and their success brings money to many people.",
+      "Fans are very important because they create atmosphere and support the team financially. Without fans, many clubs would struggle to survive.",
+      "Some video games are professional and require skill, but I would not call them a sport in the traditional sense. They involve mental, not physical, effort."
+    ]
+  },
+  "homework": {
+    "reading": "Read a sports news article. Identify who, what, where, when, and why in three sentences.",
+    "listening": "Watch a sports highlight clip with English commentary. Write down five action verbs used.",
+    "writing": "Write an essay (140\u2013190 words): 'Is it better to play sport or watch it?'"
+  }
+}

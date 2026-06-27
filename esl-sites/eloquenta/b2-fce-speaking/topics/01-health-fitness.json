@@ -1,0 +1,72 @@
+{
+  "title": "Health & Fitness",
+  "file_key": "01-health-fitness",
+  "bg": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1920\u0026q=80",
+  "vocab": {
+    "sedentary": "involving little or no physical activity",
+    "moderation": "avoiding excess; doing something within reasonable limits",
+    "cardiovascular": "relating to the heart and blood vessels",
+    "wellbeing": "the state of being comfortable, healthy, or happy",
+    "procrastinate": "delay or postpone action; put off doing something"
+  },
+  "phrases": [
+    "I would say that...",
+    "From my point of view...",
+    "That's a tricky question because...",
+    "On the one hand... on the other hand...",
+    "I tend to...",
+    "It depends on the situation."
+  ],
+  "part1": {
+    "questions": [
+      "How often do you do exercise?",
+      "Do you think you have a healthy diet?",
+      "What do you do to relax when you feel stressed?",
+      "Is it easy to stay fit where you live?",
+      "Have your exercise habits changed since you were younger?"
+    ],
+    "answers": [
+      "I would say that I exercise three or four times a week. I usually go jogging in the evening, and at the weekend I play football with my friends. However, during exam periods I become more sedentary.",
+      "I think my diet is fairly balanced, but I could still improve it. I eat fruit and vegetables most days, but I also enjoy sweets in moderation.",
+      "When I feel stressed, I normally listen to music or go for a walk outdoors. I find that being in nature really improves my mental wellbeing.",
+      "Yes and no. There are plenty of parks, so running or cycling is easy. On the other hand, gym memberships are quite expensive, which puts some people off.",
+      "Definitely. When I was a child, I used to play outside every day without thinking about fitness. Now I have to plan exercise because I spend so much time studying."
+    ]
+  },
+  "part2": {
+    "question": "What kinds of exercise might appeal to young people?",
+    "photoA": "A group of teenagers playing basketball together in an indoor court",
+    "photoB": "A young person doing yoga alone at home while following an online video",
+    "model": "In photo A, a group of teenagers are playing basketball together in what looks like an indoor court. This kind of exercise is social and competitive, which might appeal to young people who enjoy teamwork. In photo B, someone is doing yoga at home while following an online video. This is more flexible and private, and it might suit people who prefer a calm atmosphere. I think team sports are better for building friendships, whereas yoga helps with flexibility and mental wellbeing. Overall, both photos show that exercise can fit different personalities."
+  },
+  "part3": {
+    "task": "A school wants to encourage students to be healthier. Here are some ideas. Discuss the advantages and disadvantages of each and decide which two would be most effective.",
+    "options": [
+      "Free gym memberships",
+      "Healthy food in the cafeteria",
+      "A school running club",
+      "Mindfulness lessons",
+      "Banning mobile phones during breaks"
+    ],
+    "model": "A: I think free gym memberships would motivate some students, but not everyone enjoys the gym. It could also be expensive for the school.\nB: Yes, but healthy food in the cafeteria would affect every student. If the food tastes good too, it would be really effective.\nA: That's true. What about a running club? It's free and social.\nB: I agree, but it might only attract students who already like sport. Mindfulness lessons could help people manage stress, which is also part of health.\nA: So maybe healthy food and mindfulness lessons would help the widest range of students.\nB: Yes, I agree with you."
+  },
+  "part4": {
+    "questions": [
+      "Do you think young people today are less healthy than in the past?",
+      "Should governments tax unhealthy food?",
+      "How important is mental health compared to physical health?",
+      "What role should schools play in keeping students healthy?"
+    ],
+    "answers": [
+      "I wouldn't say they are less healthy overall, but their lifestyles are different. Many young people have access to better information about nutrition, yet they also spend a lot of time in sedentary activities like gaming or scrolling on social media.",
+      "I think it's a good idea, but with caution. Taxing sugary drinks could reduce consumption, but it shouldn't punish people on low incomes. The money could fund public sports facilities.",
+      "In my opinion, mental health is equally important. If your mental wellbeing is poor, it's hard to stay motivated to exercise or eat well.",
+      "Schools should educate students about balanced diets and exercise without making anyone feel ashamed. They can also create a supportive environment where wellbeing is taken seriously."
+    ]
+  },
+  "homework": {
+    "reading": "Read an article about how sleep affects exam performance. Summarise the three main points in your own words.",
+    "listening": "Watch a 5-minute video about a beginner's fitness routine. Note down five new words and their meanings.",
+    "writing": "Write an essay (140–190 words) answering this question: 'Is it better to exercise alone or in a group? Give reasons for your answer.'"
+  }
+}

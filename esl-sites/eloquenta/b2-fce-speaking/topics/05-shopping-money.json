@@ -1,0 +1,72 @@
+{
+  "title": "Shopping & Money",
+  "file_key": "05-shopping-money",
+  "bg": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1920&q=80",
+  "vocab": {
+    "bargain": "something bought for less than its usual price",
+    "impulse purchase": "something you buy suddenly without planning to",
+    "budget": "a plan for how much money you will spend and save",
+    "quality": "how good or bad something is",
+    "brand": "a type of product made by a particular company"
+  },
+  "phrases": [
+    "I would say that...",
+    "From my point of view...",
+    "That's a tricky question because...",
+    "On the one hand... on the other hand...",
+    "I tend to...",
+    "It depends on the situation."
+  ],
+  "part1": {
+    "questions": [
+      "Do you enjoy shopping?",
+      "How do you decide what to buy?",
+      "Do you usually pay with cash or card?",
+      "Have you ever bought something you later regretted?",
+      "Are you good at saving money?"
+    ],
+    "answers": [
+      "I would say I enjoy shopping for clothes and gadgets, but I hate grocery shopping because it feels like a chore.",
+      "I usually read reviews online first and compare prices. If it is expensive, I wait for a sale before buying.",
+      "I almost always pay by card because it is more convenient. However, I try to use cash sometimes to keep track of my spending.",
+      "Yes, I once bought a pair of trainers just because they were popular. I wore them twice and realised they were uncomfortable.",
+      "I am reasonably good at saving, but I sometimes make impulse purchases. I am trying to set a weekly budget to control that."
+    ]
+  },
+  "part2": {
+    "question": "Why do some people prefer shopping online to shopping in stores?",
+    "photoA": "A busy high street with people carrying shopping bags",
+    "photoB": "A person browsing products on a laptop at home",
+    "model": "In photo A, people are shopping in physical stores, which allows them to try things on and enjoy the atmosphere. In photo B, someone is shopping online from home, which is more convenient and often cheaper. I think online shopping is popular because it saves time and you can compare prices easily. On the other hand, in-store shopping lets you see the quality of products before you buy them. I personally prefer online shopping for clothes but in-store for shoes because fit is important."
+  },
+  "part3": {
+    "task": "A school wants to teach students how to manage money better. Discuss the ideas and decide which two would be most useful.",
+    "options": [
+      "Lessons on budgeting",
+      "A school savings challenge",
+      "Talks from local business owners",
+      "Practice with online banking tools",
+      "A pretend shop to practise buying and selling"
+    ],
+    "model": "A: I think budgeting lessons are essential because every student will need that skill in adult life.\nB: That's a good point, but a savings challenge could make it fun and competitive.\nA: I see what you mean. However, the challenge might only motivate students for a short time.\nB: True. Talks from business owners could show real-world examples, but not every student wants to run a business.\nA: So budgeting lessons and practice with online banking tools seem the most practical for everyone.\nB: Yes, I agree with you."
+  },
+  "part4": {
+    "questions": [
+      "Should young people get pocket money?",
+      "Is it better to buy cheap products or expensive ones?",
+      "How has online shopping changed town centres?",
+      "What advice would you give someone who wants to save money?"
+    ],
+    "answers": [
+      "I think pocket money is a good idea because it teaches young people how to manage money. However, it should be connected to responsibilities, not just given freely.",
+      "It depends on the product. For everyday items, cheap is fine, but for things you use a lot, like shoes or a laptop, quality matters more.",
+      "Online shopping has damaged many town centres because fewer people visit physical shops. Some high streets now have more cafes and services instead of shops.",
+      "I would advise them to track their spending, set a clear goal, and avoid impulse purchases. Even small amounts saved regularly add up over time."
+    ]
+  },
+  "homework": {
+    "reading": "Read an article about consumer rights. Summarise what to do if you buy a faulty product.",
+    "listening": "Watch a video about budgeting for teenagers. Note down three tips mentioned.",
+    "writing": "Write an essay (140\u2013190 words): 'Is online shopping better than shopping in physical stores?'"
+  }
+}

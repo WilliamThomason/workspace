@@ -1,0 +1,72 @@
+{
+  "title": "Music & Concerts",
+  "file_key": "07-music-concerts",
+  "bg": "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=1920&q=80",
+  "vocab": {
+    "genre": "a particular style or category of music",
+    "live performance": "a concert or show where music is played in front of an audience",
+    "atmosphere": "the feeling or mood in a place",
+    "lyrics": "the words of a song",
+    "talented": "having a natural ability to do something well"
+  },
+  "phrases": [
+    "I would say that...",
+    "From my point of view...",
+    "That's a tricky question because...",
+    "On the one hand... on the other hand...",
+    "I tend to...",
+    "It depends on the situation."
+  ],
+  "part1": {
+    "questions": [
+      "What kind of music do you like?",
+      "Do you prefer listening to music alone or with friends?",
+      "Have you ever been to a live concert?",
+      "Do you play any musical instruments?",
+      "How do you usually discover new music?"
+    ],
+    "answers": [
+      "I would say I mostly listen to pop and indie music, but I also enjoy some electronic tracks when I am studying.",
+      "I prefer listening to music with friends, especially when we are driving or getting ready to go out. It makes the experience more fun.",
+      "Yes, I went to a small indie concert last year. The atmosphere was amazing because everyone knew the lyrics and sang along.",
+      "I used to play the guitar, but I stopped when school got busy. I would like to start again because it helps me relax.",
+      "I usually discover new music through streaming apps and recommendations from friends. Sometimes I also watch music videos on YouTube."
+    ]
+  },
+  "part2": {
+    "question": "Why do people enjoy going to live concerts?",
+    "photoA": "A huge crowd at an outdoor music festival with bright lights",
+    "photoB": "A small, intimate concert in a cosy club",
+    "model": "In photo A, there is a massive crowd at a festival, which shows the excitement of sharing music with thousands of people. In photo B, the concert is small and intimate, so the audience feels closer to the performer. I think people enjoy live concerts because the atmosphere is completely different from listening to a recording. There is something special about hearing music with other fans and feeling the energy in the room. Personally, I prefer smaller venues because you can see the artist better."
+  },
+  "part3": {
+    "task": "A school wants to encourage more students to enjoy music. Discuss the ideas and decide which two would be most effective.",
+    "options": [
+      "Free tickets to local concerts",
+      "After-school music clubs",
+      "Inviting musicians to perform at school",
+      "Music appreciation lessons",
+      "A student battle of the bands"
+    ],
+    "model": "A: I think inviting musicians to perform would inspire students who are interested in music.\nB: That's true, but it might only appeal to students who already like music.\nA: I see what you mean. Music appreciation lessons could help everyone understand different genres.\nB: Yes, but after-school music clubs give students a chance to actually play and create music.\nA: So maybe music clubs and live performances at school would work best together.\nB: Yes, I agree with you."
+  },
+  "part4": {
+    "questions": [
+      "Is live music better than recorded music?",
+      "Should music lessons be compulsory in schools?",
+      "How has streaming changed the music industry?",
+      "What makes a song popular?"
+    ],
+    "answers": [
+      "I think live music is more emotional and exciting, but recorded music is more convenient because you can listen anytime. Both have their place.",
+      "I believe music lessons should be available to everyone, but not necessarily compulsory. Some students have no interest in music and should not be forced.",
+      "Streaming has made music more accessible, but artists earn less money per stream. It has also changed how people discover new songs.",
+      "A popular song usually has a catchy melody, relatable lyrics, and good production. Social media trends can also make a song famous very quickly."
+    ]
+  },
+  "homework": {
+    "reading": "Read an interview with a musician. Summarise their career path in three sentences.",
+    "listening": "Listen to a song in English and write down five words or phrases from the lyrics.",
+    "writing": "Write an essay (140\u2013190 words): 'Is it better to listen to live music or recorded music?'"
+  }
+}

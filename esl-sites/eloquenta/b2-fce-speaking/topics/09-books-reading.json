@@ -1,0 +1,72 @@
+{
+  "title": "Books & Reading",
+  "file_key": "09-books-reading",
+  "bg": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=1920&q=80",
+  "vocab": {
+    "novel": "a long written story about imaginary people and events",
+    "non-fiction": "writing about real facts and events, not imaginary stories",
+    "plot": "the series of events that form the main story",
+    "character": "a person in a book, film, or play",
+    "recommend": "to tell someone that something is good and worth using or doing"
+  },
+  "phrases": [
+    "I would say that...",
+    "From my point of view...",
+    "That's a tricky question because...",
+    "On the one hand... on the other hand...",
+    "I tend to...",
+    "It depends on the situation."
+  ],
+  "part1": {
+    "questions": [
+      "Do you enjoy reading?",
+      "What kind of books do you prefer?",
+      "How often do you read in English?",
+      "Do you prefer paper books or e-books?",
+      "Has a book ever changed the way you think?"
+    ],
+    "answers": [
+      "I would say I enjoy reading, but I do not have as much time as I would like. I usually read before bed or during holidays.",
+      "I prefer novels, especially thrillers and science fiction. I like books that keep me guessing until the end.",
+      "I try to read in English at least once a week. It helps me learn new vocabulary and see how sentences are structured.",
+      "I prefer paper books because I like the feeling of turning pages. However, e-books are much more convenient for travelling.",
+      "Yes, a book about climate change made me more aware of environmental issues. It encouraged me to reduce my plastic use."
+    ]
+  },
+  "part2": {
+    "question": "Why do some young people prefer reading online articles to books?",
+    "photoA": "A teenager reading a long novel in a quiet library",
+    "photoB": "A teenager scrolling through short articles on a phone",
+    "model": "In photo A, a student is reading a long book in a library, which takes concentration and time. In photo B, someone is looking at short articles on a phone, which is quicker and more interactive. I think young people prefer online articles because they are short and easy to access. Books require more patience. On the other hand, books usually offer deeper stories and better language development. I think both are useful, but for serious reading, books are still better."
+  },
+  "part3": {
+    "task": "A school wants to encourage more students to read. Discuss the ideas and decide which two would be most effective.",
+    "options": [
+      "A school library with comfortable spaces",
+      "Book clubs during lunch",
+      "Recommended reading lists",
+      "Author visits",
+      "Reading challenges with prizes"
+    ],
+    "model": "A: I think book clubs are great because reading becomes social and students can discuss what they think.\nB: That's a good point, but some students need a comfortable place to read first. A nice library space could make reading more appealing.\nA: I agree. Author visits might be inspiring, but they only happen occasionally and might not reach everyone.\nB: What about reading challenges? Prizes could motivate competitive students.\nA: So let's choose book clubs and a comfortable library.\nB: Yes, I agree with you."
+  },
+  "part4": {
+    "questions": [
+      "Should reading be taught differently in schools?",
+      "Are printed books going to disappear?",
+      "How does reading help language learning?",
+      "What makes a good story?"
+    ],
+    "answers": [
+      "I think reading should include more choice. If students can pick books they enjoy, they are more likely to read outside school.",
+      "I do not think printed books will disappear completely. Many people still love physical books, even if e-books are popular.",
+      "Reading helps you learn vocabulary in context and understand grammar naturally. It also improves your imagination and concentration.",
+      "A good story needs interesting characters, a strong plot, and some emotion. If the reader cares about what happens, the story works."
+    ]
+  },
+  "homework": {
+    "reading": "Read the first chapter of a graded reader in English. Summarise what happens in five sentences.",
+    "listening": "Listen to a book review podcast. Note the reviewer's opinion and two reasons.",
+    "writing": "Write an essay (140\u2013190 words): 'Is reading books better than reading online articles?'"
+  }
+}

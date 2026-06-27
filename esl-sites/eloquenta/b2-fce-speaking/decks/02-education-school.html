@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#0a0e1a">
+<title>Education & School Life — Eloquenta B2 First Speaking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cs-accent:#22d3ee;--cs-bg:#0a0e1a;--cs-text:#e0f2fe;--cs-bg-card:#111827;
+  --cs-border:#1e3a5f;--cs-text-muted:#94a3b8;--cs-accent-glow:rgba(34,211,238,.2);
+  --cs-accent-dim:rgba(34,211,238,.08);--cs-border-light:rgba(30,58,95,.7);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{font-size:16px}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--cs-bg);color:var(--cs-text);line-height:1.6;min-height:100vh;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif}
+.bg{position:fixed;inset:0;background:radial-gradient(circle at 20% 20%,rgba(34,211,238,.08),transparent 40%),radial-gradient(circle at 80% 80%,rgba(167,139,250,.08),transparent 40%),var(--cs-bg);z-index:-2}
+.glass{background:rgba(255,255,255,.04);border:1px solid var(--cs-border);border-radius:18px;backdrop-filter:blur(14px);box-shadow:0 0 30px rgba(0,0,0,.3)}
+.glow-text{text-shadow:0 0 12px var(--cs-accent-glow),0 0 24px var(--cs-accent-dim)}
+.nav{position:sticky;top:0;z-index:50;background:rgba(10,14,26,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--cs-border);padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:'Space Grotesk';font-size:1.1rem;font-weight:700;color:#fff;text-decoration:none;letter-spacing:1px}
+.nav-logo span{color:var(--cs-accent)}
+.theme-cycle-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--cs-border);background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.theme-dot{width:10px;height:10px;border-radius:50%;background:var(--cs-accent)}
+.loading{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;background:var(--cs-bg);color:var(--cs-accent);font-family:'Space Grotesk';font-size:1rem;letter-spacing:1px}
+.loading.hidden{display:none}
+#slides{max-width:900px;margin:0 auto;padding:30px 16px 100px;min-height:100vh}
+#slides.hidden{display:none}
+.slide{display:none}
+.slide.active{display:block}
+.slide h2{font-size:1.5rem;margin-bottom:16px;color:var(--cs-accent)}
+.card{padding:22px;margin-bottom:18px}
+.part-badge{display:inline-block;font-size:.65rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:4px 10px;border-radius:6px;background:var(--cs-accent-dim);color:var(--cs-accent);border:1px solid var(--cs-border);margin-bottom:12px}
+.question{font-size:1.05rem;font-weight:600;margin-bottom:12px}
+.reveal-btn{font-family:'Space Grotesk';font-size:.75rem;font-weight:700;padding:8px 14px;border-radius:8px;border:1px solid var(--cs-accent);background:transparent;color:var(--cs-accent);cursor:pointer;transition:all .15s}
+.reveal-btn:hover{background:var(--cs-accent);color:var(--cs-bg)}
+.hidden-answer{display:none;margin-top:12px;padding:14px;border-left:3px solid var(--cs-accent);background:rgba(34,211,238,.06);border-radius:0 10px 10px 0}
+.hidden-answer.open{display:block}
+.phrase-chip{display:inline-block;font-size:.7rem;padding:3px 8px;border-radius:6px;background:var(--cs-bg-card);border:1px solid var(--cs-border);color:var(--cs-text-muted);margin:2px}
+.tooltip{position:relative;border-bottom:1px dotted var(--cs-accent);cursor:help}
+.tooltip::after{content:attr(data-def);position:absolute;bottom:120%;left:50%;transform:translateX(-50%);width:220px;padding:8px 10px;border-radius:8px;background:var(--cs-bg-card);border:1px solid var(--cs-accent);color:var(--cs-text);font-size:.75rem;line-height:1.4;opacity:0;pointer-events:none;transition:opacity .2s;z-index:10}
+.tooltip:hover::after{opacity:1}
+.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.photo-box{min-height:140px;display:flex;align-items:center;justify-content:center;border-radius:10px;border:1px solid var(--cs-border);background:rgba(0,0,0,.25);padding:16px;text-align:center;font-size:.85rem;color:var(--cs-text-muted)}
+.nav-btns{display:flex;justify-content:space-between;align-items:center;max-width:900px;margin:0 auto;padding:16px;position:fixed;bottom:0;left:0;right:0;background:rgba(10,14,26,.9);border-top:1px solid var(--cs-border)}
+.nav-btns button{font-family:'Space Grotesk';font-size:.8rem;font-weight:700;padding:10px 18px;border-radius:10px;border:1px solid var(--cs-border);background:var(--cs-bg-card);color:var(--cs-text);cursor:pointer}
+.nav-btns button:hover{border-color:var(--cs-accent);color:var(--cs-accent)}
+.progress-bar{position:fixed;top:56px;left:0;right:0;height:3px;background:rgba(255,255,255,.06);z-index:40}
+.progress-fill{height:100%;width:0;background:var(--cs-accent);transition:width .3s;box-shadow:0 0 10px var(--cs-accent-glow)}
+.timer{font-family:'Space Grotesk';font-size:.85rem;color:var(--cs-text-muted)}
+@media(max-width:640px){.slide h2{font-size:1.25rem}.card{padding:16px}.photo-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+<div class="loading" id="loadingScreen">Loading deck…</div>
+<nav class="nav">
+  <a href="../index.html" class="nav-logo">◆ <span>Eloquenta</span> B2 First</a>
+  <button class="theme-cycle-btn" id="themeCycleBtn" title="Cycle theme"><span class="theme-dot" id="themeDot"></span></button>
+</nav>
+
+<main id="slides" class="hidden">
+  <section class="slide active" data-slide="0" style="background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1920&q=80')">
+    <div class="card glass" style="text-align:center;margin-top:10vh">
+      <div class="part-badge">B2 First Speaking</div>
+      <h1 class="glow-text" style="font-size:2.4rem;margin-bottom:12px">Education & School Life</h1>
+      <p style="color:var(--cs-text-muted);font-size:1rem;max-width:500px;margin:0 auto 24px">Practice Part 1 interview, Part 2 photo comparison, Part 3 collaborative task, and extra homework.</p>
+      <button class="reveal-btn" onclick="goTo(1)">Start Deck</button>
+    </div>
+  </section>
+
+  <section class="slide" data-slide="1" style="background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1920&q=80')">
+  <div class="card glass">
+    <div class="part-badge">Part 1 — Interview</div>
+    <h2 class="glow-text">Part 1 — Interview</h2>
+<p style="color:var(--cs-text-muted);font-size:.85rem;margin-bottom:14px">Answer these questions. Spend about 20 seconds on each.</p>
+<div class="question">• Do you enjoy going to school?</div>
+<button class="reveal-btn">Show answer</button>
+<div class="hidden-answer">I would say that I generally enjoy school, especially when the lessons are practical. However, I find long days exhausting, especially after a late night of homework.</div>
+<div class="question">• What is your favourite subject and why?</div>
+<button class="reveal-btn">Show answer</button>
+<div class="hidden-answer">My favourite subject is probably biology because I find the human body fascinating. I also like doing experiments, which makes the lessons more memorable.</div>
+<div class="question">• How do you usually revise for exams?</div>
+<button class="reveal-btn">Show answer</button>
+<div class="hidden-answer">I usually revise by making flashcards and testing myself. I also meet up with friends to explain topics to each other, which helps me remember things better.</div>
+<div class="question">• Have you ever taken extra lessons outside school?</div>
+<button class="reveal-btn">Show answer</button>
+<div class="hidden-answer">Yes, I took private maths lessons last year because I was struggling with algebra. The extra <span class='tooltip' data-def='the act of teaching, especially when given to a small group or one person'>tuition</span> helped me catch up with the rest of the class.</div>
+<div class="question">• What would you change about your school?</div>
+<button class="reveal-btn">Show answer</button>
+<div class="hidden-answer">If I could change one thing, I would make the school day shorter. I think students would concentrate better if they had more time to rest and do <span class='tooltip' data-def='activities done outside normal classes, such as clubs or sports'>extracurricular</span> activities.</div>
+<div style="margin-top:18px"><strong style="color:var(--cs-accent)">Useful phrases:</strong><br><span class="phrase-chip">I would say that...</span><span class="phrase-chip">From my point of view...</span><span class="phrase-chip">That's a tricky question because...</span><span class="phrase-chip">On the one hand... on the other hand...</span><span class="phrase-chip">I tend to...</span><span class="phrase-chip">It depends on the situation.</span></div>
+
+  </div>
+</section>
+<section class="slide" data-slide="2" style="background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1920&q=80')">
+  <div class="card glass">
+    <div class="part-badge">Part 2 — Long Turn</div>
+    <h2 class="glow-text">Part 2 — Photo Comparison</h2>
+<p style="color:var(--cs-text-muted);font-size:.85rem;margin-bottom:14px">Talk for 1 minute. Compare the photos and answer the question.</p>
+<div class="question">What can schools do to help students enjoy learning more?</div>
+<div class="photo-grid"><div class="photo-box">Photo A:<br>A traditional classroom with students listening to a teacher at the front</div><div class="photo-box">Photo B:<br>A modern classroom where students are working together in small groups</div></div>
+<button class="reveal-btn">Show model answer</button>
+<div class="hidden-answer">In photo A, the students are sitting in rows and listening to the teacher, which looks quite formal and maybe a bit boring. In photo B, they are working in groups and seem more active and engaged. I think group work is better for motivation because students can discuss ideas and learn from each other. On the other hand, traditional lessons are sometimes necessary for explaining difficult concepts. Overall, a mixture of both approaches is probably the best way to help students enjoy learning.</div>
+
+  </div>
+</section>
+<section class="slide" data-slide="3" style="background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1920&q=80')">
+  <div class="card glass">
+    <div class="part-badge">Part 3 — Discussion</div>
+    <h2 class="glow-text">Part 3 — Collaborative Task</h2>
+<p style="color:var(--cs-text-muted);font-size:.85rem;margin-bottom:14px">Discuss with your partner for 2–3 minutes, then decide.</p>
+<div class="question">A school wants to improve student motivation. Discuss the ideas and decide which two would be most effective.</div>
+<ul style="margin:12px 0 16px 18px;color:var(--cs-text-muted);font-size:.95rem"><li>More interactive technology in lessons</li><li>Regular school trips</li><li>Student choice in some subjects</li><li>Rewards for good behaviour</li><li>Shorter lessons with more breaks</li></ul>
+<button class="reveal-btn">Show model discussion</button>
+<div class="hidden-answer">A: I think interactive technology would make lessons more engaging, especially for subjects like history or science.<br>B: That's true, but school trips might be even better because students remember real experiences.<br>A: I see what you mean. However, trips can be expensive and only happen a few times a year.<br>B: Yes, you're right. What about giving students more choice in subjects? That could increase motivation because they study things they actually care about.<br>A: I agree. And rewards for good behaviour would probably help too, especially with younger students.<br>B: So let's choose student choice and rewards.<br>A: Yes, I agree with you.</div>
+
+  </div>
+</section>
+<section class="slide" data-slide="4" style="background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1920&q=80')">
+  <div class="card glass">
+    <div class="part-badge">Part 4 — Extension</div>
+    <h2 class="glow-text">Part 4 — Follow-up Discussion</h2>
+<p style="color:var(--cs-text-muted);font-size:.85rem;margin-bottom:14px">Answer these deeper questions.</p>
+<div class="question">• Do you think homework is necessary?</div>
+<button class="reveal-btn">Show answer</button>
+<div class="hidden-answer">I think homework is necessary in moderation. It helps students practise what they learned, but too much homework can cause stress and reduce free time.</div>
+<div class="question">• Should students wear uniforms?</div>
+<button class="reveal-btn">Show answer</button>
+<div class="hidden-answer">I believe uniforms are a good idea because they stop students from being judged by their clothes. On the other hand, some people argue that uniforms limit personal expression.</div>
+<div class="question">• How important are teachers compared to technology?</div>
+<button class="reveal-btn">Show answer</button>
+<div class="hidden-answer">Teachers are still very important because they can adapt to students' needs and explain things in different ways. Technology is useful, but it cannot replace human interaction.</div>
+<div class="question">• What skills should schools teach more?</div>
+<button class="reveal-btn">Show answer</button>
+<div class="hidden-answer">Schools should teach more practical skills like financial literacy, communication, and critical thinking. These are essential for adult life but often missing from the <span class='tooltip' data-def='the subjects that are studied in a school or college'>curriculum</span>.</div>
+
+  </div>
+</section>
+<section class="slide" data-slide="5" style="background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1920&q=80')">
+  <div class="card glass">
+    <div class="part-badge">Vocabulary</div>
+    <h2 class="glow-text">Vocabulary & Phrases</h2>
+<p><strong style="color:var(--cs-accent)">curriculum</strong> — the subjects that are studied in a school or college</p>
+<p><strong style="color:var(--cs-accent)">extracurricular</strong> — activities done outside normal classes, such as clubs or sports</p>
+<p><strong style="color:var(--cs-accent)">revision</strong> — studying again something you have already learned to prepare for an exam</p>
+<p><strong style="color:var(--cs-accent)">peer</strong> — a person of the same age or status as another</p>
+<p><strong style="color:var(--cs-accent)">tuition</strong> — the act of teaching, especially when given to a small group or one person</p>
+
+  </div>
+</section>
+
+  <section class="slide" data-slide="6" style="background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1920&q=80')">
+    <div class="card glass">
+      <div class="part-badge">Homework</div>
+      <h2 class="glow-text">Reading, Listening & Writing</h2>
+      <div class="question">Reading</div>
+<p>Read an article about a country with a different school system. Compare it with your own in three sentences.</p>
+<div class="question" style="margin-top:14px">Listening</div>
+<p>Watch a TED Talk about education reform. Note down the speaker's three main arguments.</p>
+<div class="question" style="margin-top:14px">Writing</div>
+<p>Write an essay (140–190 words): 'Should students be allowed to choose all their own subjects? Give reasons for your answer.'</p>
+
+    </div>
+  </section>
+</main>
+
+<div class="nav-btns">
+  <button onclick="prev()" id="prevBtn">← Back</button>
+  <span class="timer" id="slideCounter">1 / 7</span>
+  <button onclick="next()" id="nextBtn">Next →</button>
+</div>
+
+<script>
+var THEME_ORDER=['eloquent','wte','midnight','sunset','forest','light'];
+var THEMES={
+  eloquent:{accent:'#22d3ee',bg:'#0a0e1a',text:'#e0f2fe',card:'#111827',border:'#1e3a5f'},
+  wte:{accent:'#a3e635',bg:'#1c1c1c',text:'#e8e8f0',card:'#232323',border:'#3a3a3a'},
+  midnight:{accent:'#818cf8',bg:'#0f0f23',text:'#c7d2fe',card:'#1a1a3e',border:'#2e2e5e'},
+  sunset:{accent:'#fb923c',bg:'#1a0f0a',text:'#fed7aa',card:'#2d1a10',border:'#4a2a1a'},
+  forest:{accent:'#4ade80',bg:'#0a1a0f',text:'#bbf7d0',card:'#162418',border:'#2a4a2a'},
+  light:{accent:'#2563eb',bg:'#f8fafc',text:'#1e293b',card:'#ffffff',border:'#e2e8f0'}
+};
+function applyTheme(name){
+  var t=THEMES[name]; if(!t) return;
+  var r=document.documentElement;
+  r.style.setProperty('--cs-accent',t.accent);
+  r.style.setProperty('--cs-bg',t.bg);
+  r.style.setProperty('--cs-text',t.text);
+  r.style.setProperty('--cs-bg-card',t.card);
+  r.style.setProperty('--cs-border',t.border);
+  r.style.setProperty('--cs-text-muted',t.text+'99');
+  r.style.setProperty('--cs-accent-glow',t.accent+'33');
+  r.style.setProperty('--cs-accent-dim',t.accent+'18');
+  document.getElementById('themeDot').style.background=t.accent;
+  try{localStorage.setItem('eloquent-theme',name);}catch(e){}
+}
+document.getElementById('themeCycleBtn').addEventListener('click',function(){
+  var saved=localStorage.getItem('eloquent-theme')||'eloquent';
+  var idx=THEME_ORDER.indexOf(saved);
+  applyTheme(THEME_ORDER[(idx+1)%THEME_ORDER.length]);
+});
+applyTheme(localStorage.getItem('eloquent-theme')||'eloquent');
+
+var current=0, slides=Array.from(document.querySelectorAll('.slide'));
+function goTo(n){
+  if(n<0||n>=slides.length) return;
+  slides[current].classList.remove('active');
+  current=n;
+  slides[current].classList.add('active');
+  document.getElementById('slideCounter').textContent=(current+1)+' / '+slides.length;
+  document.getElementById('progressFill').style.width=((current+1)/slides.length*100)+'%';
+  document.getElementById('prevBtn').disabled=current===0;
+  document.getElementById('nextBtn').disabled=current===slides.length-1;
+  try{
+    var progress=JSON.parse(localStorage.getItem('fce-progress')||'{}');
+    progress['02-education-school']=current;
+    localStorage.setItem('fce-progress',JSON.stringify(progress));
+  }catch(e){}
+}
+function next(){goTo(current+1);}
+function prev(){goTo(current-1);}
+document.addEventListener('click',function(e){
+  var btn=e.target.closest('.reveal-btn');
+  if(btn){
+    var ans=btn.parentElement.querySelector('.hidden-answer');
+    if(ans){ ans.classList.toggle('open'); btn.textContent=ans.classList.contains('open')?'Hide answer':'Show answer'; }
+  }
+});
+document.addEventListener('keydown',function(e){
+  if(e.key==='ArrowRight'||e.key===' '){ e.preventDefault(); next(); }
+  if(e.key==='ArrowLeft'){ e.preventDefault(); prev(); }
+});
+(function(){
+  try{
+    var progress=JSON.parse(localStorage.getItem('fce-progress')||'{}');
+    var saved=progress['02-education-school'];
+    if(typeof saved==='number' && saved>=0) goTo(saved);
+  }catch(e){}
+})();
+(function(){
+  var bgImages=[];
+  document.querySelectorAll('.slide').forEach(function(s){
+    var style=s.getAttribute('style')||'';
+    var m=style.match(/background-image:\s*url\(([^)]+)\)/);
+    if(m) bgImages.push(m[1].replace(/["']/g,''));
+  });
+  if(!bgImages.length){ document.getElementById('loadingScreen').classList.add('hidden'); document.getElementById('slides').classList.remove('hidden'); return; }
+  var loaded=0;
+  bgImages.forEach(function(src){
+    var img=new Image();
+    img.onload=img.onerror=function(){
+      loaded++;
+      if(loaded===bgImages.length){
+        document.getElementById('loadingScreen').classList.add('hidden');
+        document.getElementById('slides').classList.remove('hidden');
+      }
+    };
+    img.src=src;
+  });
+})();
+</script>
+</body>
+</html>
