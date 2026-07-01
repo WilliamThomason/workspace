@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; media-src 'self' blob:; object-src 'none'; frame-ancestors 'none'">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Eloquenta Video Call</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
@@ -120,6 +121,37 @@ button{font-family:inherit}
   .chat-toggle-btn{display:flex}
   .video-grid{grid-template-columns:1fr}
   .video-box.local{position:absolute;bottom:80px;right:16px;width:120px;height:90px;z-index:10;border-radius:8px}
+  .theme-picker-btn{width:32px;height:32px;font-size:16px}}
+  
+  /* Theme picker button */
+  .theme-picker-btn{position:fixed;bottom:16px;right:16px;z-index:90;width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:var(--bg2);color:var(--text-muted);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+  .theme-picker-btn:hover{transform:scale(1.1);border-color:var(--cyan);color:var(--cyan);box-shadow:0 0 16px rgba(34,211,238,.3)}
+  .theme-picker-btn:active{transform:scale(0.95)}
+  
+  /* Theme picker panel */
+  .theme-picker-panel{position:fixed;bottom:60px;right:16px;z-index:90;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:12px;width:200px;box-shadow:0 8px 24px rgba(0,0,0,.4);display:none;flex-direction:column;gap:8px}
+  .theme-picker-panel.open{display:flex}
+  .theme-picker-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
+  .theme-picker-title{font-size:12px;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:1px}
+  .theme-picker-close{width:24px;height:24px;border:none;background:transparent;color:var(--text-muted);cursor:pointer;font-size:14px;border-radius:4px}
+  .theme-picker-close:hover{background:var(--bg3);color:var(--text)}
+  .theme-preset-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  .theme-preset{width:38px;height:38px;border-radius:8px;border:2px solid transparent;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
+  .theme-preset:hover{transform:scale(1.12);border-color:var(--cyan)}
+  .theme-preset.active{border-color:#fff;box-shadow:0 0 12px rgba(34,211,238,.3)}
+  
+  /* Sparkle effect */
+  @keyframes sparkle-fall{0%{transform:translateY(-100px) rotate(0deg);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(400px) rotate(360deg);opacity:0}}
+  .sparkle{position:absolute;width:6px;height:6px;background:var(--cyan);border-radius:50%;box-shadow:0 0 8px var(--cyan);z-index:100;pointer-events:none;animation:sparkle-fall 1.2s ease-out forwards}
+  
+  /* Swish animation */
+  @keyframes swish{0%{transform:translate(-50%,-50%) scale(0);opacity:0.8}100%{transform:translate(-50%,-50%) scale(1.5);opacity:0}}
+  
+  /* Enhanced button effects */
+  .ctrl-btn:hover{transform:scale(1.08);filter:brightness(1.1)}
+  .ctrl-btn:active{transform:scale(0.95)}
+  .join-btn:hover{transform:scale(1.03);filter:brightness(1.1)}
+  .setup-btn:hover{transform:scale(1.03)}
 }
 </style>
 </head>
@@ -232,296 +264,49 @@ button{font-family:inherit}
 
 <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
 <script>
-// ═══ STARS ═══
-function initStars(){
-  var el=document.getElementById('stars');
-  for(var i=0;i<60;i++){
-    var s=document.createElement('div');s.className='star';
-    s.style.cssText='left:'+Math.random()*100+'%;top:'+Math.random()*100+'%;width:'+(1+Math.random()*2)+'px;height:'+(1+Math.random()*2)+'px;--dur:'+(2+Math.random()*4)+'s;--op:'+(0.2+Math.random()*0.5);
-    el.appendChild(s);
-  }
-}
-initStars();
 
-// ═══ STATE ═══
-var localStream=null,remoteStream=null;
-var roomCode='';
-var camOn=true,micOn=true;
-var callStartTime=null,timerInterval=null;
-var isHost=false;
-
-// ═══ SETUP ═══
-async function getMedia(){
-  try{
-    localStream=await navigator.mediaDevices.getUserMedia({video:true,audio:true});
-    document.getElementById('previewVideo').srcObject=localStream;
-    document.getElementById('noVideoMsg').style.display='none';
-    return true;
-  }catch(e){
-    console.error('Media error:',e);
-    document.getElementById('noVideoMsg').innerHTML='<div>Camera/Mic access denied</div>';
-    return false;
-  }
-}
-getMedia();
-
-function toggleCamera(){
-  if(!localStream) return;
-  camOn=!camOn;
-  localStream.getVideoTracks().forEach(function(t){t.enabled=camOn});
-  document.getElementById('camBtn').classList.toggle('active',camOn);
-  document.getElementById('callCamBtn').classList.toggle('active',camOn);
-}
-function toggleMic(){
-  if(!localStream) return;
-  micOn=!micOn;
-  localStream.getAudioTracks().forEach(function(t){t.enabled=micOn});
-  document.getElementById('micBtn').classList.toggle('active',micOn);
-  document.getElementById('callMicBtn').classList.toggle('active',micOn);
+// ── SOUND EFFECTS ──
+var audioCtx=null;
+function playSwish(){
+  if(!audioCtx){audioCtx=new(window.AudioContext||window.webkitAudioContext)();}
+  var o=audioCtx.createOscillator(),g=audioCtx.createGain();
+  o.type="sine";o.frequency.value=800;g.gain.value=0.08;
+  o.connect(g);g.connect(audioCtx.destination);
+  o.start();o.stop(audioCtx.currentTime+0.1);
 }
 
-function generateRoomCode(){
-  var chars='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-  var code='';
-  for(var i=0;i<8;i++) code+=chars[Math.floor(Math.random()*chars.length)];
-  return code;
+// ── THEME PICKER ──
+var THEMES={default:"#22d3ee",ocean:"#3b82f6",forest:"#22c55e",sunset:"#f97316",rose:"#f43f5e",amber:"#f59e0b",violet:"#8b5cf6",neon:"#d946ef"};
+function applyTheme(t){
+  var c=THEMES[t]||THEMES.default;
+  document.documentElement.style.setProperty("--cyan",c);
 }
 
-function joinCall(){
-  roomCode=generateRoomCode();
-  document.getElementById('setupScreen').classList.add('hidden');
-  document.getElementById('callLayout').style.display='flex';
-  document.getElementById('localVideo').srcObject=localStream;
-  startCall();
-}
+document.getElementById("themePresets").addEventListener("click",function(e){
+  if(e.target.classList.contains("theme-preset")){applyTheme(e.target.dataset.theme);playSwish();}
+});
+document.querySelectorAll(".ctrl-btn").forEach(function(el){el.addEventListener("click",playSwish);});
+var st=localStorage.getItem("elo_theme");
+if(st){applyTheme(st);}
 
-// ═══ PEERJS SIGNALING ═══
-var peer=null;
-var peerCall=null;
-var peerDataConn=null;
-var peerConnected=false;
-
-function startCall(){
-  addSystemMessage('Connecting to PeerJS...');
-  var roomPeerId='eloquent-'+roomCode;
-  peer=new Peer(roomPeerId,{debug:2,config:{iceServers:[{urls:'stun:stun.l.google.com:19302'},{urls:'stun:stun1.l.google.com:19302'}]}});
-  peer.on('open',function(id){addSystemMessage('Connected as room host — waiting for peer...');isHost=true;});
-  peer.on('call',function(call){addSystemMessage('Incoming call...');peerCall=call;call.answer(localStream);call.on('stream',function(rs){handleRemoteStream(rs);});call.on('close',function(){addSystemMessage('Peer disconnected');resetRemoteVideo();});});
-  peer.on('connection',function(conn){addSystemMessage('Data channel connected');peerDataConn=conn;conn.on('data',function(d){if(d.type==='chat')addChatMessage('Peer',d.msg,false);});conn.on('close',function(){peerDataConn=null});});
-  peer.on('error',function(err){console.error('Peer error:',err);if(err.type==='unavailable-id'){connectAsSecondPeer();}else{addSystemMessage('Error: '+err.type);}});
-}
-
-function connectAsSecondPeer(){
-    isHost=false;
-    addSystemMessage('Room found — connecting as peer...');
-
-    // Create our own peer with a different ID
-    var myPeerId='eloquent-'+roomCode+'-peer-'+Math.random().toString(36).substring(2,8);
-    var myPeer=new Peer(myPeerId,{debug:2});
-
-    myPeer.on('open',function(){
-      addSystemMessage('Connected — calling room host...');
-
-      // Call the host
-      var call=myPeer.call('eloquent-'+roomCode,localStream);
-      call.on('stream',function(remoteStream){
-        handleRemoteStream(remoteStream);
-      });
-      call.on('close',function(){
-        addSystemMessage('Peer disconnected');
-        resetRemoteVideo();
-      });
-      peerCall=call;
-
-      // Also open data connection
-      var conn=myPeer.connect('eloquent-'+roomCode,{reliable:true});
-      conn.on('open',function(){
-        addSystemMessage('Data channel connected');
-        peerDataConn=conn;
-        conn.on('data',function(data){
-          if(data.type==='chat'){
-            addChatMessage('Peer',data.msg,false);
-          }
-        });
-        conn.on('close',function(){peerDataConn=null});
-      });
-    });
-
-    myPeer.on('error',function(err){
-      console.error('Peer error:',err);
-      addSystemMessage('Connection error: '+err.type);
-    });
-  }
-
-function handleRemoteStream(stream){
-  remoteStream=stream;
-  document.getElementById('remoteVideo').srcObject=remoteStream;
-  document.getElementById('remoteVideo').style.display='block';
-  document.getElementById('remotePlaceholder').style.display='none';
-  document.getElementById('remoteLabel').style.display='block';
-  document.getElementById('remoteStatusDot').classList.add('active');
-  document.getElementById('remoteStatusDot').classList.remove('inactive');
-  document.getElementById('remoteBox').classList.add('connected');
-  peerConnected=true;
-  startTimer();
-  addSystemMessage('Peer connected!');
-}
-
-function resetRemoteVideo(){
-  document.getElementById('remoteVideo').srcObject=null;
-  document.getElementById('remoteVideo').style.display='none';
-  document.getElementById('remotePlaceholder').style.display='flex';
-  document.getElementById('remoteLabel').style.display='none';
-  document.getElementById('remoteBox').classList.remove('connected');
-  peerConnected=false;
-  stopTimer();
-}
-
-// ═══ CALL CONTROLS ═══
-function callToggleMic(){
-  micOn=!micOn;
-  if(localStream) localStream.getAudioTracks().forEach(function(t){t.enabled=micOn});
-  document.getElementById('callMicBtn').classList.toggle('active',micOn);
-  document.getElementById('micBtn').classList.toggle('active',micOn);
-}
-function callToggleCam(){
-  camOn=!camOn;
-  if(localStream) localStream.getVideoTracks().forEach(function(t){t.enabled=camOn});
-  document.getElementById('callCamBtn').classList.toggle('active',camOn);
-  document.getElementById('camBtn').classList.toggle('active',camOn);
-}
-
-async function toggleScreenShare(){
-  try{
-    var screenStream=await navigator.mediaDevices.getDisplayMedia({video:true});
-    var screenTrack=screenStream.getVideoTracks()[0];
-    // Replace track in the peer call if active
-    if(peerCall&&peerCall.peerConnection){
-      var sender=peerCall.peerConnection.getSenders().find(function(s){return s.track&&s.track.kind==='video'});
-      if(sender) sender.replaceTrack(screenTrack);
-    }
-    document.getElementById('localVideo').srcObject=screenStream;
-    document.getElementById('screenShareBtn').classList.add('active');
-    screenTrack.onended=function(){
-      if(localStream){
-        if(peerCall&&peerCall.peerConnection){
-          var camTrack=localStream.getVideoTracks()[0];
-          var sender2=peerCall.peerConnection.getSenders().find(function(s){return s.track&&s.track.kind==='video'});
-          if(sender2) sender2.replaceTrack(camTrack);
-        }
-        document.getElementById('localVideo').srcObject=localStream;
-        document.getElementById('screenShareBtn').classList.remove('active');
-      }
-    };
-  }catch(e){console.error('Screen share error:',e)}
-}
-
-function leaveCall(){
-  if(peerCall) peerCall.close();
-  if(peer) peer.destroy();
-  if(localStream) localStream.getTracks().forEach(function(t){t.stop()});
-  peerConnected=false;
-  isHost=false;
-  peerCall=null;
-  peer=null;
-  peerDataConn=null;
-  stopTimer();
-  document.getElementById('setupScreen').classList.remove('hidden');
-  document.getElementById('callLayout').style.display='none';
-  document.getElementById('remoteVideo').srcObject=null;
-  document.getElementById('remoteVideo').style.display='none';
-  document.getElementById('remotePlaceholder').style.display='flex';
-  document.getElementById('remoteLabel').style.display='none';
-  document.getElementById('remoteBox').classList.remove('connected');
-  document.getElementById('chatMessages').innerHTML='';
-  localStream=null;
-  remoteStream=null;
-  getMedia();
-}
-
-// ═══ TIMER ═══
-var SESSION_DURATION=30*60; // 30 minutes in seconds
-var sessionEndTime=null;
-
-function startTimer(){
-  callStartTime=Date.now();
-  sessionEndTime=callStartTime+SESSION_DURATION*1000;
-  document.getElementById('callTimer').classList.add('active');
-  document.getElementById('callTimer').classList.remove('warning','danger');
-  timerInterval=setInterval(updateTimer,1000);
-  updateTimer();
-}
-function updateTimer(){
-  var now=Date.now();
-  var remaining=Math.max(0,Math.floor((sessionEndTime-now)/1000));
-  var m=Math.floor(remaining/60);var s=remaining%60;
-  var timerEl=document.getElementById('callTimer');
-  timerEl.textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
-  timerEl.classList.remove('warning','danger');
-  if(remaining<=120&&remaining>0){
-    timerEl.classList.add('danger');
-  }else if(remaining<=300&&remaining>0){
-    timerEl.classList.add('warning');
-  }
-  if(remaining<=0){
-    clearInterval(timerInterval);
-    timerEl.textContent='00:00';
-  }
-}
-function stopTimer(){
-  clearInterval(timerInterval);
-  document.getElementById('callTimer').textContent='00:00';
-  document.getElementById('callTimer').classList.remove('active','warning','danger');
-}
-
-// ═══ CHAT ═══
-function sendChat(){
-  var input=document.getElementById('chatInput');
-  var msg=input.value.trim();
-  if(!msg) return;
-  addChatMessage('You',msg,true);
-  input.value='';
-  if(peerDataConn&&peerDataConn.open){
-    peerDataConn.send({type:'chat',msg:msg});
-  }
-}
-function addChatMessage(sender,msg,self){
-  var div=document.createElement('div');
-  div.className='chat-msg '+(self?'self':'other');
-  // XSS-safe text insertion
-  var senderDiv=document.createElement('div');
-  senderDiv.className='sender';
-  senderDiv.textContent=sender;
-  var textDiv=document.createElement('div');
-  textDiv.className='text';
-  textDiv.textContent=msg;
-  var timeDiv=document.createElement('div');
-  timeDiv.className='time';
-  timeDiv.textContent=new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});
-  div.appendChild(senderDiv);
-  div.appendChild(textDiv);
-  div.appendChild(timeDiv);
-  var msgs=document.getElementById('chatMessages');
-  msgs.appendChild(div);
-  msgs.scrollTop=msgs.scrollHeight;
-}
-function addSystemMessage(msg){
-  var div=document.createElement('div');
-  div.className='chat-system';
-  div.textContent=msg;
-  var msgs=document.getElementById('chatMessages');
-  msgs.appendChild(div);
-  msgs.scrollTop=msgs.scrollHeight;
-}
-function toggleSidebar(){
-  document.getElementById('sidebar').classList.toggle('open');
-}
 </script>
-<!-- Donate Section — inconspicuous, bottom of page -->
-<div id="donate-bar" style="text-align:center;padding:12px 0 8px;font-size:11px;color:rgba(0,0,0,0.35);letter-spacing:0.5px;border-top:1px solid rgba(0,0,0,0.08);margin-top:auto">
-  <span style="margin-right:10px">Support this project</span>
-  <a href="https://paypal.me/williamgraythomason" target="_blank" rel="noopener" style="display:inline-block;background:#0070ba;color:#fff;padding:4px 12px;border-radius:4px;text-decoration:none;font-weight:600;font-size:11px;margin:0 4px">PayPal</a>
-  <a href="https://wise.com/payme/williamgraythomason" target="_blank" rel="noopener" style="display:inline-block;background:#9fe870;color:#163300;padding:4px 12px;border-radius:4px;text-decoration:none;font-weight:600;font-size:11px;margin:0 4px">Wise</a>
+<!-- Theme picker panel -->
+<div class="theme-picker-panel" id="themePickerPanel">
+  <div class="theme-picker-header">
+    <span class="theme-picker-title">Themes</span>
+    <button class="theme-picker-close" onclick="toggleThemePicker()">✕</button>
+  </div>
+  <div class="theme-preset-grid" id="themePresets">
+    <button class="theme-preset" data-theme="default" style="background:linear-gradient(135deg,#22d3ee,#0891b2)"></button>
+    <button class="theme-preset" data-theme="ocean" style="background:linear-gradient(135deg,#3b82f6,#0ea5e9)"></button>
+    <button class="theme-preset" data-theme="forest" style="background:linear-gradient(135deg,#22c55e,#16a34a)"></button>
+    <button class="theme-preset" data-theme="sunset" style="background:linear-gradient(135deg,#f97316,#f59e0b)"></button>
+    <button class="theme-preset" data-theme="rose" style="background:linear-gradient(135deg,#f43f5e,#fb7185)"></button>
+    <button class="theme-preset" data-theme="amber" style="background:linear-gradient(135deg,#f59e0b,#fbbf24)"></button>
+    <button class="theme-preset" data-theme="violet" style="background:linear-gradient(135deg,#8b5cf6,#7c3aed)"></button>
+    <button class="theme-preset" data-theme="neon" style="background:linear-gradient(135deg,#d946ef,#c084fc)"></button>
+  </div>
 </div>
+
 </body>
 </html>
